@@ -89,6 +89,7 @@ pre{
 	white-space: pre-wrap !important;
 	width:100%;
 	color:#0B5345;
+	border-left: 3px solid green !important;
 	
 }
 .code-comment{
@@ -237,4 +238,13 @@ a.list-group-item:hover{
 .header{
 	background:#E8F6F3;
 	padding-top: 0.5rem !important;
+}
+
+.dec-none{
+	text-decoration: dotted;
+}
+
+.sub-text{
+	font-size: 12px;
+    font-style: italic;
 }
