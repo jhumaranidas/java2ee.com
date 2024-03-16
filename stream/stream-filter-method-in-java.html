@@ -14,27 +14,23 @@
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <!--
-        <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
-        -->
         <meta name="theme-color" content="#f10d0d">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="java stream, java stream api, lambda expression, stream api in java, java 8 stream, java 8 stream api, java stream tutorial, java 8 streams examples, stream api java 8, java stream example, stream example, java 8 features, lambda expression in java">          
+        <meta name=keywords content="Stream API Filter Method in Java 8, java stream filter, filter method in java 8, java stream filter example, java stream filter list of objects, how to filter list of objects in java 8, stream api filter, stream api filter example, stream api filter arraylist">          
         <meta name=description content="Streams are designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection.">
         <meta property="og:locale" content="en_IN">
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Java 8 Stream - java2ee">
+        <meta property="og:title" content="Filter Method in Java 8 - java2ee">
         <meta property="og:description" content="Streams are designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection.">
-        <meta property="og:url" content="https://java2ee.com/stream/stream-api-in-java.html">
+        <meta property="og:url" content="https://java2ee.com/stream/filter-method-in-java.html">
         <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Java 8 Stream - java2ee">
-        <meta property="article:section" content="Java 8 Stream - java2ee">
+        <meta property="article:tag" content="Filter Method in Java 8 - java2ee">
+        <meta property="article:section" content="Filter Method in Java 8 - java2ee">
         <meta property="article:published_time" content="2024-03-4T12:59:35+00:00">
         <meta property="article:modified_time" content="2024-03-6T12:59:35+00:00">
         <meta property="og:updated_time" content="2024-03-8T12:59:35+00:00">
-        <title>Java 8 Stream - java2ee</title>
+        <title>Filter Method in Java 8 - java2ee</title>
     </head>
     <body>      
         <div class="d-flex" id="wrapper">
@@ -87,65 +83,97 @@
             -->
             <div id="page-content-wrapper">
                 <div class="container-fluid header"> 
-                    <h1>Java 8 Stream</h1>
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-operations-in-java.html">
+                    <h1>Stream API Filter Method in Java 8</h1>  
+                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java.html">
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream Operations In Java</span>
+                             <span class="next-topic-name">Java Stream Map() method</span>
                         </span>&nbsp;        
-                    </a>  
+                    </a>   
                 </div>
 				<div id="right-main-div">
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream API in Java 8</h2>
+						    <h2> - Stream filter() method</h2>
 							<p>
                                 
-                                Streams are designed to be efficient and can support improving the performance of programs.
-                                 We can avoid unnecessary loops and iterations in our programs by using Stream functionality. 
-                                Streams can be used for filtering, collecting, printing, and converting data from one structure to another
-                                such as one collection to another collection.
-                               
+                                The filter method provides functionality to filter stream elements on the basis of given <a target="_blank" href="https://java2ee.com/lambda-expression-in-java.html">lambda</a> expression or 
+                                <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html">predicate</a>. 
+                                The filter method expects a lambda expression or predicate in argument and the lambda
+                                expression returns a boolean(true/false) value, based on boolean value filter method filters the elements.
+                                
                                 <ol>
-                                    <li><b>Java 8 introduces Stream API, and some additional features to allows functional-style operations on the elements.</b></li>                                   
-                                    <li><b>The stream can be used by importing <span class="green">java.util.stream</span> package.</b></li>
-                                    <li><b>The stream API is used to process collections of objects.</b></li>
-                                    <li><b>A Stream is a sequence of components that can be processed sequentially.</b></li>
-                                    <li><b>The elements of a stream are only visited once during the life of a stream.</b></li>
+                                    <li><b>filter() is an intermediate Stream operation.</b></li>                                   
+                                    <li><b>filter method expects a <a target="_blank" href="https://java2ee.com/lambda-expression-in-java.html">lambda</a>  expression or <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html">predicate</a> in argument.</b></li>
+                                    <li><b>Predicate is a functional interface. So, you can also pass lambda expression here.</b></li>
+                                    <li><b>filter() method does not change/modify the original source(collection)</b></li>
+                                    <li><b>filter() method creates a new collection(list/array) based on condition and returns the new collection.</b></li>
                                     <li><b>Stream does not modify the source. It produces a new Stream by filtering or applying any logic.</b></li>
                                     
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                  
-<pre>
-<code>Stream</code><span class="blue"> stream </span> = collection.strim();
+<pre><code>Stream<</code><code>T</code>><code> filter(Predicate</code><<code>? super T> predicate)</code>  
 </pre>
 
-<h2 class="m-l-20"> Example of filterig data using stream:</h2>
+<h2 class="m-l-20"> Example of filterig data using lamda expression in argument:</h2>
 
 <pre>
-<span class="blue"><code>import java.io.*;</code> </span>
-<span class="blue"><code>import java.util.*;</code> </span>
-<span class="blue"><code>import java.util.stream.*;</code> </span>
+<span class="code-comment">//Importing required classes</span>
+<span class="blue"><code> import java.util.*;</code> </span>
+<span class="blue"><code> import java.io.*;</code> </span>
+<span class="blue"><code> import java.util.stream.*;</code> </span>
 
-<code>public</code> <span class="blue"> <code>class</code></span> StreamFilterExample <code>{</code>
+<code>public</code> <span class="blue"> <code>class</code></span> FilterExample <code>{</code>
 
     <span class="orange"><code>static void main (String args[]){ </code> </span>
-        <span class="blue"><code>int</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10};</code>
+        <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
 
         <span class="code-comment">//Filtering the even numbers from a collection</span>
         <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
           <code>Arrays.asList(numbers).stream() </code>
+                <span class="code-comment">//passing lambda expression in argument</span>
                 <code>.filter(i -> i % 2 == 0)</code>
                 <code>.collect(Collectors.toList());</code>
                 <code>         
-        System.out.println("<span class="green">Even numbers after stream operation : </span>"+ evenList); 
+        System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); 
                 </code>
 <code>}</code>
 
 Output:
-Even numbers after stream operation : [2, 4, 6, 8, 10]
-</pre>                                
+Filtered even numbers : [2, 4, 6, 8, 10, 12]
+</pre>   
+
+
+<h2 class="m-l-20"> Example of filterig with <a target="_blank" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java.html" title="Predicate In Details">Predicate</a> argument:</h2>
+
+<pre>
+<span class="code-comment">//Importing required classes for stream</span>
+<span class="blue"><code> import java.util.*;</code> </span>
+<span class="blue"><code> import java.io.*;</code> </span>
+<span class="blue"><code> import java.util.stream.*;</code> </span>
+
+<code>public</code> <span class="blue"> <code>class</code></span> PredicateFilterExample <code>{</code>
+
+    <span class="orange"><code>static void main (String args[]){ </code> </span>
+        <span class="code-comment" style="color:red;">//Creating predicate</span>
+        Predicate<<code>Integer</code>> pr = i -> (i % 2 == 0);
+        <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8};</code>
+
+        <span class="code-comment">//Filtering the even numbers from a collection</span>
+        <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
+          <code>Arrays.asList(numbers).stream() </code>
+                <span class="code-comment" style="color:red;">//passing predicate in argument</span>
+                <code>.filter(pr)</code>
+                <code>.collect(Collectors.toList());</code>
+                <code>         
+        System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); 
+                </code>
+<code>}</code>
+
+Output:
+Filtered even numbers : [2, 4, 6, 8]
+</pre>   
                                 
 </p>
 
@@ -157,13 +185,13 @@ Even numbers after stream operation : [2, 4, 6, 8, 10]
 
 
                         <div class="container-fluid"> <br>  
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-operations-in-java.html">
+                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java.html">
                                 <span class="next-botton">
                                     <span class="next-topic">Next Topic </span>
                                      <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream Operations In Java</span>
+                                     <span class="next-topic-name">Java Stream Map() method</span>
                                 </span>&nbsp;        
-                            </a>
+                            </a>   
                         </div> <br><br>
 
 

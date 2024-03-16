@@ -13,6 +13,7 @@
         <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
         <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
@@ -84,11 +85,13 @@
 
                 <div class="container-fluid header">
                     <h1>Predicate Interfaces In Java</h1>
-                    <span class="next-botton">Next Topic >></span>&nbsp;
-                    <a target="_blank" href="https://java2ee.com/function-interface-in-java.html">
-                        <span>Function Interface In Java</span>
-                    </a>
-                    
+                    <a target="_blank" class="next-link" href="https://java2ee.com/function-interface-in-java.html">
+                        <span class="next-botton">
+                            <span class="next-topic">Next Topic </span>
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Function Interface In Java</span>
+                        </span>&nbsp;        
+                    </a> 
                 </div>
 				<div id="right-main-div">
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
@@ -102,7 +105,7 @@
                             <ol>
                                 <li><b>boolean test(T t)</b></li>
                                 <dd>- It returns true if the input argument matches the predicate, otherwise false.</dd>
-                                <h2 class="m-l-20">Example of Predicate test method</h2>
+                                <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-test-method-in-java-8.html" title="Predicate test method in java 8" class="font-15">Predicate test</a> method</h2>
 <pre>
 <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
   <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr = a -> (a > 10);
@@ -116,7 +119,7 @@ true
 </pre>
                                 <li><b>static  Predicate isEqual(Object targetRef)</b></li>
                                 <dd>- t is a static method of the Predicate interface that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
-                                <h2 class="m-l-20">Example of Predicate isEqual method</h2>  
+                                <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-isequal-method-in-java-8.html" title="Predicate isEqual method in java 8" class="font-15">Predicate isEqual</a> method</h2>  
 <pre>
 <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
   <span class="orange">Predicate</span><<span class="blue"><code>String</code></span>> pr = 
@@ -138,7 +141,7 @@ false
                                
                                 <li><b>default Predicate and(Predicate other)</b></li>
                                 <dd>- This method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
-                                <h2 class="m-l-20">Example of Predicate and method</h2>  
+                                <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-and-method-in-java-8.html" title="Predicate and method in java 8" class="font-15">Predicate and</a> method</h2>  
 <pre>
 <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>  
   <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr1 = 
@@ -164,7 +167,7 @@ false
                                 
                                 <li><b>default Predicate negate()</b></li>
                                 <dd>- The negate() method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
-                                <h2 class="m-l-20">Example of Predicate negate method</h2>  
+                                <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-negate-method-in-java-8.html" title="Predicate negate method in java 8" class="font-15">Predicate negate</a> method</h2>  
 <pre>
 <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{</code>
   <code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharJ = 
@@ -200,7 +203,7 @@ false
                                
                                 <li><b>or(Predicate other)</b></li>
                                 <dd>- The or() method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
-                                <h2 class="m-l-20">Example of Predicate or method</h2>  
+                                <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-or-method-in-java-8.html" title="Predicate or method in java 8" class="font-15">Predicate or</a> method</h2>  
 <pre>
 <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>
   <code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharH = 
@@ -239,10 +242,13 @@ false
 
 					
                     <div class="container-fluid"> <br>  
-                        <span class="next-botton">Next Topic >></span>
-                        <a target="_blank" href="https://java2ee.com/function-interface-in-java.html">
-                            <span>Function Interface In Java</span>
-                        </a>
+                        <a target="_blank" class="next-link" href="https://java2ee.com/function-interface-in-java.html">
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                 <span class="next-topic-name">Function Interface In Java</span>
+                            </span>&nbsp;        
+                        </a> 
                     </div> <br><br> 
 				
 				</div> <!--end left-->

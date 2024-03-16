@@ -13,6 +13,7 @@
         <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
         <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
@@ -84,9 +85,12 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid header">
                     <h1>Consumer Interfaces In Java</h1>
-                    <span class="next-botton">Next Topic >></span>&nbsp;
-                    <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html">
-                        <span>Predicate Interface In Java</span>
+                    <a target="_blank" class="next-link" href="https://java2ee.com/predicate-interfaces-in-java.html">
+                        <span class="next-botton">
+                            <span class="next-topic">Next Topic </span>
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Predicate Interface In Java</span>
+                        </span>&nbsp;        
                     </a>  
                 </div>
 				<div id="right-main-div">
@@ -94,18 +98,20 @@
 						<h2> - Consumer interface</h2>
 							<p>
                                 The consumer interface of the functional interface accepts only one argument without any return value.
-                                The consumer interface has no return value. It contains an abstract accept() and a default andThen() method. 
-                                It can be used as the assignment target for a lambda expression or method reference.
+                                The consumer interface has no return value. It contains an abstract <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8.html" title="accept method in java 8" class="font-15">accept()</a> 
+                                and a default <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8.html" title="andThen method in java 8" class="font-15">andThen()</a>  method. 
+                                It can be used as the assignment target for a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java.html" title="lambda expression in java 8" class="font-15">lambda expression</a> or method reference.
                                 
                                 <h6>Consumer Interface Methods.</h6>
                                 <ol>
                                     <li>void accept(T t)</li>
                                     <dd>- accept() method takes as input the type T and returns no value. This is the single abstract method of Consumer.
                                             It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
-                                            by a lambda expression or method reference.</dd>
+                                            by a lambda expression or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8.html" title="accept method in java 8" class="font-15">details..</a>
+                                        </dd>
                                     <li>andThen(Consumer<? super T> after)</li>
                                     <dd>- This is a default method. In other words, it has an implementation and is thus non-abstract.
-                                            The method accepts a Consumer and returns another Consumer. 
+                                            The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8.html" title="andThen method in java 8" class="font-15">details..</a>
                                 </ol>
                                     
                                     <h2 class="m-l-20"> Example of Consumer Interface</h2>
@@ -169,10 +175,13 @@ Your salary is 20000
                     
                           
                                 <div class="container-fluid"> <br>  
-                                    <span class="next-botton">Next Topic >></span>
-                                    <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html">
-                                        <span>Predicate Interface In Java</span>
-                                    </a>
+                                    <a target="_blank" class="next-link" href="https://java2ee.com/predicate-interfaces-in-java.html">
+                                        <span class="next-botton">
+                                            <span class="next-topic">Next Topic </span>
+                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                             <span class="next-topic-name">Predicate Interface In Java</span>
+                                        </span>&nbsp;        
+                                    </a>  
                                 </div> <br><br> 
 				
 

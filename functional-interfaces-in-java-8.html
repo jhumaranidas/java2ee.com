@@ -14,6 +14,7 @@
         <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
         <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
@@ -83,10 +84,13 @@
             <div id="page-content-wrapper">
                     <div class="container-fluid header">
                         <h1>Functional Interfaces In Java 8</h1>
-                        <span class="next-botton">Next Topic >></span>&nbsp;
-                        <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java.html">
-                            <span>Consumer Interface In Java</span>
-                        </a>
+                        <a target="_blank" class="next-link" href="https://java2ee.com/consumer-interfaces-in-java.html">
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                 <span class="next-topic-name">Consumer Interface In Java</span>
+                            </span>&nbsp;        
+                        </a> 
                     </div>
 				<div id="right-main-div">
 					<div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">      
@@ -97,7 +101,7 @@
 								They can have only one functionality to execute. Functional Interface is the approach of fundamental programming
 								in Java. It is also known as <b>SAM</b> interfaces <b>Single Abstract Method Interfaces</b>.
 								<h6 style="white-space:nowrap">
-									<a href="https://support.google.com/domains/answer/4491208?hl=en" target="_blank" alt="Lambda expressions">
+									<a href="https://support.google.com/domains/answer/4491208?hl=en" target="_blank" title="Lambda expressions" class="font-15">
 										Lambda expressions
 									</a>
 								</h6>
@@ -125,7 +129,7 @@
 public class Calculate {
 	public static void main (String[] args) {</code>
 		<span class="code-comment">//with lambda</span>
-		<code>code>MultipleInterface m = (x, y) -> {
+		<code>MultipleInterface m = (x, y) -> {
 			//System.out.println("Drawing "+width);
 			return x * y;
 		};
@@ -181,10 +185,10 @@ Area of Square is 100
                                 <h6>There are four types of functional interfaces.</h6>
 
                                 <ol>
-                                    <li><b>Consumer -> Bi-Consumer</b></li>
-                                    <li><b>Predicate -> Bi-Predicate</b></li>
-                                    <li><b>Function -> Bi-Function, Unary Operator, Binary Operator</b></li>
-                                    <li><b>Supplier</b></li>
+                                    <li><b>Consumer -> Bi-Consumer</b> &nbsp;<a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java.html" title="consumer interface in java 8" class="font-15">details..</a></li>
+                                    <li><b>Predicate -> Bi-Predicate</b>  &nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html" title="predicate interfaces in java 8" class="font-15">details..</a></li>
+                                    <li><b>Function -> Bi-Function, Unary Operator, Binary Operator</b> &nbsp;<a target="_blank" href="https://java2ee.com/function-interface-in-java.html" title="function interface in java 8" class="font-15">details..</a></li>
+                                    <li><b>Supplier</b> &nbsp;<a target="_blank" href="https://java2ee.com/supplier-interface-in-java.html" title="supplier interface in java 8" class="font-15">details..</a></li>
                                 </ol>  
                                 <h2 class="m-l-20">1. Consumer</h2>
                                 <p>
@@ -197,10 +201,12 @@ Area of Square is 100
                                         <li>void accept(T t)</li>
                                         <dd>- accept() method takes as input the type T and returns no value. This is the single abstract method of Consumer.
                                              It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
-                                             by a lambda expression or method reference.</dd>
+                                             by a lambda expression or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8.html" title="accept method in java 8" class="font-15">details..</a>
+                                            </dd>
                                         <li>andThen(Consumer<? super T> after)</li>
                                         <dd>- This is a default method. In other words, it has an implementation and is thus non-abstract.
-                                             The method accepts a Consumer and returns another Consumer. 
+                                             The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8.html" title="andThen method in java 8" class="font-15">details..</a>
+                                        </dd>
                                     </ol>
                                     
                                     <h2 class="m-l-20"> Example of Consumer Interface</h2>
@@ -269,7 +275,7 @@ Your salary is 20000
                                     Predicate accepts an argument and return a boolean value. Predicate functional interface in Java is a type of function
                                      that accepts a single value or argument and returns a boolean (True/ False). It provides the dunctionality of filtering, 
                                      it filtera stream components on the base of a provided predicate. 
-                                    
+                                     <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java.html" title="predicate interfaces in java 8" class="font-15">details..</a>
                                     <h6>Predicate Interface Methods.</h6>
                                     <ol>
                                         <li><b>boolean test(T t)</b></li>
@@ -399,7 +405,7 @@ false</code>
                              <p>
                                 The function type functional interface receives a single argument, processes it, and returns a value.
                                  Functional interface is taking the key from the user as input and searching for the value in the map
-                                  for the given key.
+                                  for the given key. <a target="_blank" href="https://java2ee.com/function-interface-in-java.html" title="function interface in java 8" class="font-15">details..</a>
                                  
                                  
 <pre><code>public static void main(String[] args) {  
@@ -429,7 +435,7 @@ false</code>
                                 The Supplier functional interface is also a type of functional interface that does not take any input 
                                 or argument and returns a single output.  On calling the supplier it simply returns a value. 
                                 The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
-                                 
+                                <a target="_blank" href="https://java2ee.com/supplier-interface-in-java.html" title="supplier interface in java 8" class="font-15">details..</a>
                                  
 <pre><code>public static void main(String[] args) { 
     Supplier</code><<code>String</code>> <code>supplier = () -> "Hello World";
@@ -446,10 +452,13 @@ Hello World</code>
                     
                 </div>            
                 <div class="container-fluid"> <br>  
-                    <span class="next-botton">Next Topic >></span>
-                    <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java.html">
-                        <span>Consumer Interface In Java</span>
-                    </a>
+                    <a target="_blank" class="next-link" href="https://java2ee.com/consumer-interfaces-in-java.html">
+                        <span class="next-botton">
+                            <span class="next-topic">Next Topic </span>
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Consumer Interface In Java</span>
+                        </span>&nbsp;        
+                    </a> 
                 </div> <br><br> 
 
            

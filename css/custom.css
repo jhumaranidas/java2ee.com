@@ -248,3 +248,22 @@ a.list-group-item:hover{
 	font-size: 12px;
     font-style: italic;
 }
+
+.red{color:red;}
+.font-15{
+	font-size:15px;
+	color: darkblue;
+}
+.next-link{
+	text-decoration:none;
+}
+.next-topic{
+	color: cyan;
+}
+.next-topic-name{
+	color: cyan;
+}
+.ficon-arraw{
+	font-size: medium;
+    margin: 0px 3px 0px 3px;
+}
