@@ -13,7 +13,7 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/stream/stream-api-in-java.html</loc>
+  <loc>https://java2ee.com/stream/stream-api-in-java-8.html</loc>
   <lastmod>2024-03-08T02:20:24+00:00</lastmod>
   <priority>0.95</priority>
 </url>
@@ -23,17 +23,17 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/consumer-interfaces-in-java.html</loc>
+  <loc>https://java2ee.com/consumer-interfaces-in-java-8.html</loc>
   <lastmod>2024-03-08T02:20:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/biconsumer-interfaces-in-java.html</loc>
+  <loc>https://java2ee.com/biconsumer-interfaces-in-java-8-8.html</loc>
   <lastmod>2024-03-08T02:20:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/predicate-interfaces-in-java.html</loc>
+  <loc>https://java2ee.com/predicate-interfaces-in-java-8.html</loc>
   <lastmod>2024-03-08T02:20:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -48,7 +48,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/supplier-interface-in-java.html</loc>
+  <loc>https://java2ee.com/supplier-interface-in-java-8.html</loc>
   <lastmod>2024-03-08T02:20:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>

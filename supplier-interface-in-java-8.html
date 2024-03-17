@@ -9,7 +9,7 @@
         <link rel="mask-icon" href="image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
         <link rel="shortcut icon" sizes="16x16" href="image/fevicon/favicon-16x16.png" type=image/x-icon>
         <link rel=preconnect href=https://fonts.googleapis.com>
-        <link rel=canonical href=https://java2ee.com/cpredicate-interfaces-in-java-8.html>
+        <link rel=canonical href=https://java2ee.com/supplier-interface-in-java-8.html>
         <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
@@ -21,20 +21,20 @@
         <meta name="theme-color" content="#f10d0d">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="The function type functional interface receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key.">          
-        <meta name=description content="Predicate accepts an argument and return a boolean value. Predicate functional interface in Java is a type of function that accepts a single value or argument and returns a boolean (True/ False). It provides the dunctionality of filtering, it filtera stream components on the base of a provided predicate.">
+        <meta name=keywords content="supplier functional interface,supplier interface,supplier interface in java,supplier interface with example in java">          
+        <meta name=description content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.">
         <meta property="og:locale" content="en_IN">
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Function Interfaces In Java">
-        <meta property="og:description" content="The function type functional interface receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key.">
-        <meta property="og:url" content="https://java2ee.com/function-interface-in-java">
+        <meta property="og:title" content="Supplier Interfaces In Java">
+        <meta property="og:description" content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.">
+        <meta property="og:url" content="https://java2ee.com/supplier-interface-in-java-8">
         <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Function Interfaces In Java">
-        <meta property="article:section" content="Function Interfaces In Java">
-        <meta property="article:published_time" content="2024-03-2T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-6T12:59:35+00:00">
+        <meta property="article:tag" content="Supplier Interfaces In Java">
+        <meta property="article:section" content="Supplier Interfaces In Java">
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-03-8T12:59:35+00:00">
         <meta property="og:updated_time" content="2024-03-8T12:59:35+00:00">
-        <title>Function Interface In Java</title>
+        <title>Supplier Interface In Java</title>
     </head>
     <body>
         
@@ -215,70 +215,23 @@
                                 </span>&nbsp;        
                             </a>
                             
-                        </li> 
-                        <li class="next-botton">     
-                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li> 
-                        <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Filter Method in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Stream Map Method in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>  
-                        <li class="next-botton">
-                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
-                                </span>&nbsp;        
-                            </a>
                             
-                        </li>      
+                        </li> 
+                        
                     </ul>
                 </div>
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <div class="container-fluid header">
-                    <h1>Function Interfaces In Java</h1>
-                    <a target="_blank" class="next-link" title="Supplier Interface In Java 8" href="https://java2ee.com/supplier-interface-in-java-8">
+                    <h1>Supplier Interfaces In Java</h1> 
+                    <a target="_blank" class="next-link" title="Stream API Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Supplier Interface In Java</span>
+                             <span class="next-topic-name">Java Stream API Tutorial In Details</span>
                         </span>&nbsp;        
-                    </a>  
+                    </a>   
                     <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
                         <span class="next-botton">
                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
@@ -296,55 +249,43 @@
                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
                              <span class="next-topic-name">Stream Operations Types</span>
                         </span>&nbsp;        
-                    </a> 
+                    </a>
                 </div>
+               
 				<div id="right-main-div">
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						<h2> - Function interface</h2>
-                        <p>
-                            The function type functional interface receives a single argument, processes it, and returns a value.
-                             Functional interface is taking the key from the user as input and searching for the value in the map
-                              for the given key.
-                             
-                             
-<pre>
-<code>public static void main(String[] args) {  </code>
-  <code>private static HashMap</code><<code>Integer</code>, <code>String</code>> Employee = 
-      <code>new HashMap<>();</code>
-  <code>Function</code><<code>Integer</code>, <code>String</code>> addFunction = <code>(Integer ID)-> {</code>
-      <code>if(Employee.containsKey(ID)) {</code>
-        <code>return Employee.get(ID);</code>
-      <code>}else{</code>
-        <code>return</code> "Invalid ID";
-    <code> }</code>
- <code> }</code>
+						<h2 class="m-l-20"> - Supplier Interface In Java</h2>
+                             <p>
+                                The Supplier functional interface is also a type of functional interface that does not take any input 
+                                or argument and returns a single output.  On calling the supplier it simply returns a value. 
+                                The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
+                                 
+                                <h2 class="m-l-20"> Example</h2>     
+<pre><code>public static void main(String[] args) { 
+    Supplier</code><<code>String</code>> <code>supplier = 
+      () -> "Hello World";
 
-  <span class="code-comment" style="color:red;">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
-  <code>System.out.println(addFunction.apply(500)); </code>
-<code> }</code>
+    System.out.println(supplier.get());        
+} 
 
+Output:
+Hello World</code>
 </pre>    
+							</p> 
 
-                        <h2 class="m-l-20">Bi Function</h2>
-                         <p>
-                            Bi-function is just like a function except it takes two arguments. Two arguments are must in Bi-function. Just like a function it also returns a value.
-                          </p>
-                    </p>     
+
+                            
                     <div class="col-sm-12 col-md-12 bottom-add">
                         
                     </div> 
-                    
-
-
-					
                     <div class="container-fluid"> <br>  
-                        <a target="_blank" class="next-link" title="Supplier Interface In Java 8" href="https://java2ee.com/supplier-interface-in-java-8">
+                        <a target="_blank" class="next-link" title="Stream API Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
                             <span class="next-botton">
                                 <span class="next-topic">Next Topic </span>
                                  <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Supplier Interface In Java 8</span>
+                                 <span class="next-topic-name">Java Stream API Tutorial</span>
                             </span>&nbsp;        
-                        </a>  
+                        </a>   
                         <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
                             <span class="next-botton">
                                  <i class="fa fa-angle-double-right ficon-arraw"></i> 
@@ -366,7 +307,7 @@
                         <a target="_blank" class="next-link" title="Stream Reduce Method In Java 8" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
                             <span class="next-botton">
                                  <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream reduce method</span>
+                                 <span class="next-topic-name">Stream reduce Types</span>
                             </span>&nbsp;        
                         </a>
                         <a target="_blank" class="next-link" title="Stream Sorted Method In Java 8" href="https://java2ee.com/stream/stream-sorted-method-in-java-8">
@@ -382,9 +323,8 @@
                             </span>&nbsp;        
                         </a>
                     </div> <br><br> 
-				 
-					
-                </div> <!--end left-->
+
+				</div> <!--end left-->
                 <!--start right-->
                 <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
                     
