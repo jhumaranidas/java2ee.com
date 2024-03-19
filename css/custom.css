@@ -365,3 +365,27 @@ li.next-botton{
 	vertical-align: text-bottom;
 	color:#D2691E;
 }
+
+.left-main-div ol li b{
+     /*   font-family: "Volkhov", serif;
+    font-weight: 400;
+   font-style: italic;
+    color: #154360 !important;
+	font-family: "JetBrains Mono", monospace;*/
+    font-family: "Volkhov", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #154360;
+	font-size: 18px;
+}
+.left-main-div ol li{
+   /* font-family: "Volkhov", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #154360 !important;*/
+	 font-family: "Volkhov", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #154360;
+	font-size: 18px;
+}
