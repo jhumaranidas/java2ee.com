@@ -2400,7 +2400,7 @@ class Square {
     };
 
     int areaVal =   a.calculateArea(10);
-    System.out.println("Area of Square is "+areaVal);
+    System.out.println( "Area of Square is "+areaVal);
 }
 
 Output:
@@ -2445,13 +2445,13 @@ Area of Square is 100
 public class ConsumerInterfaceExample Area {
 
     static void welcomeGreeting (</code><code>String</code> name){
-        System.out.println("Welcome "+name);
+        System.out.println( "Welcome "+name);
     }
     static void showAge (int age){
-          System.out.println("Your age is "+age);
+          System.out.println( "Your age is "+age);
     }
     static void showSalary (int sal){
-          System.out.println("Your salary is "+sal);
+          System.out.println( "Your salary is "+sal);
     }
 
     public static void main(<code>String</code>[] args) {</code>
@@ -2492,7 +2492,7 @@ Your salary is 20000
                                 </p>
 
 <pre><code>BiConsumer</code><<code>String</code>,<code>String</code>> foo = 
-     <code>(a, b) -> System.out.println(a + b);</code>
+     <code>(a, b) -> System.out.println( a + b );</code>
 </pre>
 
 
@@ -2517,7 +2517,7 @@ Your salary is 20000
     <span class="code-comment">// Creating predicate  </span> 
     <code>Predicate</code><<code>Integer</code>> <code>pr = a -> (a > 10);</code>
     <span class="code-comment">// Calling Predicate method </span> 
-    <code>System.out.println(pr.test(20));        
+    <code>System.out.println( pr.test(20) );        
 } 
 
 Output:
@@ -2532,11 +2532,11 @@ true</code>
   <code>Predicate</code><<code>String</code>> <code>pr = 
     Predicate.isEqual("MyAllText"); </code>
   <span class="code-comment">// Creating predicate  </span>
-  <code>System.out.println(pr.test("AllText"));</code>
+  <code>System.out.println( pr.test("AllText"));</code>
   <span class="code-comment">// Creating predicate  </span>
-  <code>System.out.println(pr.test("MyAllText")); </code>
+  <code>System.out.println( pr.test("MyAllText")); </code>
   <span class="code-comment">// Creating predicate  </span>
-  <code> System.out.println(pr.test("MyAll"));     
+  <code> System.out.println( pr.test("MyAll"));     
 } 
 
 Output:
@@ -2552,11 +2552,11 @@ false</code>
     Predicate</code><<code>Integer</code>> <code>pr1 = x -> (x > 20);
     Predicate</code><<code>Integer</code>> <code>pr2 = x -> (x < 80);</code>
     <span class="code-comment">// Creating predicate method</span>
-    <code>System.out.println(pr1.and(pr2).test(100)); </code>
+    <code>System.out.println( pr1.and(pr2).test(100)); </code>
     <span class="code-comment">// Creating predicate method</span>
-    <code> System.out.println(pr1.and(pr2).test(50));</code>
+    <code> System.out.println( pr1.and(pr2).test(50));</code>
     <span class="code-comment">// Creating predicate method</span>
-    <code>System.out.println(pr1.and(pr2).test(10));
+    <code>System.out.println( pr1.and(pr2).test(10));
 } 
 
 Output:
@@ -2576,8 +2576,8 @@ false</code>
           s -> s.length() == 5;</code>
     
     <span class="code-comment">// Calling without negate method</span> 
-    <code>System.out.println(startsWithCharJ.test("Horse")); 
-    System.out.println(hasLengthOfInt5.test("India"));
+    <code>System.out.println( startsWithCharJ.test("Horse")); 
+    System.out.println( hasLengthOfInt5.test("India"));
    
     Predicate</code> <<code> String</code> > <code> negateStartsWithCharJ = 
            startsWithCharJ.negate();
@@ -2585,8 +2585,8 @@ false</code>
            hasLengthOfInt5.negate();</code> 
     
     <span class="code-comment">// Calling after negate predicate</span> 
-    <code>System.out.println(negateStartsWithCharJ.test("Horse")); 
-    System.out.println(negatehasLengthOfInt5.test("India")); 
+    <code>System.out.println( negateStartsWithCharJ.test("Horse")); 
+    System.out.println( negatehasLengthOfInt5.test("India")); 
 } 
 
 Output:
@@ -2611,9 +2611,9 @@ false</code>
     Predicate</code><<code>String</code>> <code>startsWithCharHOrHasLengthOf5 = 
           startsWithCharH.or(hasLengthOfInt5);
 
-    System.out.println(startsWithCharHOrHasLengthOf5.test("Hero")); 
-    System.out.println(startsWithCharHOrHasLengthOf5.test("India")); 
-    System.out.println(startsWithCharHOrHasLengthOf5.test("Method"));
+    System.out.println( startsWithCharHOrHasLengthOf5. test("Hero") ); 
+    System.out.println( startsWithCharHOrHasLengthOf5. test("India") ); 
+    System.out.println( startsWithCharHOrHasLengthOf5. test("Method") );
         
     } 
     
@@ -2649,7 +2649,7 @@ false</code>
         }
 };</code>
 <span class="code-comment" style="color:red">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
-<code>System.out.println(addFunction.apply(500)); 
+<code>System.out.println( addFunction.apply( 500 )); 
 } 
 </code>
 </pre>    
@@ -2669,7 +2669,7 @@ false</code>
                                  
 <pre><code>public static void main(<code>String</code>[] args) { 
     Supplier</code><<code>String</code>> <code>supplier = () -> "Hello World";
-    System.out.println(supplier.get());        
+    System.out.println( supplier.get() );        
 };
 
 Output:
