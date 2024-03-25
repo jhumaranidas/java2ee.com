@@ -2356,8 +2356,8 @@
   public int multiple(int x,int y);
 }
 
-public class Calculate {
- public static void main (String[] args) {</code>
+public class Calculate></code><code>{
+ public static void main (String[] args) {</code> 
   <span class="code-comment">//with lambda</span>
   <code>MultipleInterface m = (x, y) -> {
   //System.out.println( "Drawing "+width);
@@ -2375,7 +2375,7 @@ Multiple Value is 200
 					
 
 					
-						<h2> - @FunctionalInterface Annotation</h2>
+						<h2> @FunctionalInterface Annotation</h2>
 							<p>
                                 @FunctionalInterface annotation is optional but it is used to ensure that the functional interface
                                 can’t have more than one abstract method.  If you add more than one abstract methods, an ‘Unexpected @FunctionalInterface annotation’ message you can get.
@@ -2444,7 +2444,7 @@ Area of Square is 100
 <code>import java.util.function.Consumer;
 public class ConsumerInterfaceExample Area {
 
-    static void welcomeGreeting (String name){
+    static void welcomeGreeting (</code><code>String</code> name){
         System.out.println("Welcome "+name);
     }
     static void showAge (int age){
@@ -2454,9 +2454,9 @@ public class ConsumerInterfaceExample Area {
           System.out.println("Your salary is "+sal);
     }
 
-    public static void main(String[] args) {</code>
+    public static void main(<code>String</code>[] args) {</code>
         <span class="code-comment">//method reference</span>
-        <code>Consumer<String> consumer1 = 
+        <code>Consumer<<code>String</code> consumer1 = 
             ConsumerInterfaceExample::welcomeGreeting;</code>  
         <span class="code-comment">// Calling Consumer method</span>
         <code>consumer1.accept("Tejas"); </code>    
@@ -2513,7 +2513,7 @@ Your salary is 20000
                                         <h2 class="m-l-20">Example of Predicate test method</h2>
 
 <pre>
-<code>public static void main(String[] args) { </code>
+<code>public static void main(<code>String</code>[] args) { </code>
     <span class="code-comment">// Creating predicate  </span> 
     <code>Predicate</code><<code>Integer</code>> <code>pr = a -> (a > 10);</code>
     <span class="code-comment">// Calling Predicate method </span> 
@@ -2527,7 +2527,7 @@ true</code>
                                         <dd>- t is a static method of the Predicate interface that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
                                         <h2 class="m-l-20">Example of Predicate isEqual method</h2>  
 <pre>
-<code>public static void main(String[] args) { </code> 
+<code>public static void main(<code>String</code>[] args) { </code> 
   <span class="code-comment">// Creating predicate </span>
   <code>Predicate</code><<code>String</code>> <code>pr = 
     Predicate.isEqual("MyAllText"); </code>
@@ -2548,7 +2548,7 @@ false</code>
                                         <li><b>default Predicate and(Predicate other)</b></li>
                                         <dd>- This method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
                                         <h2 class="m-l-20">Example of Predicate and method</h2>  
-<pre><code>public static void main(String[] args) {  
+<pre><code>public static void main(<code>String</code>[] args) {  
     Predicate</code><<code>Integer</code>> <code>pr1 = x -> (x > 20);
     Predicate</code><<code>Integer</code>> <code>pr2 = x -> (x < 80);</code>
     <span class="code-comment">// Creating predicate method</span>
@@ -2569,7 +2569,7 @@ false</code>
                                         <li><b>default Predicate negate()</b></li>
                                         <dd>- The negate() method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
                                         <h2 class="m-l-20">Example of Predicate negate method</h2>  
-<pre><code>public static void main(String[] args) { 
+<pre><code>public static void main(<code>String</code>[] args) { 
     Predicate</code><<code>String</code>> <code>startsWithCharJ = 
           s -> s.startsWith("H");
     Predicate</code><<code>String</code>> <code>hasLengthOfInt5 = 
@@ -2601,7 +2601,7 @@ false</code>
                                         <li><b>or(Predicate other)</b></li>
                                         <dd>- The or() method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
                                         <h2 class="m-l-20">Example of Predicate or method</h2>  
-<pre><code>public static void main(String[] args) { 
+<pre><code>public static void main(<code>String</code>[] args) { 
     Predicate</code><<code>String</code>> <code>startsWithCharH = 
           s -> s.startsWith("H");
 
@@ -2638,7 +2638,7 @@ false</code>
                                   for the given key. <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="function interface in java 8" class="font-15">details..</a>
                                  
                                  
-<pre><code>public static void main(String[] args) {  
+<pre><code>public static void main(<code>String</code>[] args) {  
     private static HashMap</code><<code>Integer</code>, <code>String</code>><code> Employee = 
                 new HashMap</code><><code>();
     Function</code><<code>Integer</code>, <code>String</code>><code> addFunction = (Integer ID)-> {
@@ -2667,7 +2667,7 @@ false</code>
                                 The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
                                 <a target="_blank" href="https://java2ee.com/supplier-interface-in-java-8" title="supplier interface in java 8" class="font-15">details..</a>
                                  
-<pre><code>public static void main(String[] args) { 
+<pre><code>public static void main(<code>String</code>[] args) { 
     Supplier</code><<code>String</code>> <code>supplier = () -> "Hello World";
     System.out.println(supplier.get());        
 };
