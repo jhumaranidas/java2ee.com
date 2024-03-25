@@ -2457,19 +2457,19 @@ public class ConsumerInterfaceExample Area {
     public static void main(<code>String</code>[] args) {</code>
         <span class="code-comment">//method reference</span>
         <code>Consumer<<code>String</code> consumer1 = 
-            ConsumerInterfaceExample::welcomeGreeting;</code>  
+            ConsumerInterfaceExample :: welcomeGreeting;</code>  
         <span class="code-comment">// Calling Consumer method</span>
         <code>consumer1.accept("Tejas"); </code>    
          
         <span class="code-comment">//method reference</span>
         </code>Consumer</code><<code>Integer</code> <code>consumer2 =
-            ConsumerInterfaceExample::showAge; </code>
+            ConsumerInterfaceExample :: showAge; </code>
         <span class="code-comment">// Calling Consumer method</span>
         <code>consumer2.accept(30); </code>    
 
         <span class="code-comment">//method reference</span>
         <code>Consumer</code><<code>Integer</code>> <code>consumer2 = 
-            ConsumerInterfaceExample::showSalary;</code>
+            ConsumerInterfaceExample :: showSalary;</code>
         <span class="code-comment">// Calling Consumer method</span>
         <code>consumer2.accept(20000);     
     }
