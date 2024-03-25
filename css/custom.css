@@ -129,11 +129,12 @@ pre{
 	
 }
 
+/*white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
 @media all and (orientation:landscape)
     pre {
-        /*white-space: pre-wrap;
-        word-wrap: break-word;
-        text-align: justify;*/
+        
 		background-color: #FFFFCC;
     border: 1% dashed #FFFFCC;
     padding: 1.2%;
@@ -147,7 +148,7 @@ pre{
     border-left: 3px solid green !important;
     }
 }
-
+*/
 .orange{color:orange;}
 .blue{color:blue;}
 .green{color:green;}
@@ -354,6 +355,29 @@ li.next-botton{
     font-size: medium;
     font-family: monospace;
     border-left: 3px solid green !important;
+	color:black;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  
+  .left-main-div{
+	  width:380px;
+  }
+  pre{
+	  background-color: #FFFFCC;
+    border: 1% dashed #FFFFCC;
+    padding: 1.2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    white-space: pre-wrap !important;
+    width: 90%;
+    color: #145A32;
+    font-size: medium;
+    font-family: monospace;
+    border-left: 3px solid green !important;
+	color:red;
   }
 }
 
