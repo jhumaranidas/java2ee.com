@@ -360,32 +360,37 @@
                                 <ol style="padding-top:0px;">
                                     <li><b>Intermediate operations</b></li>   
                                     <dd style="padding-left:10px;">
-                                          - filter() <br>
-                                          <span class="sub-text">&nbsp;&nbsp;Filters elements based on a specified condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details" class="dec-none">details...</a></span><br>
-                                          - map() <br>
-                                          <span class="sub-text">&nbsp;&nbsp;Transforms each element in a stream to another value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" class="dec-none">details...</a></span><br>
-                                          - sorted() <br>
-                                          <span class="sub-text">&nbsp;&nbsp;Sorts the elements of a stream.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details" class="dec-none">details...</a></span>
+                                           The intermediate operations return another stream as a result,
+                                            they can be chained together to form a pipeline of operations.
+                                            <br>
+                                         - <span class="red">filter()</span> <br>
+                                          <span class="sub-text">Filters elements based on a specified condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details" class="dec-none">details...</a></span><br>
+                                          - <span class="red">map()</span> <br>
+                                          <span class="sub-text">Transforms each element in a stream to another value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" class="dec-none">details...</a></span><br>
+                                          - <span class="red">sorted()</span> <br>
+                                          <span class="sub-text">Sorts the elements of a stream.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details" class="dec-none">details...</a></span>
                                     </dd>                           
                                     <li><b>Terminal operations</b></li>
                                     <dd style="padding-left:10px;">
-                                        - forEach() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;It iterates all the elements in a stream. &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details" class="dec-none"><span>details...</a></span><br>
-                                        - collect() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;It is used to return the result of the intermediate operations performed on the stream.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details" class="dec-none">details...</a></span><br>
-                                        - anyMatch() and allMatch() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;The anyMatch operation checks if any element of a stream matches a given condition, while the allMatch operation checks if all elements &nbsp;&nbsp;satisfy the given condition.&nbsp; <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details" class="dec-none">details...</a></span><br>
-                                        - count() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;The count operation returns the number of elements in a stream as a long value&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details" class="dec-none">details...</a></span><br>
-                                        - reduce() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;It is used to reduce the elements of a stream to a single value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details" class="dec-none">details...</a></span>
+                                        The terminal operation means after calling this method on Stream, you cannot call any other method on Stream.
+                                        <br>
+                                        - <span class="red">forEach() </span><br>
+                                        <span class="sub-text">It iterates all the elements in a stream. &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details" class="dec-none"><span>details...</a></span><br>
+                                        - <span class="red">collect()</span> <br>
+                                        <span class="sub-text">The stream.collect() method accumulate elements of any Stream into a Collection, it is a part of stream terminal operation.  The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java. It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection such as stream().collect(Collectors.toList()).&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details" class="dec-none">details...</a></span><br>
+                                        - <span class="red">anyMatch() and allMatch()</span> <br>
+                                        <span class="sub-text">The anyMatch operation checks if any element of a stream matches a given condition, while the allMatch operation checks if all elements &nbsp;&nbsp;satisfy the given condition.&nbsp; <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details" class="dec-none">details...</a></span><br>
+                                        - <span class="red">count()</span> <br>
+                                        <span class="sub-text">The count operation returns the number of elements in a stream as a long value&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details" class="dec-none">details...</a></span><br>
+                                        - <span class="red">reduce()</span> <br>
+                                        <span class="sub-text">It is used to reduce the elements of a stream to a single value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details" class="dec-none">details...</a></span>
                                   </dd> 
                                     <li><b>Short-circuit operations</b></li>
                                     <dd style="padding-left:10px;">
-                                        - findFirst() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;The findFirst() method finds the first element in a Stream. we use this method when we specifically want the first element from a &nbsp;&nbsp;sequence.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details" class="dec-none">details...</a></span><br>
-                                        - anyMatch() <br>
-                                        <span class="sub-text">&nbsp;&nbsp;It checks the stream if it satisfies the given condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details" class="dec-none">details...</a></span>
+                                        - <span class="red">findFirst() </span><br>
+                                        <span class="sub-text">The findFirst() method finds the first element in a Stream. we use this method when we specifically want the first element from a &nbsp;&nbsp;sequence.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details" class="dec-none">details...</a></span><br>
+                                        - <span class="red">anyMatch()</span> <br>
+                                        <span class="sub-text">It checks the stream if it satisfies the given condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details" class="dec-none">details...</a></span>
                                   </dd> 
                                 </ol>
                             </p>             

@@ -19,20 +19,20 @@
         <meta name="theme-color" content="#f10d0d">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="foreach in java in java 8, foreach method in java in java 8, stream foreach method in java 8, stream foreach java 8, list.foreach in java 8, java foreach list of objects, foreach loop in java, stream foreach example, java stream foreach lambda, java foreach(), java foreach example">          
-        <meta name=description content="The forEach() method is a default method defined in Iterable and Stream interface. It is an terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result. ">
+        <meta name=keywords content="collect method in java 8, java stream collect to list, java stream collect to map, collect to map, collect to list, stream collect to map, stream collect method, collect() method in java 8">          
+        <meta name=description content="The stream.collect() method accumulate elements of any Stream into a Collection, it is a part of stream terminal operation.  The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java. It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection such as stream().collect(Collectors.toList()). ">
         <meta property="og:locale" content="en_IN">
         <meta property="og:type" content="article">
         <meta property="og:title" content="Java Stream collect Method">
-        <meta property="og:description" content="The forEach() method is a default method defined in Iterable and Stream interface. It is an terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result. ">
+        <meta property="og:description" content="The stream.collect() method accumulate elements of any Stream into a Collection, it is a part of stream terminal operation.  The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java. It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection such as stream().collect(Collectors.toList()). ">
         <meta property="og:url" content="https://java2ee.com/stream/stream-collect-method-in-java-8">
         <meta property="og:site_name" content="java2ee">
         <meta property="article:tag" content="Java Stream collect Method">
         <meta property="article:section" content="Java Stream collect Method">
 
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-22T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-22T12:59:35+00:00">
+        <meta property="article:published_time" content="2024-03-25T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-03-25T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-03-25T12:59:35+00:00">
         <title>Java Stream collect Method</title>
     </head>
     <body> 
@@ -761,12 +761,12 @@
             -->
             <div id="page-content-wrapper">
                 <div class="container-fluid header"> 
-                    <h1>Stream Collect Method In Java 8</h1>    
-                    <a target="_blank" class="next-link" title="Stream Collect Method In Java 8" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                    <h1>Stream Collect() Method In Java 8</h1>    
+                    <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream forEach() method</span>
+                             <span class="next-topic-name">Java Stream anyMatch() method</span>
                         </span>&nbsp;        
                     </a> 
                     <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
@@ -795,115 +795,125 @@
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
 						    <h2> - Stream collect() Method</h2>
 							<p>
-                                
-                                Stream collect() Method is a part of stream terminal operation. 
-                                It is used to return the result of the intermediate operations performed on the stream.
-                                The purpose of the forEach() method is iterating 
-                                the elements one by one of a <a class="font-15" target="_blank" class="font-15" href="https://java2ee.com/core-java/collections-in-java">Collection</a> to produce a result.
-                                 It accept one single argument which is a 
-                                functional interface. So, you can pass a lambda expression in argument.
+                            The stream.collect() method accumulate elements of any Stream into a Collection, 
+                            it is a part of stream terminal operation. <br> 
+                            The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java.
+                            It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection 
+                            such as <span style="color:chocolate"> stream().collect(Collectors.toList()), stream().collect(Collectors.toSet()),
+                             stream().collect(Collectors.toMap(....)), stream().collect(Collectors.counting() </span> etc.. 
+                               
+                             <br>  <br>
+                                It is used to perform different types of reduction operations such as 
+                                calculating the sum of numeric values, finding the minimum or maximum number, 
+                                concatenating strings to new string, collecting elements into a new stream.
+
+                    
                                  <br><br>
-                                
+<pre>
+<code>List<</code><code>Integer</code>> evenNumList = list.stream().filter( i-> i%2==0 )
+<span class="code-comment red">//Converting filtered data to a List using collect method</span>
+.<b><span class="red">collect</span></b>(Collectors.toList());
+</code></pre>
+                                 
 
                                 <ol>
-                                    <li><b>The forEach() method is an terminal operation.</b></li>
-                                    <li><b>The forEach() method is a default method defined in Iterable and Stream interface.</b></li>                                   
-                                    <li><b>The forEach() method iterates the elements one by one of a <a class="font-15" target="_blank" class="font-15" title="Collections In Java" href="https://java2ee.com/core-java/collections-in-java"> Collection</a> to produce a result.</b></li>
-                                    <li><b>The forEach() method accept one single argument which is a 
-                                        <a class="font-15" target="_blank" class="font-15" title="Functional Interfaces In Java 8" href="https://java2ee.com/functional-interfaces-in-java-8"> functional interface</a>.</b></li>
-                                    <li><b>We can pass a <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/lambda/lambda-expression-in-java"> lambda expression</a> in argument.</b></li>
+                                    <li><b>The stream.collect() method is a part of stream terminal operation.</b></li>
+                                    <li><b>The stream.collect() method accumulate elements of any Stream into a Collection.</b></li>
+                                    <li><b>It is used to convert to list, stream().collect(Collectors.toList()).</b></li>
+                                    <li><b>It is used to convert to map, stream().collect(Collectors.toMap()).</b></li>
+                                    <li><b>It is used to convert to map, stream().collect(Collectors.toSet()).</b></li>
+                                    <li><b>It is used for calculating the sum of numeric values.</b></li>
+                                    <li><b>It is used for calculating the sum of numeric values.</b></li>
+                                    <li><b>It is used for calculating the sum of numeric values.</b></li>
+                                    <li><b>It is used for collecting elements into a new stream.</b></li>
+                                    <li><b>It is used for concatenating strings to new string.</b></li>
+                                    <li><b>It is used for finding the minimum or maximum number.</b></li>
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                            
-<pre><code> default void forEach(Consumer<<code>super T</code>>action)  </code>
-</pre>
+<pre><code> stream.collect() </code></pre>
 
-<h2 class="m-l-20"> Example of forEach() method in Java 8:</h2>
+<h2 class="m-l-20"> Example of collect() method for the convrting Stream to List</h2>
                                            
 <pre><code><span class="code-comment">//Importing required classes</span>
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class ForEachExample {
+public class CollectMethodExample {
  public static void main(String args[]){
     <span class="code-comment">//Declaring List</span>
-    List<</code><code>String</code>> countryList = new ArrayList<<code>String</code>>();
-    countryList.add("Afghanistan");
-    countryList.add("Albania");
-    countryList.add("Algeria");
-    countryList.add("India");
-    countryList.add("Australia");
-    countryList.add("India");
-    countryList.add("Brazil");
-    countryList.add("Japan");
-    countryList.add("Italy");
+    List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
+    intList.add(6);
+    intList.add(11);
+    intList.add(14);
+    intList.add(7);
+    intList.add(3);
+    intList.add(2);
+    intList.add(16);
+    intList.add(15);
+    intList.add(19);
 
-    <span class="code-comment red">//forEach method to printing country names</span>
-    countryList.forEach(country -> System.out.println(country));
+    List<</code><code>Integer</code>> evenNumList = 
+    intList.stream()
+    .filter( i-> i%2==0 )
+    <span class="code-comment red">//Converting filtered data to a List</span>
+    .collect(Collectors.toList());
+
+    System.out.println( "Even Num List" +evenNumList)
+
   }
 }
 
 Output:
-Afghanistan
-Albania
-Algeria
-India
-Australia
-India
-Brazil
-Japan
-Italy
+Even Num List [6, 14, 2, 16]
 </pre>
 
-<h2 class="m-l-20"> Example of Java Stream forEach Objects:</h2>
+<h2 class="m-l-20"> Example of collect() method for the convrting Stream to Map</h2>
                                            
 <pre>
 <code>public</code> <span class="blue"> <code>class</code></span> Students <code>{</code>
-    <code>private Integer</code> age;
-    <code>private String</code> name;
+ <code>Integer</code> rollNumber;
+ <code>final String</code> studentName;;
+  Students(<code>Integer</code> rollNumber,<code>String</code> name){
+   this.rollNumber=rollNumber;
+   this.studentName=name;
+  }
 
-    Students(<code>Integer</code> age,<code>String</code> name){
-        this.age=age;
-        this.name=name;
-    }
-    <span class="code-comment red">//toString() method for printing</span>
-    <code>public String</code> toString() {
-        return this.age + ", "+ this.name;
-    }
+ <code>public String</code> toString() {
+    return this.rollNumber + ", "+ this.studentName;
+ }
 <code>}</code>
-
-
 
 <span class="code-comment">//Importing required classes</span>
 <span class="blue"><code> import java.util.*;</code> </span>
 <span class="blue"><code> import java.io.*;</code> </span>
 <span class="blue"><code> import java.util.stream.*;</code> </span>
 
-<code>public</code> <span class="blue"> <code>class</code></span> SortedExampleWithComparator <code>{</code>
-
+<code>public</code> <span class="blue"> <code>class</code></span> CollectMapExample <code>{</code>
  <span class="orange"><code>public static void main (String args[]){ </code> </span>
   List<<code>Students</code>> studentsList = new ArrayList<<code>Students</code>>();
-  studentsList.add(new Students(18,"Pankaj"));
-  studentsList.add(new Students(20,"Prakash"));
-  studentsList.add(new Students(16,"Karim"));
-  studentsList.add(new Students(19,"Shyam"));
-    
-  studentsList
-   .stream()
-   <span class="code-comment red">//filtering the studentsList with age greater than 15 </span>
-   .filter(s -> s.age>15)
-   <span class="code-comment red">//forEach with method reference</span>
-   .forEach(System.out::println);   
-  <code>}</code>
-        
+  studentsList.add(new Students(1,"Pankaj"));
+  studentsList.add(new Students(6,"Prakash"));
+  studentsList.add(new Students(3,"Karim"));
+  studentsList.add(new Students(2,"Shyam"));
+  studentsList.add(new Students(4,"Tejas"));
+  studentsList.add(new Students(5,"Rahul"));
+               
+  Map<<code>Integer</code>, <code>String</code>> studentMap =
+    studentsList.stream()
+    .collect(
+        Collectors
+        .toMap(
+            p -> p.rollNumber, p -> p.studentName));
+
+ <span class="code-comment">//Printing the map</span>
+  System.out.println( "Student Map " +studentMap);
+ <code>}</code>         
 <code>}</code>
 
-
 Output:
-20, Prakash
-16, Karim
-19, Tejas
-
+{1=Pankaj, 2=Shyam, 3=Karim, 4=Tejas, 5=Rahul, 6=Prakash}
 </pre>   
                               
 </p>
@@ -916,13 +926,13 @@ Output:
 
 
                         <div class="container-fluid"> <br>  
-                            <a target="_blank" class="next-link" title="Stream Collect Method In Java 8" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                            <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
                                 <span class="next-botton">
                                     <span class="next-topic">Next Topic </span>
                                      <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Collect Method In Java 8</span>
+                                     <span class="next-topic-name">Java Stream anyMatch() method</span>
                                 </span>&nbsp;        
-                            </a> 
+                            </a>  
                             <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
                                 <span class="next-botton">
         
