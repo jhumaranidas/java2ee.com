@@ -363,7 +363,8 @@ li.next-botton{
   /* For mobile phones: */
   
   .left-main-div{
-	  width:380px;
+	  width:370px !important;
+	  padding-right:10px !important;
   }
   pre{
 	  background-color: #FFFFCC;
