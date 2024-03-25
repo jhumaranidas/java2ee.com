@@ -2349,22 +2349,23 @@
 						
 					 
 						<h2> - Example of functional interface with lambda</h2>
-<pre>
-<code>/*@FunctionalInterface*/  </code><span class="code-comment" style="color:red;">//It is optional</span>
+<pre style="width:98%">
+<span class="code-comment" style="color:red;">//It is optional</span>
+<code>/*@FunctionalInterface*/  </code>
 <code>public interface MultipleInterface {
-	public int multiple(int x,int y);
+  public int multiple(int x,int y);
 }
 
 public class Calculate {
-	public static void main (String[] args) {</code>
-		<span class="code-comment">//with lambda</span>
-		<code>MultipleInterface m = (x, y) -> {
-			//System.out.println("Drawing "+width);
-			return x * y;
-		};
+ public static void main (String[] args) {</code>
+  <span class="code-comment">//with lambda</span>
+  <code>MultipleInterface m = (x, y) -> {
+  //System.out.println( "Drawing "+width);
+  return x * y;
+ };
 
-	  int multipleVal =   m.multiple(10,20);
-	  System.out.println("Multiple Value is "+multipleVal);
+ int multipleVal =   m.multiple(10,20);
+ System.out.println( "Multiple Value is "+multipleVal);
 }
 
 Output:
