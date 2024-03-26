@@ -11,6 +11,11 @@
   <priority>0.95</priority>
 </url>
 <url>
+  <loc>https://java2ee.com/stream/stream-reduce-method-in-java-8.html</loc>
+  <lastmod>2024-03-26T02:20:24+00:00</lastmod>
+  <priority>0.96</priority>
+</url>
+<url>
   <loc>https://java2ee.com/stream/stream-api-in-java-8</loc>
   <lastmod>2024-03-22T02:20:24+00:00</lastmod>
   <priority>0.94</priority>
@@ -90,5 +95,11 @@
   <loc>https://java2ee.com/stream/stream-allmatch-method-in-java-8.html</loc>
   <lastmod>2024-03-26T02:20:24+00:00</lastmod>
   <priority>0.79</priority>
+</url>
+
+<url>
+  <loc>https://java2ee.com/stream/stream-count-method-in-java-8.html</loc>
+  <lastmod>2024-03-26T02:20:24+00:00</lastmod>
+  <priority>0.78</priority>
 </url>
 </urlset>
