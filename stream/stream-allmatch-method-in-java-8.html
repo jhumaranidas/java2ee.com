@@ -12,29 +12,29 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel=canonical href=https://java2ee.com/stream/stream-anymatch-method-in-java-8.html>
+        <link rel=canonical href=https://java2ee.com/stream/stream-allmatch-method-in-java-8.html>
         <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
         <meta name="theme-color" content="#f10d0d">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="stream anyMatch() in java with examples, anymatch in java 8, java stream anymatch example">          
-        <meta name=description content="The anyMatch method returns whether any elements of this stream match the provided predicate. The anyMatch method executes untill determining the result,when presented with infinite input, its terminate the loop execution when found any match and returns the value.">
+        <meta name=keywords content="stream allMatch() in java with examples, allMatch in java 8, java stream allmatch example">          
+        <meta name=description content="The allMatch method returns whether all elements of this stream match the provided predicate. Its check whether all elements are present or not in the given stream.">
         <meta property="og:locale" content="en_IN">
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Stream anyMatch() in Java with examples">
-        <meta property="og:description" content="The anyMatch method returns whether any elements of this stream match the provided predicate. The anyMatch method executes untill determining the result,when presented with infinite input, its terminate the loop execution when found any match and returns the value. ">
-        <meta property="og:url" content="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
+        <meta property="og:title" content="Stream allMatch() in Java with examples">
+        <meta property="og:description" content="The allMatch method returns whether all elements of this stream match the provided predicate. Its check whether all elements are present or not in the given stream.">
+        <meta property="og:url" content="https://java2ee.com/stream/stream-allmatch-method-in-java-8">
         <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Stream anyMatch() in Java with examples">
-        <meta property="article:section" content="Stream anyMatch() in Java with examples">
+        <meta property="article:tag" content="Stream allMatch() in Java with examples">
+        <meta property="article:section" content="Stream allMatch() in Java with examples">
         <meta name="google-adsense-account" content="ca-pub-1973149732345742">
         
         <meta property="article:published_time" content="2024-03-25T12:59:35+00:00">
         <meta property="article:modified_time" content="2024-03-25T12:59:35+00:00">
         <meta property="og:updated_time" content="2024-03-26T12:59:35+00:00">
-        <title>Stream anyMatch() in Java with examples</title>
+        <title>Stream allMatch() in Java with examples</title>
     </head>
     <body> 
         <div class="d-flex" id="wrapper">
@@ -593,7 +593,7 @@
             -->
             <div id="page-content-wrapper">
                 <div class="container-fluid header"> 
-                    <h1>Stream anyMatch() Method In Java 8</h1>    
+                    <h1>Stream allMatch() Method In Java 8</h1>    
                     <a target="_blank" class="next-link" title="Stream allMatch Method In Java 8" href="https://java2ee.com/stream/stream-allmatch-method-in-java-8">
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
@@ -625,31 +625,29 @@
                 </div>
 				<div id="right-main-div">
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream anyMatch() Method In Java 8</h2>
+						    <h2> - Stream allMatch() Method In Java 8</h2>
 							<p>
-                             The anyMatch method returns whether any elements of this stream match the provided predicate. 
-                             The anyMatch method executes untill determining the result,when presented with infinite input.
-                             Its terminate the loop execution when found any match and returns the value.
+                             The allMatch method returns whether all elements of this stream match the provided predicate. 
+                             Its check whether all elements are present or not in the given stream.
 
                                 <ol>
-                                    <li><b>The anyMatch method returns whether any elements of this stream match the provided predicate.</b></li>
-                                    <li><b>The anyMatch method executes untill determining the result,when presented with infinite input.</b></li>
-                                    <li><b>Its terminate the loop execution when found any match and returns the value.</b></li>
+                                    <li><b>The allMatch method returns whether all elements of this stream match the provided predicate.</b></li>
+                                    <li><b>Its check whether all elements are present or not in the given stream.</b></li>
                                     <li><b>boolean result = list.stream().anyMatch(n ->  n == 5); It will check whether 5 is available in the list.</b></li>
-                                    <li><b>Return type Boolean, returns true if matches or returns false if does not matches.</b></li>
+                                    <li><b>Return type Boolean, returns true if all elements are present</b></li>
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                            
-<pre><code> boolean anyMatch(Predicate<? super T> predicate) </code></pre>
+<pre><code> boolean allMatch(Predicate<? super T> predicate) </code></pre>
 
-<h2 class="m-l-20"> Example of anyMatch() method</h2>
+<h2 class="m-l-20"> Example of allMatch() method</h2>
                                            
 <pre><code><span class="code-comment">//Importing required classes</span>
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.*;
 
-public class AnyMatchMethodExample {
+public class AllMatchMethodExample {
  public static void main(String args[]){
   <span class="code-comment">//Declaring List</span>
   List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
@@ -664,7 +662,35 @@ public class AnyMatchMethodExample {
   intList.add(19);
 
 boolean result = intList.stream().anyMatch(n 
-                    -> n==14); 
+                    -> n%2 == 0); 
+
+System.out.println( result )
+
+  }
+}
+
+Output:
+false
+</pre>
+
+<h2 class="m-l-20"> Example of allMatch() method</h2>
+                                           
+<pre><code><span class="code-comment">//Importing required classes</span>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.*;
+
+public class AllMatchMethodExample {
+ public static void main(String args[]){
+  <span class="code-comment">//Declaring List</span>
+  List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
+  intList.add(6);
+  intList.add(14);
+  intList.add(2);
+  intList.add(16);
+
+boolean result = intList.stream().anyMatch(n 
+                    -> n%2 == 0); 
 
 System.out.println( result )
 
@@ -673,9 +699,7 @@ System.out.println( result )
 
 Output:
 true
-</pre>
-
-                
+</pre>           
 </p>
 
 
