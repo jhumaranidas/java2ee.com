@@ -102,4 +102,50 @@
   <lastmod>2024-03-26T02:20:24+00:00</lastmod>
   <priority>0.78</priority>
 </url>
+
+<url>
+  <loc>https://java2ee.com/stream/stream-predicate-and-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.77</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-predicate-isequal-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.76</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-predicate-negate-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-predicate-or-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.74</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-predicate-test-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.73</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-anymatch-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.72</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-findfirst-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.71</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-andthen-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-accept-method-in-java-8.html</loc>
+  <lastmod>2024-03-27T02:20:24+00:00</lastmod>
+  <priority>0.69</priority>
+</url>
 </urlset>
