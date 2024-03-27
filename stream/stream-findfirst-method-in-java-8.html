@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8>
+        <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
+        <link rel="manifest" href="../image/fevicon/site.webmanifest">
+        <link rel="mask-icon" href="../image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
+        <link rel="shortcut icon" sizes="16x16" href="../image/fevicon/favicon-16x16.png" type=image/x-icon>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel=canonical href=https://java2ee.com/stream/stream-findfirst-method-in-java-8.html>
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/custom.css" rel="stylesheet" />
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name=keywords content="findFirst method in java 8, java stream findFirst, findfirst return optional, findfirst in java stream example, findfirst example of strings, findfirst example of empty list, findfirst example of integers,">          
+        <meta name=description content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty.">
+        <meta property="og:locale" content="en_IN">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Java Stream findFirst Method">
+        <meta property="og:description" content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty.">
+        <meta property="og:url" content="https://java2ee.com/stream/stream-findfirst-method-in-java-8">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:tag" content="Java Stream findFirst Method">
+        <meta property="article:section" content="Java Stream findFirst Method">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+        
+        <meta property="article:published_time" content="2024-03-25T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-03-25T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-03-27T12:59:35+00:00">
+        <title>Java Stream findFirst Method</title>
+    </head>
+    <body> 
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div id="sidebar-wrapper">
+                <div class="sidebar-heading">
+                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
+                </div>
+                <div class="list-group list-group-flush">
+                    <ul>
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                    
+                         
+                    </ul>
+                </div> 
+            </div> 
+            <!-- Page content wrapper  <h1 class="mt-2">Java 8 Stream</h1>
+            <span class="next-botton">Next Topic >></span>
+                        <a target="_blank" href="https://java2ee.com/stream/stream-perations-in-java">
+                            <span>Java Stream Operations In Java</span>
+                        </a>
+            -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid header"> 
+                    <h1>Stream findFirst() Method In Java 8</h1>    
+                    <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
+                        <span class="next-botton">
+                            <span class="next-topic">Next Topic </span>
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Java Stream anyMatch() method</span>
+                        </span>&nbsp;        
+                    </a> 
+                    <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
+                        <span class="next-botton">
+
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
+                        </span>&nbsp;        
+                    </a>  
+                    <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                        <span class="next-botton">
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Stream Filter Method In Java</span>
+                        </span>&nbsp;        
+                    </a>  
+                    <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
+                        <span class="next-botton">
+                            
+                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                             <span class="next-topic-name">Java Stream map() method</span>
+                        </span>&nbsp;        
+                    </a> 
+                   
+                </div>
+				<div id="right-main-div">
+                       <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
+						    <h2> - Stream findFirst() Method</h2>
+							<p>
+
+                            The findFirst() method is a part of stream Short circuit operation in Java Stream.
+                            It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.
+ 
+                            <ol>
+                                <li><b>The findFirst() method is a part of stream short circuit operation.</b></li>
+                                <li><b>It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.</b></li>
+                                <li><b>Syntex is <span class="red">Optional<<code>T</code>> findFirst()</span>.</b></li>
+                            </ol>
+                                <h2 class="m-l-20"> Syntax:</h2>
+                                           
+<pre>Optional<<code>T</code>> findFirst()</pre>
+
+<h2 class="m-l-20"> Example of findFirst() method of Strings in Java Stream</h2>
+                                           
+<pre><code><span class="code-comment">//Importing required classes</span>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+public class FindFirstExample {
+
+    public static void main(String args[]) {
+        List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
+        strList.add("One");
+        strList.add("Two");
+        strList.add("Three");
+        strList.add("Four");
+        strList.add("Five");
+    
+        Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+    
+        System.out.println(firstElement);
+        System.out.println(firstElement.get());
+    }
+
+Output:
+Optional[One]
+One
+</pre>
+
+<h2 class="m-l-20"> Example of findFirst() method of Integers in Java Stream</h2>
+                                           
+<pre><code><span class="code-comment">//Importing required classes</span>
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Optional;
+    
+    public class FindFirstExample {
+    
+        public static void main(String args[]) {
+            List<<code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
+            intList.add(100);
+            intList.add(90);
+            intList.add(80);
+            intList.add(70);
+            intList.add(200);
+        
+            Optional<<code>Integer</code>> firstElement = intList.stream().findFirst();
+        
+            System.out.println(firstElement);
+            System.out.println(firstElement.get());
+        }
+    
+    Output:
+    Optional[100]
+    100
+    </pre>
+           
+    <h2 class="m-l-20"> Example of findFirst() method of empty list in Java Stream</h2>
+                                           
+<pre><code><span class="code-comment">//Importing required classes</span>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+public class FindFirstExample {
+
+    public static void main(String args[]) {
+        List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
+       
+        Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+    
+        System.out.println( firstElement );
+        System.out.println( "Optional.get() of empty" );
+        System.out.println( firstElement.get() );
+    }
+
+Output:
+Optional.empty
+Optional.get() of empty
+<span class="red">Exception in thread "main" java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.school.stream.FindFirstExample.main(FindFirstExample.java:21)</span>
+</pre>
+
+</p>
+
+
+                   <div class="col-sm-12 col-md-12 bottom-add">
+                        
+                    </div> 
+
+
+
+                        <div class="container-fluid"> <br>  
+                            <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
+                                <span class="next-botton">
+                                    <span class="next-topic">Next Topic </span>
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Java Stream anyMatch() method</span>
+                                </span>&nbsp;        
+                            </a>  
+                            <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
+                                <span class="next-botton">
+        
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
+                                </span>&nbsp;        
+                            </a>  
+                            <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                <span class="next-botton">
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Stream Filter Method In Java</span>
+                                </span>&nbsp;        
+                            </a>  <br><br>
+                            <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
+                                <span class="next-botton">
+                                    
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Java Stream map() method</span>
+                                </span>&nbsp;        
+                            </a> 
+                            <a target="_blank" class="next-link" title="Java Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                <span class="next-botton">
+        
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Java Stream Operations In Details</span>
+                                </span>&nbsp;        
+                            </a> 
+                            <a target="_blank" class="next-link" title="Stream reduce() method In Details" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                <span class="next-botton">
+        
+                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                                     <span class="next-topic-name">Stream reduce() method</span>
+                                </span>&nbsp;        
+                            </a>  
+                        </div> <br><br>
+
+
+					
+				        </div> <!--end left-->
+                        <!--start right-->
+                        <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                           
+                        </div>   <!--end right-->
+                    </div>
+                    
+		        </div>
+	        </div>
+        </div>
+    <div class="cookie-consent">      
+            By using our site, you acknowledge that you have read and understood our
+            <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;
+            <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
+    </div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/scripts.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WNN8BHZLNW');
+        </script>
+        <script>
+            window.addEventListener("load", (event) => {
+               
+                if(document.getElementById('right-adv')!=0){
+                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                    if(height>300){
+                        height=height-117;
+                    }
+                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+                }
+                
+            });
+           
+        </script>
+    </body>
+</html>
