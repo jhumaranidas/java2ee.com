@@ -793,19 +793,19 @@
 						    <h2> - Stream forEach() Method</h2>
 							<p>
                                 
-                                The forEach() method is a default method defined in Iterable and Stream interface. 
+                                The forEach() method is a default method defined in the Iterable and Stream interface. 
                                 It is a terminal operation. The purpose of the forEach() method is iterating 
                                 the elements one by one of a <a class="font-15" target="_blank" class="font-15" href="https://java2ee.com/core-java/collections-in-java">Collection</a> to produce a result.
                                  It accept one single argument which is a 
-                                functional interface. So, you can pass a lambda expression in argument.
+                                functional interface. So, you can pass a <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/lambda/lambda-expression-in-java"> lambda expression</a> in argument.
                                  <br><br>
                                 
 
                                 <ol>        
-                                    <li><b>The forEach() method is a default method in Iterable and Stream interface.</b></li>                                   
-                                    <li><b>The forEach() method is a <a class="font-15" target="_blank" class="font-15" title="Stream Terminal Operation" href="https://java2ee.com/stream/stream-operations-in-java-8"> terminal operation</a>.</b></li>
-                                    <li><b>The forEach() method iterates the elements one by one of a <a class="font-15" target="_blank" class="font-15" title="Collections In Java" href="https://java2ee.com/core-java/collections-in-java"> Collection</a> to produce a result.</b></li>
-                                    <li><b>The forEach() method accept one single argument which is a 
+                                    <li><b>The  <b><span class="red"><i>forEach()</i></span></b> method is a default method in the Iterable and Stream interface.</b></li>                                   
+                                    <li><b>The  <b><span class="red"><i>forEach()</i></span></b> method is a <a class="font-15" target="_blank" class="font-15" title="Stream Terminal Operation" href="https://java2ee.com/stream/stream-operations-in-java-8"> terminal operation</a>.</b></li>
+                                    <li><b>The  <b><span class="red"><i>forEach()</i></span></b> method iterates the elements one by one of a <a class="font-15" target="_blank" class="font-15" title="Collections In Java" href="https://java2ee.com/core-java/collections-in-java"> Collection</a> to produce a result.</b></li>
+                                    <li><b>The  <b><span class="red"><i>forEach()</i></span></b> method accept one single argument which is a 
                                         <a class="font-15" target="_blank" class="font-15" title="Functional Interfaces In Java 8" href="https://java2ee.com/functional-interfaces-in-java-8"> functional interface</a>.</b></li>
                                     <li><b>We can pass a <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/lambda/lambda-expression-in-java"> lambda expression</a> in argument.</b></li>
                                 </ol>
@@ -814,16 +814,16 @@
 <pre><code> default void forEach(Consumer<<code>super T</code>>action)  </code>
 </pre>
 
-<h2 class="m-l-20"> Example of forEach() method in Java 8:</h2>
+<h2 class="m-l-20"> Example of forEach() method in Java 8</h2>
                                            
 <pre><code><span class="code-comment">//Importing required classes</span>
 import java.util.ArrayList;
 import java.util.List;
-
-public class ForEachExample {
- public static void main(String args[]){
+<b>
+public class <span class="blue">ForEachExample {
+ public static void main(String args[]){</span></b>
     <span class="code-comment">//Declaring List</span>
-    List<</code><code>String</code>> countryList = new ArrayList<<code>String</code>>();
+   List<</code><code>String</code>> countryList = new ArrayList<<code>String</code>>();
     countryList.add("Afghanistan");
     countryList.add("Albania");
     countryList.add("Algeria");
@@ -835,8 +835,10 @@ public class ForEachExample {
 
     <span class="code-comment red">//forEach method to printing country names</span>
     countryList.forEach(country -> System.out.println(country));
-  }
+   
+ <b><span class="blue"> }
 }
+</span></b>
 
 Output:
 Afghanistan
@@ -851,8 +853,8 @@ Italy
 
 <h2 class="m-l-20"> Example of Java Stream forEach method:</h2>
                                            
-<pre>
-<code>public</code> <span class="blue"> <code>class</code></span> Students <code>{</code>
+<pre><b>
+<code>public</code> <span class="blue"> class Students <code>{</code></span></b>
     <code>private Integer</code> age;
     <code>private String</code> name;
 
@@ -864,18 +866,20 @@ Italy
     <code>public String</code> toString() {
         return this.age + ", "+ this.name;
     }
+<b>
+<span class="blue">   
 <code>}</code>
-
-
+</span>
+</b>
 
 <span class="code-comment">//Importing required classes</span>
-<span class="blue"><code> import java.util.*;</code> </span>
-<span class="blue"><code> import java.io.*;</code> </span>
-<span class="blue"><code> import java.util.stream.*;</code> </span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public <span class="blue"> class SortedExampleWithComparator {
 
-<code>public</code> <span class="blue"> <code>class</code></span> SortedExampleWithComparator <code>{</code>
-
- <span class="orange"><code>public static void main (String args[]){ </code> </span>
+public static void main (String args[]){ </code></b>
   List<<code>Students</code>> studentsList = new ArrayList<<code>Students</code>>();
   studentsList.add(new Students(18,"Pankaj"));
   studentsList.add(new Students(20,"Prakash"));
@@ -888,10 +892,11 @@ Italy
    .filter(s -> s.age>15)
    <span class="code-comment red">//forEach with method reference</span>
    .forEach(System.out::println);   
-  <code>}</code>
-        
-<code>}</code>
-
+   
+<b><span class="blue">
+   <code>}</code>    
+<code>}</code></span>
+</b>
 
 Output:
 20, Prakash

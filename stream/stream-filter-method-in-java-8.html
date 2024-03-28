@@ -615,17 +615,17 @@
 						    <h2> - Stream filter() method</h2>
 							<p>
                                 
-                                The filter method provides functionality to filter stream elements on the basis of given <a target="_blank" href="https://java2ee.com/lambda-expression-in-java">lambda</a> expression or 
-                                <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a>. 
+                                The filter method provides the functionality to filter stream's elements on the basis of given <a target="_blank" class="font-15" href="https://java2ee.com/lambda-expression-in-java">lambda</a> expression or 
+                                <a target="_blank" title="Predicate in java" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a>. 
                                 The filter method expects a lambda expression or predicate in argument and the lambda
                                 expression returns a boolean(true/false) value, based on boolean value filter method filters the elements.
                                 
                                 <ol>
-                                    <li><b>filter() is an intermediate Stream operation.</b></li>                                   
-                                    <li><b>filter method expects a <a target="_blank" href="https://java2ee.com/lambda-expression-in-java">lambda</a>  expression or <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a> in argument.</b></li>
-                                    <li><b>Predicate is a functional interface. So, you can also pass lambda expression here.</b></li>
-                                    <li><b>filter() method does not change/modify the original source(collection)</b></li>
-                                    <li><b>filter() method creates a new collection(list/array) based on condition and returns the new collection.</b></li>
+                                    <li><b>filter() is an intermediate stream operation.</b></li>                                   
+                                    <li><b>filter method expects a <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-in-java">lambda</a>  expression or <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a> in argument.</b></li>
+                                    <li><b>The <a target="_blank" title="Predicate in java" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java-8">Predicate</a>.  is a functional interface. So, you can also pass lambda expression here.</b></li>
+                                    <li><b>filter() method does not change/modify the original source/collection.</b></li>
+                                    <li><b>filter() method creates a new collection(list/array) based on the condition and returns the new collection.</b></li>
                                     <li><b>Stream does not modify the source. It produces a new Stream by filtering or applying any logic.</b></li>
                                     
                                 </ol>
@@ -634,30 +634,30 @@
 <pre><code>Stream<</code><code>T</code>><code> filter(Predicate</code><<code>? super T> predicate)</code>  
 </pre>
 
-<h2 class="m-l-20"> Example of filterig data using lamda expression in argument:</h2>
+<h2 class="m-l-20"> Example of filterig data using <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-in-java">Lambda Expression</a> in arguments</h2>
 
 <pre>
 <span class="code-comment">//Importing required classes</span>
-<span class="blue"><code> import java.util.*;</code> </span>
-<span class="blue"><code> import java.io.*;</code> </span>
-<span class="blue"><code> import java.util.stream.*;</code> </span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class FilterExample {</code></span>
 
-<code>public</code> <span class="blue"> <code>class</code></span> FilterExample <code>{</code>
+<code>static void main (String args[]){ </code></b>
+  <code>Integer</code><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
 
-    <span class="orange"><code>static void main (String args[]){ </code> </span>
-        <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
-
-        <span class="code-comment">//Filtering the even numbers from a collection</span>
-        <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-          <code>Arrays.asList(numbers).stream() </code>
-                <span class="code-comment">//passing lambda expression in argument</span>
-                <code>.filter(i -> i % 2 == 0)</code>
-                <code>.collect(Collectors.toList());</code>
-                <code>         
-        System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); 
-                </code>
+  <span class="code-comment">//Filtering the even numbers from a collection</span>
+  <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
+  <code>Arrays.asList(numbers).stream() </code>
+  <span class="code-comment">//passing lambda expression in argument</span>
+            <code>.filter(i -> i % 2 == 0)</code>
+            <code>.collect(Collectors.toList());</code>
+            <code>         
+  System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList);</code>
+<b> <code>}</code>
 <code>}</code>
-
+</b>
 Output:
 Filtered even numbers : [2, 4, 6, 8, 10, 12]
 </pre>   
@@ -667,27 +667,28 @@ Filtered even numbers : [2, 4, 6, 8, 10, 12]
 
 <pre>
 <span class="code-comment">//Importing required classes for stream</span>
-<span class="blue"><code> import java.util.*;</code> </span>
-<span class="blue"><code> import java.io.*;</code> </span>
-<span class="blue"><code> import java.util.stream.*;</code> </span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class PredicateFilterExample </span></code>
 
-<code>public</code> <span class="blue"> <code>class</code></span> PredicateFilterExample <code>{</code>
+ <code>static void main (String args[]){ </code></b>
+ <span class="code-comment red">//Creating predicate</span>
+ Predicate<<code>Integer</code>> pr = i -> (i % 2 == 0);
+ <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8};</code>
 
-    <span class="orange"><code>static void main (String args[]){ </code> </span>
-        <span class="code-comment" style="color:red;">//Creating predicate</span>
-        Predicate<<code>Integer</code>> pr = i -> (i % 2 == 0);
-        <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8};</code>
-
-        <span class="code-comment">//Filtering the even numbers from a collection</span>
-        <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-          <code>Arrays.asList(numbers).stream() </code>
-                <span class="code-comment" style="color:red;">//passing predicate in argument</span>
-                <code>.filter(pr)</code>
-                <code>.collect(Collectors.toList());</code>
-                <code>         
-        System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); 
-                </code>
+ <span class="code-comment">//Filtering the even numbers from a collection</span>
+ <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
+    <code>Arrays.asList(numbers).stream() </code>
+        <span class="code-comment" style="color:red;">//passing predicate in argument</span>
+        <code>.filter(pr)</code>
+        <code>.collect(Collectors.toList());</code>
+        <code>         
+ System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); </code>
+<b> <code>}</code>
 <code>}</code>
+</b>
 
 Output:
 Filtered even numbers : [2, 4, 6, 8]

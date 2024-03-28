@@ -1006,15 +1006,15 @@
                                 
                                 Stream interface provides a sorted() method to sort a list.
                                 Stream sorted() method returns a sorted stream according to the natural order.
-                                If the elements are not comparable, it throws <span class="orange"><i>java.lang.ClassCastException</i></span>. 
+                                If the elements are not comparable, it throws <span class="red"><i><b>java.lang.ClassCastException</b></i></span>. 
                                  <br><br>
                                 It also returns a sorted stream according to the provided comparator.
 
                                 <ol>
-                                    <li><b>Stream sorted() method is an intermediate operation.</b></li>
-                                    <li><b>Stream interface provides a sorted() method to sort a list.</b></li>                                   
-                                    <li><b>Stream sorted() method returns a stream sorted according to the natural order.</b></li>
-                                    <li><b>If the elements are not comparable, it throws <span class="orange"><i>java.lang.ClassCastException</i></span>.</b></li>
+                                    <li><b>Stream <b><span class="red"><i>sorted()</i></span></b> method is an <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Intermediate Operations">intermediate operation</a>.</b></li>
+                                    <li><b>Stream interface provides a <b><span class="red"><i>sorted()</i></span></b> method to sort a list.</b></li>                                   
+                                    <li><b>Stream <b><span class="red"><i>sorted()</i></span></b> method returns a sorted stream according to the natural order.</b></li>
+                                    <li><b>If the elements are not comparable, it throws <span class="red"><i><b>java.lang.ClassCastException</b></i></span>.</b></li>
                                     <li><b>It also returns a sorted stream according to the provided comparator.</b></li>
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
@@ -1031,22 +1031,23 @@
 
 <pre>
 <span class="code-comment">//Importing required classes</span>
-<span class="blue"><code> import java.util.*;</code> </span>
-<span class="blue"><code> import java.io.*;</code> </span>
-<span class="blue"><code> import java.util.stream.*;</code> </span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code><span class="blue"> <code>class StreamSortedExample {</code></span>
 
-<code>public</code> <span class="blue"> <code>class</code></span> StreamSortedExample <code>{</code>
-
-    <span class="orange"><code>public static void main (String args[]){ </code> </span>
-        <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
-        <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
-          <code>Arrays.asList(numbers).stream() </code>
-                <code>.sorted()</code>
-                <code>.collect(Collectors.toList());</code>
-                <code>         
-        System.out.println("<span class="green">"Sorted list : </span>"+ sortedList); 
-                </code>
+<code>public static void main (String args[]){ </code> </b>
+  <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
+  <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
+  <code>Arrays.asList(numbers).stream() </code>
+        <code>.sorted()</code>
+        <code>.collect(Collectors.toList());</code>
+        <code>         
+  System.out.println("<span class="green">"Sorted list : </span>"+ sortedList); </code>
+<b> <code>}</code>
 <code>}</code>
+</b>
 
 Output:
 Sorted list : [1, 2, 5, 7, 11, 13, 16, 20, 28, 100, 440]
@@ -1055,23 +1056,24 @@ Sorted list : [1, 2, 5, 7, 11, 13, 16, 20, 28, 100, 440]
 
 <h2 class="m-l-20"> Example of stream sorted method with <a target="_blank" class="font-15" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="stream foreach method">forEach method</a></h2>
 <pre>
-    <span class="code-comment">//Importing required classes</span>
-    <span class="blue"><code> import java.util.*;</code> </span>
-    <span class="blue"><code> import java.io.*;</code> </span>
-    <span class="blue"><code> import java.util.stream.*;</code> </span>
-    
-    <code>public</code> <span class="blue"> <code>class</code></span> StreamSortedExample <code>{</code>
-    
-        <span class="orange"><code>public static void main (String args[]){ </code> </span>
-            <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
-            <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
-              <code>Arrays.asList(numbers).stream() </code>
-                    <code>.sorted()</code>
-                <span class="code-comment red">//forEach with method reference</span>
-                <code>.forEach(System.out::println);</code>
-                
-    <code>}</code>
+<span class="code-comment">//Importing required classes</span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class StreamSortedExample {</code></span>
 
+ <code>public static void main (String args[]){ </code> </span></b>
+  <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
+  <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
+  <code>Arrays.asList(numbers).stream() </code>
+                <code>.sorted()</code>
+            <span class="code-comment red">//forEach with method reference</span>
+            <code>.forEach(System.out::println);</code>
+<b>           
+  <code>}</code>
+<code>}</code>
+</b> 
 
 Output:
 1
@@ -1087,48 +1089,49 @@ Output:
 440
 </pre>   
 
-<h2 class="m-l-20"> Example of sorted method with <a class="font-15" target="_blank" class="font-15" href="https://java2ee.com/core-java/comparator-in-java">Comparator</a> in argument:</h2>
+<h2 class="m-l-20"> Example of sorted method with <a class="font-15" target="_blank" class="font-15" title="Comparator Example In Java" href="https://java2ee.com/core-java/comparator-in-java">Comparator</a> in argument:</h2>
 
-<pre>
-    <code>public</code> <span class="blue"> <code>class</code></span> Students <code>{</code>
-        <code>private Integer</code> age;
-        <code>private String</code> name;
-    
-        Students(<code>Integer</code> age,<code>String</code> name){
-            this.age=age;
-            this.name=name;
-        }
-    
-        <code>public String</code> toString() {
-            return this.age + ", "+ this.name;
-        }
-    <code>}</code>
+<pre><b>
+<code>public</code> <span class="blue"> <code>class Students {</code></b>
+    <code>private Integer</code> age;
+    <code>private String</code> name;
 
-    <span class="code-comment">//Importing required classes</span>
-    <span class="blue"><code> import java.util.*;</code> </span>
-    <span class="blue"><code> import java.io.*;</code> </span>
-    <span class="blue"><code> import java.util.stream.*;</code> </span>
-    
-    <code>public</code> <span class="blue"> <code>class</code></span> SortedExampleWithComparator <code>{</code>
-    
-        <span class="orange"><code>public static void main (String args[]){ </code> </span>
-            List<<code>Students</code>> studentsList = new ArrayList<<code>Students</code>>();
-                studentsList.add(new Students(18,"Pankaj"));
-                studentsList.add(new Students(20,"Prakash"));
-                studentsList.add(new Students(16,"Karim"));
-                studentsList.add(new Students(19,"Shyam"));
-            
-                studentsList
-                .stream()
-                <span class="code-comment red">//comparator</span>
-                .sorted((s1, s2)->s1.age.compareTo(s2.age))
-                <span class="code-comment red">//forEach with method reference</span>
-                .forEach(System.out::println);
-            
-            <code>}</code>
-                
-    <code>}</code>
+    Students(<code>Integer</code> age,<code>String</code> name){
+        this.age=age;
+        this.name=name;
+    }
 
+    <code>public String</code> toString() {
+        return this.age + ", "+ this.name;
+    }
+
+<span class="blue"><b><code>}</code></b></span>
+
+<span class="code-comment">//Importing required classes</span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class SortedExampleWithComparator {
+
+public static void main (String args[]){ </code></span></b>
+    List<<code>Students</code>> studentsList = new ArrayList<<code>Students</code>>();
+    studentsList.add(new Students(18,"Pankaj"));
+    studentsList.add(new Students(20,"Prakash"));
+    studentsList.add(new Students(16,"Karim"));
+    studentsList.add(new Students(19,"Shyam"));
+
+    studentsList
+    .stream()
+    <span class="code-comment red">//comparator</span>
+    .sorted((s1, s2)->s1.age.compareTo(s2.age))
+    <span class="code-comment red">//forEach with method reference</span>
+    .forEach(System.out::println);
+<span class="blue"> <b> 
+    <code>}           
+}</code>
+</b>
+</span>
 
 Output:
 16, Karim

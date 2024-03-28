@@ -616,7 +616,7 @@
             -->
             <div id="page-content-wrapper">
                 <div class="container-fluid header"> 
-                    <h1>Stream API Map Method in Java 8</h1> 
+                    <h1>Stream Map Method in Java 8</h1> 
                     <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-sorted-method-in-java">
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
@@ -650,17 +650,16 @@
 						    <h2> - Stream map() method</h2>
 							<p>
                                 
-                                The stream map(Function mapper) is an intermediate operation. Stream map() method is used to transform 
-                                elements of a stream by applying a mapping function to each element. The mapped stream is then returned
-                                as a new stream.
-                                This method accepts a Function mapper object as an argument. This function describes how each element
+                                The stream map(Function mapper) is an intermediate operation. This method transforms
+                                elements of a stream by applying a mapping function to each of the elements and returns a new stream.
+                                It accepts a Function mapper object as an argument. This function describes how each element
                                  in the original stream is transformed into an element in the new stream.
 
                                 <ol>
-                                    <li><b>Stream map(Function mapper) is an intermediate operation.</b></li>                                   
-                                    <li><b>Stream map() method accepts a Function mapper object in argument.</b></li>
-                                    <li><b>Stream map() method is used to transform elements of a stream by applying a mapping function to each element.</b></li>
-                                    <li><b>Stream map() method returnes a new stream.</b></li>
+                                    <li><b>Stream<span class="red"> map(Function mapper)</span> is an <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Intermediate Operations">intermediate operation</a>.</b></li>                                   
+                                    <li><b>Stream <span class="red"> map()</span> method accepts a Function mapper object in argument.</b></li>
+                                    <li><b>Stream <span class="red"> map()</span> method is used to transform elements of a stream by applying a mapping function to each of the elements.</b></li>
+                                    <li><b>Stream <span class="red"> map()</span> method returnes a new stream.</b></li>
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                            
@@ -671,26 +670,28 @@
 
 <pre>
 <span class="code-comment">//Importing required classes</span>
-<span class="blue"><code> import java.util.*;</code> </span>
-<span class="blue"><code> import java.io.*;</code> </span>
-<span class="blue"><code> import java.util.stream.*;</code> </span>
-
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
 <code>public</code> <span class="blue"> <code>class</code></span> StreamMapExample <code>{</code>
 
-    <span class="orange"><code>public static void main (String args[]){ </code> </span>
-        <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
-        <span class="code-comment">//Filtering the even numbers from a collection</span>
-        <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-          <code>Arrays.asList(numbers).stream() </code>
-                <span class="code-comment">//passing lambda expression in argument</span>
-                <code>.filter(i -> i % 2 == 0)</code>
-                <span class="code-comment red">//multiplying by 2 for each element after filter</span>
-                <code>.map(i -> i*2)</code>
-                <code>.collect(Collectors.toList());</code>
-                <code>         
-        System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); 
-                </code>
+ <code>public static void main (String args[]){ </code></b>
+
+   <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
+   <span class="code-comment">//Filtering the even numbers from a collection</span>
+   <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
+   <code>Arrays.asList(numbers).stream() </code>
+    <span class="code-comment">//passing lambda expression in argument</span>
+        <code>.filter(i -> i % 2 == 0)</code>
+        <span class="code-comment red">//multiplying by 2 for each element after filter</span>
+        <code>.map(i -> i*2)</code>
+        <code>.collect(Collectors.toList());</code>
+        <code>         
+  System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); </code>
+<b> <code>}</code>
 <code>}</code>
+</b>
 
 Output:
 Filtered even numbers : [2, 4, 6, 8, 10, 12]
@@ -699,27 +700,26 @@ Filtered even numbers : [2, 4, 6, 8, 10, 12]
 
 <h2 class="m-l-20"> Example of stream map method with <a target="_blank" class="font-15" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="stream foreach method">forEach method</a></h2>
 <pre>
-    <span class="code-comment">//Importing required classes</span>
-    <span class="blue"><code> import java.util.*;</code> </span>
-    <span class="blue"><code> import java.io.*;</code> </span>
-    <span class="blue"><code> import java.util.stream.*;</code> </span>
-    
-    <code>public</code> <span class="blue"> <code>class</code></span> StreamMapExample <code>{</code>
-    
-        <span class="orange"><code>public static void main (String args[]){ </code> </span>
-            <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
-            <span class="code-comment">//Filtering the even numbers from a collection</span>
-            <code>Arrays.asList(numbers).stream() </code>
-                <span class="code-comment">//passing lambda expression in argument</span>
-                <code>.filter(i -> i % 2 == 0)</code>
-                <span class="code-comment red">//multiplying by 2 for each element after filter</span>
-                <code>.map(i -> i*2)</code>
-                <span class="code-comment red">//forEach with method reference</span>
-                <code>.forEach(System.out::println);</code>
-                
-    <code>}</code>
+<span class="code-comment">//Importing required classes</span>
+<span class="blue"><code>import java.util.*;</code> </span>
+<span class="blue"><code>import java.io.*;</code> </span>
+<span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class</code></span> StreamMapExample <code>{</code>
 
-
+ <code>public static void main (String args[]){ </code></b>
+  <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
+  <span class="code-comment">//Filtering the even numbers from a collection</span>
+  <code>Arrays.asList(numbers).stream() </code>
+        <span class="code-comment">//passing lambda expression in argument</span>
+        <code>.filter(i -> i % 2 == 0)</code>
+        <span class="code-comment red">//multiplying by 2 for each element after filter</span>
+        <code>.map(i -> i*2)</code>
+        <span class="code-comment red">//forEach with method reference</span>
+        <code>.forEach(System.out::println);</code>     
+  <b class="orange"><code>}</code></b>
+<b><code>}</code></b>
+</span>
 Output:
 6
 12
