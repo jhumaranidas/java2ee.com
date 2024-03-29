@@ -20,26 +20,36 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
+        <meta name=facebook-domain-verification content="">
         -->
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="function interface in java, function interface in java 8, function interface methods in java 8, function interface in java example, function interface method, stream function interface, stream function in java, stream function in java 8, stream function example, stream function definition">          
-        <meta name=description content="The function interface is a type functional interface, receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Function Interface In Java">
-        <meta property="og:description" content="The function interface is a type functional interface, receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key.">
-        <meta property="og:url" content="https://java2ee.com/function-interface-in-java">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Function Interface In Java">
-        <meta property="article:section" content="Function Interface In Java">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
+        <meta name=keywords content="function interface in java, function interface in java 8, function interface methods in java 8, function interface in java example, function interface method, stream function interface, stream function in java, stream function in java 8, stream function example, stream function definition"/>          
+        <meta name=description content="The function interface is a type functional interface, receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key."/>
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Function Interface In Java"/>
+        <meta property="og:description" content="The function interface is a type functional interface, receives a single argument, processes it, and returns a value. Functional interface is taking the key from the user as input and searching for the value in the map for the given key."/>
+        <meta property="og:url" content="https://java2ee.com/function-interface-in-java"/>
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Function Interface In Java"/>
+        <meta property="article:section" content="Function Interface In Java"/>
 
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-22T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-22T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - function interface" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
+        
         <title>Function Interface In Java</title>
     </head>
     <body>
@@ -308,32 +318,66 @@
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
 						<h2> - Function interface</h2>
                         <p>
-                            The function type functional interface receives a single argument, processes it, and returns a value.
+                            The <b>function</b> type functional interface receives a single argument, processes it, and returns a value.
                              Functional interface is taking the key from the user as input and searching for the value in the map
-                              for the given key.
+                              for the given key. <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="function interface in java 8" class="font-15">details..</a>
                              
-                             
+                              <h2 class="m-l-20">Example of Function interface </h2>             
 <pre>
-<code>public static void main(String[] args) {  </code>
-  <code>private static HashMap</code><<code>Integer</code>, <code>String</code>> Employee = 
-      <code>new HashMap<>();</code>
-  <code>Function</code><<code>Integer</code>, <code>String</code>> addFunction = <code>(Integer ID)-> {</code>
-      <code>if(Employee.containsKey(ID)) {</code>
-        <code>return Employee.get(ID);</code>
-      <code>}else{</code>
-        <code>return</code> "Invalid ID";
-    <code> }</code>
- <code> }</code>
+<b class="blue"><code>public static void main(<code>String</code>[] args) { </b> 
+private static HashMap</code><<code>Integer</code>, <code>String</code>><code> employeeMap = 
+        new HashMap</code><><code>();
+Function</code><<code>Integer</code>, <code>String</code>><code> addFunc = (Integer ID)-> {
+    if(employeeMap.containsKey(ID)) {
+        return employeeMap.get(ID);
+    }else{
+        return "Invalid ID";
+    }
+};</code>
+<span class="code-comment red">// Returns the Employee object if present in the hashmap or return Invalid Id message </span>       
+<code>System.out.println( addFunc.apply( 500 )); 
+<b class="blue">};</b></code>
+</code>
+</pre>  
 
-  <span class="code-comment" style="color:red;">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
-  <code>System.out.println(addFunction.apply(500)); </code>
-<code> }</code>
 
-</pre>    
+<h2 class="m-l-20">Example of Function interface </h2>             
+<pre>
+import java.util.HashMap;
+import java.util.function.Function;
+<b class="blue">
+public class EmployeeFunctionExample {</b>
+
+    private static HashMap<<code>Integer, String</code>> employeeMap =
+            new HashMap<>();
+    static Function<<code>Integer, String</code>> addFunc = (Integer ID) -> {
+        if (employeeMap.containsKey(ID)) {
+            return employeeMap.get(ID);
+        } else {
+            return "Invalid ID";
+        }
+    };
+    <b class="blue">
+    public static void main(String args[]) {</b>
+
+        employeeMap.put(100, "Employee1");
+        employeeMap.put(200, "Employee1");
+        employeeMap.put(300, "Employee1");
+
+        System.out.println(addFunc.apply(500));
+        System.out.println(addFunc.apply(100));
+        <b class="blue">
+    }
+}</b>
+
+Output:
+Invalid ID
+Employee1
+    </pre> 
 
                         <h2 class="m-l-20">Bi Function</h2>
                          <p>
-                            Bi-function is just like a function except it takes two arguments. Two arguments are must in Bi-function. Just like a function it also returns a value.
+                           <b>Bi-function</b> is just like a function except it takes two arguments. Two arguments are must in Bi-function. Just like a function it also returns a value.
                           </p>
                     </p>     
                     <div class="col-sm-12 col-md-12 bottom-add">

@@ -18,26 +18,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
+        <meta name=facebook-domain-verification content="">
         -->
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="supplier functional interface,supplier interface,supplier interface in java,supplier interface with example in java">          
-        <meta name=description content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Supplier Interfaces In Java">
-        <meta property="og:description" content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.">
-        <meta property="og:url" content="https://java2ee.com/supplier-interface-in-java-8">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Supplier Interfaces In Java">
-        <meta property="article:section" content="Supplier Interfaces In Java">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
+        <meta name=keywords content="supplier functional interface,supplier interface,supplier interface in java,supplier interface with example in java"/>          
+        <meta name=description content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier."/>
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Supplier Interfaces In Java"/>
+        <meta property="og:description" content="The Supplier functional interface is also a type of functional interface that does not take any input or argument and returns a single output.  On calling the supplier it simply returns a value. The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier."/>
+        <meta property="og:url" content="https://java2ee.com/supplier-interface-in-java-8"/>
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Supplier Interfaces In Java"/>
+        <meta property="article:section" content="Supplier Interfaces In Java"/>
 
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-22T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-27T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - supplier interface" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
         <title>Supplier Interface In Java</title>
     </head>
     <body>
@@ -324,10 +333,9 @@
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
 						<h2 class="m-l-20"> - Supplier Interface In Java</h2>
                              <p>
-                                The Supplier functional interface is also a type of functional interface that does not take any input 
-                                or argument and returns a single output.  On calling the supplier it simply returns a value. 
-                                The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
-                                 
+                                The <b>Supplier functional interface</b> is also a type of functional interface that does not take any input 
+                                or argument and returns a single output. 
+                                The <b>Supplier interface</b> takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
                                 <h2 class="m-l-20"> Example of Supplier Interface</h2>     
 <pre><code>public static void main(String[] args) { 
     Supplier</code><<code>String</code>> <code>supplier = 
@@ -339,6 +347,30 @@
 Output:
 Hello World</code>
 </pre>    
+
+<h2 class="m-l-20"> Example of Supplier Interface</h2>     
+<pre><code>public static void main(String[] args) { 
+    Supplier</code><<code>Integer</code>> <code>supplier = 
+      () -> 500;
+
+    System.out.println(supplier.get());        
+} 
+
+Output:
+500</code>
+</pre> 
+
+<h2 class="m-l-20"> Example of Supplier Interface</h2>     
+<pre><code>public static void main(String[] args) { 
+    Supplier</code><<code>Integer</code>> <code>supplier = 
+      () -> 100;
+
+    System.out.println(supplier.get());        
+} 
+
+Output:
+100</code>
+</pre> 
 							</p> 
 
 

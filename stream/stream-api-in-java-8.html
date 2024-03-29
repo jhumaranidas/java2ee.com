@@ -18,26 +18,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--
         <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="xo7t4ve2wn3ywfkjdvwbrk01pvdond">
+        <meta name=facebook-domain-verification content="">
         -->
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="stream api tutorial, java stream api tutorial, stream, java stream api, lambda expression, stream api in java, java 8 stream, java 8 stream api, java stream tutorial, java 8 streams examples, stream api java 8, java stream example, stream example, java 8 features, lambda expression in java">          
-        <meta name=description content="The stream is designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Stream API Full Tutorial">
-        <meta property="og:description" content="The stream is designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection.">
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
+        <meta name=keywords content="stream api tutorial, java stream api tutorial, stream, java stream api, lambda expression, stream api in java, java 8 stream, java 8 stream api, java stream tutorial, java 8 streams examples, stream api java 8, java stream example, stream example, java 8 features, lambda expression in java"/>          
+        <meta name=description content="The stream is designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection."/>
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Stream API Full Tutorial"/>
+        <meta property="og:description" content="The stream is designed to be efficient and can support improving the performance of programs. We can avoid unnecessary loops and iterations in our programs by using Stream functionality. Streams can be used for filtering, collecting, printing, and converting data from one structure to another such as one collection to another collection."/>
         <meta property="og:url" content="https://java2ee.com/stream/stream-api-in-java-8">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Stream API Full Tutorial">
-        <meta property="article:section" content="Stream API Full Tutorial">
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Stream API Full Tutorial"/>
+        <meta property="article:section" content="Stream API Full Tutorial"/>
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
         
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-22T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-22T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - stream tutorial" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
         <title>Stream API Full Tutorial</title>
     </head>
     <body>      
@@ -405,7 +414,7 @@
 						    <h2> - Stream API in Java 8</h2>
 							<p>
                                 
-                                Streams are designed to be efficient and can support improving the performance of programs.
+                                <b>Stream API</b> are designed to be efficient and can support improving the performance of programs.
                                  We can avoid unnecessary loops and iterations in our programs by using Stream functionality. 
                                 Streams can be used for filtering, collecting, printing, and converting data from one structure to another
                                 such as one collection to another collection.
@@ -431,22 +440,24 @@
 <span class="blue"><code>import java.io.*;</code> </span>
 <span class="blue"><code>import java.util.*;</code> </span>
 <span class="blue"><code>import java.util.stream.*;</code> </span>
+<b>
+<code>public</code> <span class="blue"> <code>class</code> StreamFilterExample <code>{</code>
 
-<code>public</code> <span class="blue"> <code>class</code></span> StreamFilterExample <code>{</code>
+<code>static void main (String args[]){ </code> </span></b>
+    <span class="blue"><code>int</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10};</code>
 
-    <span class="orange"><code>static void main (String args[]){ </code> </span>
-        <span class="blue"><code>int</code></span><code>[] numbers = {1,2,3,4,5,6,7,8,9,10};</code>
-
-        <span class="code-comment">//Filtering the even numbers from a collection</span>
-        <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-          <code>Arrays.asList(numbers).stream() </code>
-                <code>.filter(i -> i % 2 == 0)</code>
-                <code>.collect(Collectors.toList());</code>
-                <code>         
-        System.out.println("<span class="green">Even numbers after stream operation : </span>"+ evenList); 
-                </code>
-<code>}</code>
-
+    <span class="code-comment">//Filtering the even numbers from a collection</span>
+    <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
+        <code>Arrays.asList(numbers).stream() </code>
+            <code>.filter(i -> i % 2 == 0)</code>
+            <code>.collect(Collectors.toList());</code>
+            <code>         
+    System.out.println("<span class="green">Even numbers after stream operation : </span>"+ evenList); </code>         
+<b class="blue">          
+<code> }
+}
+</code>
+</b> 
 Output:
 Even numbers after stream operation : [2, 4, 6, 8, 10]
 </pre>                                

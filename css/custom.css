@@ -425,6 +425,17 @@ li.next-botton{
     color: #154360;
 	font-size: 18px;
 }
+.left-main-div ol li b i{
+    color: red;
+    font-weight: 500;
+}
+
+.left-main-div ol li i{
+   color: red;
+   font-weight: 500;
+}
+
+	
 .left-main-div ol li{
    /* font-family: "Volkhov", serif;
     font-weight: 400;

@@ -17,24 +17,34 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="sorted method in java 8, stream sorted methods in java, stream sorted java 8, stream sorted method in java 8, java stream sorted example, stream sorted java, sorted method with Comparator, java stream sorted custom comparator">          
-        <meta name=description content="The stream sorted method is used to sort a list. Stream sorted() method returns a sorted stream according to the natural order. If the elements are not comparable, it throws java.lang.ClassCastException.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Stream Sorted Method In Java 8- java2ee">
-        <meta property="og:description" content="The stream sorted method is used to sort a list. Stream sorted() method returns a sorted stream according to the natural order. If the elements are not comparable, it throws java.lang.ClassCastException.">
-        <meta property="og:url" content="https://java2ee.com/stream/stream-sorted-method-in-java-8">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Stream Sorted Method In Java 8">
-        <meta property="article:section" content="Stream Sorted Method In Java 8">
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
+        <meta name=keywords content="sorted method in java 8, stream sorted methods in java, stream sorted java 8, stream sorted method in java 8, java stream sorted example, stream sorted java, sorted method with Comparator, java stream sorted custom comparator"/>          
+        <meta name=description content="The stream sorted method is used to sort a list. Stream sorted() method returns a sorted stream according to the natural order. If the elements are not comparable, it throws java.lang.ClassCastException."/>
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Stream Sorted Method In Java 8- java2ee"/>
+        <meta property="og:description" content="The stream sorted method is used to sort a list. Stream sorted() method returns a sorted stream according to the natural order. If the elements are not comparable, it throws java.lang.ClassCastException."/>
+        <meta property="og:url" content="https://java2ee.com/stream/stream-sorted-method-in-java-8"/>
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Stream Sorted Method In Java 8"/>
+        <meta property="article:section" content="Stream Sorted Method In Java 8"/>
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
         
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-22T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-22T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - stream sorted method" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
         <title>Stream Sorted Method In Java 8</title>
     </head>
     <body> 
@@ -1004,8 +1014,8 @@
 						    <h2> - Stream sorted() method</h2>
 							<p>
                                 
-                                Stream interface provides a sorted() method to sort a list.
-                                Stream sorted() method returns a sorted stream according to the natural order.
+                                Stream interface provides a <b>sorted()</b> method to sort a list.
+                                Stream <b>sorted()</b> method returns a sorted stream according to the natural order.
                                 If the elements are not comparable, it throws <span class="red"><i><b>java.lang.ClassCastException</b></i></span>. 
                                  <br><br>
                                 It also returns a sorted stream according to the provided comparator.
@@ -1035,9 +1045,9 @@
 <span class="blue"><code>import java.io.*;</code> </span>
 <span class="blue"><code>import java.util.stream.*;</code> </span>
 <b>
-<code>public</code><span class="blue"> <code>class StreamSortedExample {</code></span>
+<code>public</code><span class="blue"> <code>class StreamSortedExample {</code>
 
-<code>public static void main (String args[]){ </code> </b>
+<code>public static void main (String args[]){ </code> </span></b>
   <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
   <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
   <code>Arrays.asList(numbers).stream() </code>
@@ -1045,7 +1055,7 @@
         <code>.collect(Collectors.toList());</code>
         <code>         
   System.out.println("<span class="green">"Sorted list : </span>"+ sortedList); </code>
-<b> <code>}</code>
+<b class="blue"> <code>}</code>
 <code>}</code>
 </b>
 
@@ -1061,16 +1071,16 @@ Sorted list : [1, 2, 5, 7, 11, 13, 16, 20, 28, 100, 440]
 <span class="blue"><code>import java.io.*;</code> </span>
 <span class="blue"><code>import java.util.stream.*;</code> </span>
 <b>
-<code>public</code> <span class="blue"> <code>class StreamSortedExample {</code></span>
+<code>public</code> <span class="blue"> <code>class StreamSortedExample {</code>
 
- <code>public static void main (String args[]){ </code> </span></b>
+ <code>public static void main (String args[]){ </code> </span></span></b>
   <span class="blue"><code>Integer</code></span><code>[] numbers = {100,20,13,440,5,16,7,28,2,11,1};</code>
   <code>List</code><<span class="blue"><code>Integer</code></span>> sortedList = 
   <code>Arrays.asList(numbers).stream() </code>
                 <code>.sorted()</code>
             <span class="code-comment red">//forEach with method reference</span>
             <code>.forEach(System.out::println);</code>
-<b>           
+<b class="blue">           
   <code>}</code>
 <code>}</code>
 </b> 

@@ -16,24 +16,34 @@
         <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name=keywords content="findFirst method in java 8, java stream findFirst, findfirst return optional, findfirst in java stream example, findfirst example of strings, findfirst example of empty list, findfirst example of integers,">          
-        <meta name=description content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Java Stream findFirst Method">
-        <meta property="og:description" content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty.">
-        <meta property="og:url" content="https://java2ee.com/stream/stream-findfirst-method-in-java-8">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Java Stream findFirst Method">
-        <meta property="article:section" content="Java Stream findFirst Method">
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
+        <meta name=keywords content="findFirst method in java 8, java stream findFirst, findfirst return optional, findfirst in java stream example, findfirst example of strings, findfirst example of empty list, findfirst example of integers,"/>          
+        <meta name=description content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty."/>
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Java Stream findFirst Method"/>
+        <meta property="og:description" content="The findFirst() method is a part of stream Short circuit operation in Java Stream. It returns an Optional 1st element of the stream or empty if the stream is empty."/>
+        <meta property="og:url" content="https://java2ee.com/stream/stream-findfirst-method-in-java-8"/>
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Java Stream findFirst Method"/>
+        <meta property="article:section" content="Java Stream findFirst Method"/>
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
         
-        <meta property="article:published_time" content="2024-03-25T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-25T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-27T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - findfirst method" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
         <title>Java Stream findFirst Method</title>
     </head>
     <body> 
@@ -797,11 +807,11 @@
 						    <h2> - Stream findFirst() Method</h2>
 							<p>
 
-                            The findFirst() method is a part of stream Short circuit operation in Java Stream.
+                            The <b>findFirst()</b> method is a part of <a target="_blank" title="Short circuit operation" href="https://java2ee.com/stream/stream-operations-in-java-8">Short circuit operation</a> in Java Stream.
                             It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.
  
                             <ol>
-                                <li><b>The findFirst() method is a part of stream short circuit operation.</b></li>
+                                <li><b>The <i>findFirst()</i> method is a part of stream short circuit operation.</b></li>
                                 <li><b>It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.</b></li>
                                 <li><b>Syntex is <span class="red">Optional<<code>T</code>> findFirst()</span>.</b></li>
                             </ol>
@@ -815,22 +825,24 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+<b class="blue">
 public class FindFirstExample {
 
-    public static void main(String args[]) {
-        List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
-        strList.add("One");
-        strList.add("Two");
-        strList.add("Three");
-        strList.add("Four");
-        strList.add("Five");
-    
-        Optional<<code>String</code>> firstElement = strList.stream().findFirst();
-    
-        System.out.println(firstElement);
-        System.out.println(firstElement.get());
-    }
+  public static void main(String args[]) {</b>
+    List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
+    strList.add("One");
+    strList.add("Two");
+    strList.add("Three");
+    strList.add("Four");
+    strList.add("Five");
+
+    Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+
+    System.out.println(firstElement);
+    System.out.println(firstElement.get());
+<b class="blue"> 
+  }
+}</b>
 
 Output:
 Optional[One]
@@ -840,30 +852,32 @@ One
 <h2 class="m-l-20"> Example of findFirst() method of Integers in Java Stream</h2>
                                            
 <pre><code><span class="code-comment">//Importing required classes</span>
-    import java.util.ArrayList;
-    import java.util.List;
-    import java.util.Optional;
-    
-    public class FindFirstExample {
-    
-        public static void main(String args[]) {
-            List<<code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
-            intList.add(100);
-            intList.add(90);
-            intList.add(80);
-            intList.add(70);
-            intList.add(200);
-        
-            Optional<<code>Integer</code>> firstElement = intList.stream().findFirst();
-        
-            System.out.println(firstElement);
-            System.out.println(firstElement.get());
-        }
-    
-    Output:
-    Optional[100]
-    100
-    </pre>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+<b class="blue">
+public class FindFirstExample {
+
+  public static void main(String args[]) {</b>
+    List<<code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
+    intList.add(100);
+    intList.add(90);
+    intList.add(80);
+    intList.add(70);
+    intList.add(200);
+
+    Optional<<code>Integer</code>> firstElement = intList.stream().findFirst();
+
+    System.out.println(firstElement);
+    System.out.println(firstElement.get());
+<b class="blue">
+    }
+}</b>
+
+Output:
+Optional[100]
+100
+</pre>
            
     <h2 class="m-l-20"> Example of findFirst() method of empty list in Java Stream</h2>
                                            
@@ -871,18 +885,20 @@ One
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+<b class="blue">
 public class FindFirstExample {
 
-    public static void main(String args[]) {
-        List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
-       
-        Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+  public static void main(String args[]) {</b>
+    List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
     
-        System.out.println( firstElement );
-        System.out.println( "Optional.get() of empty" );
-        System.out.println( firstElement.get() );
+    Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+
+    System.out.println( firstElement );
+    System.out.println( "Optional.get() of empty" );
+    System.out.println( firstElement.get() );
+<b class="blue">   
     }
+}</b>
 
 Output:
 Optional.empty
@@ -915,20 +931,20 @@ Optional.get() of empty
                                      <i class="fa fa-angle-double-right ficon-arraw"></i> 
                                      <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
                                 </span>&nbsp;        
-                            </a>  
+                            </a> <br><br> 
                             <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
                                 <span class="next-botton">
                                      <i class="fa fa-angle-double-right ficon-arraw"></i> 
                                      <span class="next-topic-name">Stream Filter Method In Java</span>
                                 </span>&nbsp;        
-                            </a>  <br><br>
+                            </a>  
                             <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
                                 <span class="next-botton">
                                     
                                      <i class="fa fa-angle-double-right ficon-arraw"></i> 
                                      <span class="next-topic-name">Java Stream map() method</span>
                                 </span>&nbsp;        
-                            </a> 
+                            </a> <br><br>
                             <a target="_blank" class="next-link" title="Java Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
                                 <span class="next-botton">
         

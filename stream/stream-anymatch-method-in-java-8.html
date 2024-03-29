@@ -16,24 +16,34 @@
         <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
-        <meta name="theme-color" content="#f10d0d">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">  
+
+        <meta name="theme-color" content="#f10d0d"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
         <meta name=keywords content="stream anyMatch() in java with examples, anymatch in java 8, java stream anymatch example">          
         <meta name=description content="The anyMatch method returns whether any elements of this stream match the provided predicate. The anyMatch method executes untill determining the result,when presented with infinite input, its terminate the loop execution when found any match and returns the value.">
-        <meta property="og:locale" content="en_IN">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="Stream anyMatch() in Java with examples">
+        <meta property="og:locale" content="en_IN"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Stream anyMatch() in Java with examples"/>
         <meta property="og:description" content="The anyMatch method returns whether any elements of this stream match the provided predicate. The anyMatch method executes untill determining the result,when presented with infinite input, its terminate the loop execution when found any match and returns the value. ">
-        <meta property="og:url" content="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
-        <meta property="og:site_name" content="java2ee">
-        <meta property="article:tag" content="Stream anyMatch() in Java with examples">
-        <meta property="article:section" content="Stream anyMatch() in Java with examples">
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+        <meta property="og:url" content="https://java2ee.com/stream/stream-anymatch-method-in-java-8"/>
+        <meta property="og:site_name" content="java2ee"/>
+        <meta property="article:tag" content="Stream anyMatch() in Java with examples"/>
+        <meta property="article:section" content="Stream anyMatch() in Java with examples"/>
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
         
-        <meta property="article:published_time" content="2024-03-25T12:59:35+00:00">
-        <meta property="article:modified_time" content="2024-03-25T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-26T12:59:35+00:00">
+        <meta property="og:type" content="article" />
+        <meta property="article:tag" content="Java - anymatch method" />
+        <meta property="article:tag" content="Java 8" />
+        <meta property="article:tag" content="java-stream" />
+        <meta property="article:tag" content="java-stream-api" />
+        <meta property="article:tag" content="java-interfaces" />
+        <meta property="article:section" content="java" />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
+        <meta property="article:modified_time" content="2024-03-29T12:59:35+00:00"/>
+        <meta property="og:updated_time" content="2024-03-29T12:59:35+00:00"/>
         <title>Stream anyMatch() in Java with examples</title>
     </head>
     <body> 
@@ -628,15 +638,15 @@
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
 						    <h2> - Stream anyMatch() Method In Java 8</h2>
 							<p>
-                             The anyMatch method returns whether any elements of this stream match the provided predicate. 
-                             The anyMatch method executes untill determining the result,when presented with infinite input.
+                             The <b>anyMatch()</b> method returns elements whether any match with the provided <a target="_blank" title="Predicate In Java" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a>. 
+                             The <b>anyMatch()</b> method executes untill determining the result.
                              Its terminate the loop execution when found any match and returns the value.
 
                                 <ol>
-                                    <li><b>The anyMatch method returns whether any elements of this stream match the provided predicate.</b></li>
-                                    <li><b>The anyMatch method executes untill determining the result,when presented with infinite input.</b></li>
+                                    <li><b>The <i>anyMatch</i> method returns elements whether any match with the provided predicate.</b></li>
+                                    <li><b>The <i>anyMatch</i> method executes untill determining the result.</b></li>
                                     <li><b>Its terminate the loop execution when found any match and returns the value.</b></li>
-                                    <li><b>boolean result = list.stream().anyMatch(n ->  n == 5); It will check whether 5 is available in the list.</b></li>
+                                    <li><b><i>boolean result = list.stream().anyMatch(n ->  n == 5);</i> It will check whether 5 is available or not in the list.</b></li>
                                     <li><b>Return type Boolean, returns true if matches or returns false if does not matches.</b></li>
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
@@ -649,9 +659,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.*;
-
+<b class="blue">
 public class AnyMatchMethodExample {
- public static void main(String args[]){
+ public static void main(String args[]){</b>
   <span class="code-comment">//Declaring List</span>
   List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
   intList.add(6);
@@ -664,14 +674,15 @@ public class AnyMatchMethodExample {
   intList.add(15);
   intList.add(19);
 
-boolean result = intList.stream().anyMatch(n 
+  <span class="code-comment red">//calling anymatch method</span>
+  boolean result = intList.stream().anyMatch(n 
                     -> n==14); 
 
-System.out.println( result )
-
+  System.out.println( result )
+<b class="blue">
   }
 }
-
+</b>
 Output:
 true
 </pre>
