@@ -805,10 +805,10 @@
 							<p>
                                 
                                 The <b>forEach()</b> method is a default method defined in the Iterable and Stream interface. 
-                                It is a terminal operation. The purpose of the <b>forEach()</b> method is iterating 
-                                the elements one by one of a <a class="font-15" target="_blank" class="font-15" href="https://java2ee.com/core-java/collections-in-java">Collection</a> to produce a result.
-                                 It accept one single argument which is a 
-                                functional interface. So, you can pass a <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/lambda/lambda-expression-in-java"> lambda expression</a> in argument.
+                                It is a <a class="font-15" target="_blank" class="font-15" title="Terminal Operation In Java" href="https://java2ee.com/stream/stream-operations-in-java-8"> terminal operation</a> in <b>stream API</b>. The purpose of the <b>forEach()</b> method is iterating 
+                                the elements one by one of a <a class="font-15" target="_blank" class="font-15" href="https://java2ee.com/core-java/collections-in-java">Collection</a> to create a result.
+                                The <b>forEach()</b> method accept a single argument which is a 
+                                <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/functional-interfaces-in-java-8"> functional interface</a>. So, you can pass a <a class="font-15" target="_blank" class="font-15" title="Lambda Expression In Java" href="https://java2ee.com/lambda/lambda-expression-in-java"> lambda expression</a> in argument.
                                  <br><br>
                                 
 
@@ -860,6 +860,43 @@ Australia
 Brazil
 Japan
 Italy
+</pre>
+
+<h2 class="m-l-20"> Example of forEach() method in Java 8</h2>
+                                           
+<pre><code><span class="code-comment">//Importing required classes</span>
+import java.util.ArrayList;
+import java.util.List;
+<b>
+public class <span class="blue">ForEachExampleWithFilter {
+ public static void main(String args[]){</span></b>
+    <span class="code-comment">//Declaring List</span>
+   List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
+    intList.add(100);
+    intList.add(99);
+    intList.add(78);
+    intList.add(3);
+    intList.add(6);
+    intList.add(8);
+    intList.add(50);
+    intList.add(55);
+
+    <span class="code-comment red">//forEach method to printing even numbers</span>
+    intList.stream()
+     .filter(i -> i%2==0)
+     <span class="code-comment red">//method reference</span>
+     .forEach(System.out::println);
+   
+ <b><span class="blue"> }
+}
+</span></b>
+
+Output:
+100
+78
+6
+8
+50
 </pre>
 
 <h2 class="m-l-20"> Example of Java Stream forEach method:</h2>
