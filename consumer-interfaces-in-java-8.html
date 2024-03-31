@@ -823,24 +823,30 @@
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
 						<h2> - Consumer interface in Java</h2>
 							<p>
-                                The consumer interface of the functional interface accepts only one argument without any return value.
+                                The <b>consumer interface</b> of the functional interface accepts only one single argument without any return value.
                                 The consumer interface has no return value. It contains an abstract <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">accept()</a> 
                                 and a default <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8" title="andThen method example in java" class="font-15">andThen()</a>  method. 
                                 It can be used as the assignment target for a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java" title="lambda expression in java 8" class="font-15">lambda expression</a> or method reference.
                                 
+                                <ol>
+                                    <li><b>The consumer interface of the <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="Java Functional Interface">functional interface</a> accepts only one single argument without any return value.</b></li>
+                                    <li><b>The consumer interface has no return value.</b></li>
+                                    <li><b>It contains an abstract <i>accept()</i> and a default <i>andThen()</i> method.</b></li>
+                                    
+                                </ol>
                                 <h6>Methods of Consumer Interface.</h6>
                                 <ol>
                                     <li>void accept(T t)</li>
-                                    <dd>- The accept() method takes as input the type T and returns no value. This is the single abstract method of Consumer.
+                                    <dd>The <b>accept()</b> method takes as input the type T and returns no value. This is the single abstract method of Consumer.
                                             It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
-                                            by a lambda expression or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">details..</a>
+                                            by a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java" title="Java Lambda Expression">lambda expression</a> or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">details..</a>
                                        
                                         </dd>
                                     <li>andThen(Consumer<? super T> after)</li>
-                                    <dd>- the  is a default method in the interface. In other words, it has an implementation and is thus non-abstract.
+                                    <dd>The <b>andThen()</b> is a default method in the interface. In other words, it has an implementation and it is non-abstract method.
                                             The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8" title="andThen method in java 8" class="font-15">details..</a>
                                             <br>
-                                        - The andThen() method allows multiple Consumer operations sequentialy.
+                                        The <b>andThen()</b> method allows multiple Consumer operations sequentialy.
                                     </dd>
                                 </ol>
                                     
