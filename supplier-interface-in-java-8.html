@@ -43,6 +43,7 @@
         <meta property="article:tag" content="java-interfaces" />
         <meta property="article:section" content="java" />
         <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+       
         <meta name="google-site-verification" content="VVe8H3tXES8dZj0tGK6QJOTgpBv9jtonXZDD25hQ6Ek" />
         <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
         <meta property="article:modified_time" content="2024-03-30T12:59:35+00:00"/>
@@ -335,7 +336,22 @@
                              <p>
                                 The <b>Supplier functional interface</b> is also a type of functional interface that does not take any input 
                                 or argument and returns a single output. 
-                                The <b>Supplier interface</b> takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
+                                The <b>Supplier interface</b> takes only one generic type, the type of data it is going to return. 
+                                It is having only one method as get() and there is no other method.
+                                 The get() is the abstract method of the Supplier.
+                                <br><br>
+                                If we want to implement of a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java" title="Java Lambda Expression">lambda expression</a>  
+                                with the predefined functional interface and supply our object and don’t want to to provide input.
+                                 So, we prefer the Supplier Predefined Functional Interface. 
+                                 
+                                  <ol>
+                                    <li>The <b>Supplier functional interface</b> is also a type of functional interface that does not take any input 
+                                        or argument and returns a single output.</li>
+                                    <li>It is having only one method as get() and there is no other method.</b></li>                                   
+                                    <li>The get() method is the abstract method of the Supplier.</b></li>
+                                    <li><b>It is enabling functional programming.</b></li>
+                                </ol>
+
                                 <h2 class="m-l-20"> Example of Supplier Interface</h2>     
 <pre><code>public static void main(String[] args) { 
     Supplier</code><<code>String</code>> <code>supplier = 
@@ -370,6 +386,20 @@ Output:
 
 Output:
 100</code>
+</pre> 
+
+<h2 class="m-l-20"> Example of Supplier Interface</h2>     
+<pre><code>public static void main(String[] args) { 
+    Supplier</code><<code>Date</code>> <code> dateSupplier = 
+        ()->new Date();;
+
+    System.out.println(dateSupplier.get());     
+    
+    
+} 
+
+Output:
+Sun Mar 31 10:37:48 IST 2024</code>
 </pre> 
 							</p> 
 
