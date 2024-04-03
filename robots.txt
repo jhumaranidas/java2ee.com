@@ -1,0 +1,6 @@
+
+User-agent: *
+Disallow: /termandpolicy/
+Disallow: /Cookies Policy/
+Disallow: /contactus/
+

@@ -199,14 +199,14 @@ a.list-group-item:hover{
     bottom: 0;
     left: 0;
     right: 0;
-    color: #ABB2B9;
+    color: #5C80A4;
     background-color: #EAECEE;
     box-shadow: 0px 0px 8px 0px;
     padding: 4px;
     z-index: 9999;
     display: block;
-	text-align: center;
-	font-size:10px;
+    text-align: center;
+    font-size:14px;
 }
 .next-botton-top{
 	padding-top:20px;
