@@ -3,4 +3,8 @@ User-agent: *
 Disallow: /termandpolicy/
 Disallow: /Cookies Policy/
 Disallow: /contactus/
+Disallow: /consumer-interfaces-in-java-8/
+Disallow: /supplier-interface-in-java-8/
+
+
 
