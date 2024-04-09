@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Stream Operation Types In Java 8</title>
         <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="stream operation types in java 8, intermediate operation in java stream, terminal operation in java stream, short circuit operation in java stream">          
+        <meta name="description" content="07 Apr 2024 - There are three main types of stream operations such as - Intermediate operations, Terminal operations,  Short-circuit operations.">
+
+        <link rel="canonical" href="https://java2ee.com/stream/stream-operations-in-java-8">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
@@ -11,56 +25,34 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel=canonical href=https://java2ee.com/stream/stream-operations-in-java-8.html>
-        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <!--
-        <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="">
-        -->
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
-        <meta name="theme-color" content="#f10d0d"/>
-        <meta name="msapplication-TileColor" content="#da532c"/>
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
-        <meta name=keywords content="stream operation types in ava 8, stream operations in java 8, stream operations, java stream operations, types of java stream, types of stream api in java, filter method in java 8, map method in java 8, sorted method in java 8, forEach method in java 8, collect method in java 8, anyMatch method in java 8, count method in java 8, reduce method in java 8, anyMatch method in java 8, findFirst method in java 8, anyMatch and allMatch method in java 8"/>          
-        <meta name=description content="01 Apr 2024 - Three types of stream operations 1. Intermediate operations 2. Terminal operations 3. Short-circuit operations."/>
-        <meta property="og:locale" content="en_IN"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Stream Operations Types In ava 8"/>
-        <meta property="og:description" content="Three types of stream operations 1. Intermediate operations 2. Terminal operations 3. Short-circuit operations."/>
-        <meta property="og:url" content="https://java2ee.com/stream/stream-operations-in-java-8"/>
-        <meta property="og:site_name" content="java2ee"/>
-        <meta property="article:tag" content="Stream Operations Types In ava 8"/>
-        <meta property="article:section" content="Stream Operations Types In ava 8"/>
-
-        <meta property="og:type" content="article" />
-        <meta property="article:tag" content="Java - stream operations" />
-        <meta property="article:tag" content="Java 8" />
-        <meta property="article:tag" content="java-stream" />
-        <meta property="article:tag" content="java-stream-api" />
-        <meta property="article:tag" content="java-interfaces" />
-        <meta property="article:section" content="java" />
+        
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Stream Operation Types In Java 8">
+        <meta property="og:description" content="07 Apr 2024 - There are three main types of stream operations such as - Intermediate operations, Terminal operations,  Short-circuit operations."/>
+        <meta property="og:url" content="https://java2ee.com/stream/stream-operations-in-java-8">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Stream Operation Types In Java 8">
+        <meta property="article:tag" content="stream">
+        <meta property="article:tag" content="Operation">
+        <meta property="article:tag" content="Types">
+        <meta property="article:tag" content="Java8">
+        <meta property="article:tag" content="java">
      
-         
-        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9" />
-
-
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@DasJhum9">
-        <meta name="twitter:creator" content="@DasJhum9" />
-        <meta name="twitter:domain" content="www.java2ee.com" />
-        <meta name="twitter:title" property="og:title" content="Stream Operations Types In ava 8">
-        <meta name="twitter:description" property="og:description" content="01 Apr 2024 - Three types of stream operations 1. Intermediate operations 2. Terminal operations 3. Short-circuit operations.">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Stream Operation Types In Java 8">
+        <meta name="twitter:description" property="og:description" content="07 Apr 2024 - There are three main types of stream operations such as - Intermediate operations, Terminal operations,  Short-circuit operations.">
         <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
-        
-        <meta property="article:publisher" content="https://www.facebook.com/java2eesite" />
-        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
-        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00"/>
-        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00"/>
-        <title>Stream Operations Types In ava 8</title>
+         
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00">
     </head>
     <body>      
         <div class="d-flex" id="wrapper">

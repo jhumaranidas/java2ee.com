@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Stream forEach Method In Java 8</title>
         <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="foreach in java 8, foreach method example, stream foreach method in java">          
+        <meta name="description" content="07 Apr 2024 - The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result.">
+       
+        <link rel="canonical" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+       
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
@@ -12,52 +27,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel=canonical href=https://java2ee.com/stream/stream-foreach-method-in-java-8.html>
-        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
 
-        <meta name="theme-color" content="#f10d0d"/>
-        <meta name="msapplication-TileColor" content="#da532c"/>
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
-        <meta name=keywords content="foreach in java in java 8, foreach method in java in java 8, stream foreach method in java 8, stream foreach java 8, list.foreach in java 8, java foreach list of objects, foreach loop in java, stream foreach example, java stream foreach lambda, java foreach(), java foreach example"/>          
-        <meta name=description content="The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result."/>
-        <meta property="og:locale" content="en_IN"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Stream forEach Method In Java 8"/>
-        <meta property="og:description" content="01 Apr 2024 - The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result."/>
-        <meta property="og:url" content="https://java2ee.com/stream/stream-foreach-method-in-java-8"/>
-        <meta property="og:site_name" content="java2ee"/>
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Stream forEach Method In Java 8">
+        <meta property="og:description" content="07 Apr 2024 - The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result.">
+        <meta property="og:url" content="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Stream forEach Method In Java 8">
         <meta property="article:tag" content="Stream forEach Method In Java 8"/>
-        <meta property="article:section" content="Stream forEach Method In Java 8"/>
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
+        <meta property="article:tag" content="foreach">
+        <meta property="article:tag" content="Method">
+        <meta property="article:tag" content="java8">
+        <meta property="article:tag" content="java">
         
-        <meta property="og:type" content="article" />
-        <meta property="article:tag" content="Java - foreach method" />
-        <meta property="article:tag" content="Java 8" />
-        <meta property="article:tag" content="java-stream" />
-        <meta property="article:tag" content="java-stream-api" />
-        <meta property="article:tag" content="java-interfaces" />
-        <meta property="article:section" content="java" />
-
-        
-        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9" />
-
-
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@DasJhum9">
-        <meta name="twitter:creator" content="@DasJhum9" />
-        <meta name="twitter:domain" content="www.java2ee.com" />
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
         <meta name="twitter:title" property="og:title" content="Stream forEach Method In Java 8">
-        <meta name="twitter:description" property="og:description" content="01 Apr 2024 - The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result.">
+        <meta name="twitter:description" property="og:description" content="07 Apr 2024 - The forEach() method is a default method defined in Iterable and Stream interface. It is a terminal operation. The purpose of the forEach() method is iterating the elements one by one of a Collection to produce a result.">
         <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
         
-        <meta property="article:publisher" content="https://www.facebook.com/java2eesite" />
-        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
-        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00"/>
-        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00"/>
-        <title>Stream forEach Method In Java 8</title>
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00">
     </head>
     <body> 
         <div class="d-flex" id="wrapper">

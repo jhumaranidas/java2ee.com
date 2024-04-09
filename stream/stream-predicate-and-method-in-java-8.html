@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset=utf-8>
+        <title>Predicate and method In Java</title>
+        <meta charset=utf-8> 
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="predicate and method in java 8, predicate and method example, predicate and method in java, java predicate and example">          
+        <meta name="description" content="07 Apr 2024 - The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.">
+        
+        <link rel="canonical" href="https://java2ee.com/stream/stream-predicate-and-method-in-java-8">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="image/fevicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="image/fevicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="image/fevicon/favicon-16x16.png">
@@ -11,56 +25,36 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel=canonical href=https://java2ee.com/stream/stream-predicate-and-method-in-java-8.html>
-        <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
+        
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/custom.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <!--
-        <meta name=theme-color content="#FFFFFF">
-        <meta name=facebook-domain-verification content="">
-        -->
-        <meta name="google-adsense-account" content="ca-pub-1973149732345742"/>
-        <meta name="theme-color" content="#f10d0d"/>
-        <meta name="msapplication-TileColor" content="#da532c"/>
-        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"/>  
-        <meta name=keywords content="predicate and method java, predicate and method, predicate and function, java predicate and example, predicate interface in java"/>          
-        <meta name=description content="The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not."/>
-        <meta property="og:locale" content="en_IN"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Predicate isequal method In Java"/>
-        <meta property="og:description" content="01 Apr 2024 - The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not."/>
-        <meta property="og:url" content="https://java2ee.com/stream/stream-predicate-and-method-in-java-8"/>
-        <meta property="og:site_name" content="java2ee"/>
-        <meta property="article:tag" content="Predicate and method In Java"/>
-        <meta property="article:section" content="Predicate and method In Java"/>
-
-        <meta property="og:type" content="article" />
-        <meta property="article:tag" content="Java - predicate and method" />
-        <meta property="article:tag" content="Java 8" />
-        <meta property="article:tag" content="java-stream" />
-        <meta property="article:tag" content="java-stream-api" />
-        <meta property="article:tag" content="java-interfaces" />
-        <meta property="article:section" content="java" />
- 
-         
-        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9" />
-
-
+              
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Predicate isequal method In Java">
+        <meta property="og:description" content="01 Apr 2024 - The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.">
+        <meta property="og:url" content="https://java2ee.com/stream/stream-predicate-and-method-in-java-8">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="og:type" content="article">
+        <meta property="article:section" content="Predicate and method In Java 8">
+        <meta property="article:tag" content="Predicate">
+        <meta property="article:tag" content="and">
+        <meta property="article:tag" content="method">
+        <meta property="article:tag" content="java8">
+        <meta property="article:tag" content="java">
+       
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@DasJhum9">
-        <meta name="twitter:creator" content="@DasJhum9" />
-        <meta name="twitter:domain" content="www.java2ee.com" />
-        <meta name="twitter:title" property="og:title" content="Predicate and method In Java">
-        <meta name="twitter:description" property="og:description" content="01 Apr 2024 - The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Predicate and method In Java 8">
+        <meta name="twitter:description" property="og:description" content="07 Apr 2024 - The predicate and method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.">
         <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
-        
-        <meta property="article:publisher" content="https://www.facebook.com/java2eesite" />
-        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ" />
-        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00"/>
-        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00"/>
-        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00"/>
-        <title>Predicate and method In Java</title>
+       
+        <meta property="article:published_time" content="2024-03-8T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-04-07T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-04-07T12:59:35+00:00">   
     </head>
     <body>
         
