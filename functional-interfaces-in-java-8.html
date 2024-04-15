@@ -2389,37 +2389,9 @@
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
-                    <div class="container-fluid header">
-                        <h1>Functional Interfaces In Java 8</h1>
-                        <a target="_blank" class="next-link" title="Consumer Interface In Java 8" href="https://java2ee.com/consumer-interfaces-in-java-8">
-                            <span class="next-botton">
-                                <span class="next-topic">Next Topic </span>
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Consumer Interface In Java 8</span>
-                            </span>&nbsp;        
-                        </a> 
-                        <a target="_blank" class="next-link" title="Predicate Interface In Java 8" href="https://java2ee.com/predicate-interfaces-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Predicate Interface In Java 8</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream API Tutorial" href="https://java2ee.com/stream/stream-api-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream API Tutorial</span>
-                            </span>&nbsp;        
-                        </a>  
-                        <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream Operations Types</span>
-                            </span>&nbsp;        
-                        </a>
-                    </div>
 				<div id="right-main-div">
 					<div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">      
-						<h2> - Functional Interface</h2>
+						<h1>Functional Interface In Java With Example</h1>
 							<p>
 								An Interface that contains exactly one abstract method is known as <b>functional interface</b>.
 								It can have any number of <b>default and static methods</b> but can contain only one <b>abstract method</b>.
@@ -2435,7 +2407,7 @@
 						
 					
 					 
-						<h2> - Rules for a functional interface</h2>
+						<h2>Rules for a functional interface</h2>
 							<ol>
 								  <li>A functional interface must have exactly one abstract method.</li>
 								  <li>A functional interface can have any number of default, static methods</li>
@@ -2444,34 +2416,33 @@
 							
 						
 					 
-						<h2> - Example of functional interface with lambda expression</h2>
-<pre>
-<span class="code-comment red">//It is optional</span>
-<code>/*@FunctionalInterface*/  </code>
-<code>public interface MultipleInterface {
+						<h2>Example of functional interface with <a target="_blank" class="font-15" href="https://java2ee.com/lambda/lambda-expression-example-in-java" title="Lambda Expression Example In Java">lambda expression</a></h2>
+<pre><code>/*@FunctionalInterface*/</code> <span class="code-comment red">//It is optional</span>
+<b><code>public interface MultipleInterface {</b>
   public int multiple(int x,int y);
-}
+<b>}</b>
 
-public class Calculate></code><code>{
- public static void main (String[] args) {</code> 
-  <span class="code-comment">//with lambda</span>
-  <code>MultipleInterface m = (x, y) -> {
-  //System.out.println( "Drawing "+width);
-  return x * y;
- };
+<b>public class Calculate{
+ public static void main (</code><code>String</code>[] args) {</b>
+   <span class="code-comment">//with lambda</span>
+   <code>MultipleInterface m = (x, y) -> {
+     //System.out.println( "Drawing "+width);
+     return x * y;
+   };
 
- int multipleVal =   m.multiple(10,30);
- System.out.println( "Multiple Value is "+multipleVal);
-}
-
+   int multipleVal =   m.multiple(10,30);
+   System.out.println( "Multiple Value is "+multipleVal);
+  <b>}
+}</b>
+<span class="output">
 Output:
-Multiple Value is 300
+    Multiple Value is 300</span>
 </code>
 </pre>
 					
 
 					
-						<h2> @FunctionalInterface Annotation</h2>
+						<h2>@FunctionalInterface Annotation</h2>
 							<p>
                                 <b>@FunctionalInterface</b> annotation is optional but it is used to ensure that the functional interface
                                 can’t have more than one abstract method.  If you add more than one abstract methods, an <i><b class="red">"Unexpected @FunctionalInterface annotation"</b></i> message you can get.
@@ -2480,34 +2451,33 @@ Multiple Value is 300
 					
                     
                     
-						<h2> - Example of functional interface with @FunctionalInterface annotation</h2>
-<pre>
-<span class="code-comment red">//It is optional</span>
-<code>@FunctionalInterface  </code>
-<code>
-interface Area {
+						<h2>Example of functional interface with @FunctionalInterface annotation</h2>
+<pre><span class="code-comment red">//It is optional</span>
+<code>@FunctionalInterface
+<b>interface Area {</b>
 	int calculateArea(int x);
-}
+<b>}</b>
 
-class Square {
-  public static void main (String[] args) {</code>
+<b>class Square {
+  public static void main (</code><code>String</code><code>[] args) {</b>
 	<span class="code-comment">//with lambda</span>
-    <code>Area a = (x) -> {			
+    Area a = (x) -> {			
         return x * x;
     };
 
     int areaVal =   a.calculateArea(20);
     System.out.println( "Area of Square is: "+areaVal);
+  <b>}
 }
-
+</b><span class="output">
 Output:
-Area of Square is: 400
+    Area of Square is: 400</span>
 </code>
 </pre>
 					
 
                     
-						<h2> - Types of functional interfaces</h2>
+						<h2>Types of functional interfaces</h2>
 							<p>
                                 <h6>There are four types of functional interfaces.</h6>
 
@@ -2522,62 +2492,60 @@ Area of Square is: 400
                                     The <b>consumer interface</b> of the functional interface accepts only one single argument without any return value.
                                     The <b>consumer interface</b> has no return value. It contains an <b>abstract accept() and a default andThen()</b> method. 
                                     It can be used as the assignment target for a lambda expression or method reference.
-                                    
+                                    <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8" title="consumer interface in java 8" class="font-15">details..</a>
                                     <h6>Consumer Interface Methods.</h6>
                                     <ol>
-                                        <li><b><i>void accept(T t)</i></b></li>
+                                        <li class="list-title"><b><i>void accept(T t)</i></b></li>
                                         <dd>The <b>accept() method</b> takes as input the type T and returns no value. This is the single abstract method of Consumer.
                                              It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
                                              by a lambda expression or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">details..</a>
                                             </dd>
-                                        <li><b><i>andThen(Consumer<? super T> after)</i></b></li>
+                                        <li class="list-title"><b><i>andThen(Consumer<? super T> after)</i></b></li>
                                         <dd>- The <b>andThen()</b> method is a default method. In other words, it has an implementation and is thus non-abstract.
                                              The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8" title="andThen method in java 8" class="font-15">details..</a>
                                         </dd>
                                     </ol>
                                     
-                                    <h2 class="m-l-20"> Example of Consumer Interface</h2>
-<pre>
-<code>import java.util.function.Consumer;
-public class ConsumerInterfaceExample Area {
+                                    <h2 class="m-l-20">Example of Consumer Interface</h2>
+<pre><code>import java.util.function.Consumer;
+<b>public class ConsumerInterfaceExample Area {</b>
 
-    static void welcomeGreeting (</code><code>String</code> name){
+    static void welcomeGreeting (</code><code>String</code><code> name){
         System.out.println( "Welcome "+name);
     }
     static void showAge (int age){
-          System.out.println( "Your age is "+age);
+        System.out.println( "Your age is "+age);
     }
     static void showSalary (int sal){
-          System.out.println( "Your salary is "+sal);
+        System.out.println( "Your salary is "+sal);
     }
 
-    public static void main(<code>String</code>[] args) {</code>
+    <b>public static void main(</code><code>String</code><code>[] args) {</b>
         <span class="code-comment">//method reference</span>
-        <code>Consumer<<code>String</code> consumer1 = 
-            ConsumerInterfaceExample :: welcomeGreeting;</code>  
-        <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer1.accept("Tejas"); </code>    
+        <code>Consumer<</code><code>String</code><code> consumer1 = 
+            ConsumerInterfaceExample :: welcomeGreeting; 
+            <span class="code-comment">// Calling Consumer method</span>
+            consumer1.accept("Tejas");
          
         <span class="code-comment">//method reference</span>
         </code>Consumer</code><<code>Integer</code> <code>consumer2 =
-            ConsumerInterfaceExample :: showAge; </code>
-        <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer2.accept(30); </code>    
+            ConsumerInterfaceExample :: showAge;
+            <span class="code-comment">// Calling Consumer method</span>
+            <code>consumer2.accept(30);   
 
         <span class="code-comment">//method reference</span>
         <code>Consumer</code><<code>Integer</code>> <code>consumer2 = 
-            ConsumerInterfaceExample :: showSalary;</code>
-        <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer2.accept(20000);     
-    }
-}
-
+            ConsumerInterfaceExample :: showSalary;
+            <span class="code-comment">// Calling Consumer method</span>
+            <code>consumer2.accept(20000);     
+   <b> }
+}</b>
+<span class="output">
 Output:
-Welcome Tejas
-Your age is 30
-Your salary is 20000
-</code>
-</pre>
+    Welcome Tejas
+    Your age is 30
+    Your salary is 20000</span>
+</code></code></code></pre>
 
                                 </p>
                                 <h2 class="m-l-20">Bi-Consumer</h2>
@@ -2586,183 +2554,177 @@ Your salary is 20000
                                      but Bi-Consumer interface takes two arguments. Both, Consumer and Bi-Consumer have no return value.
                                       It is used in iterating through the entries of the map. 
                                     
-                                </p>
-
-<pre><code>BiConsumer</code><<code>String</code>,<code>String</code>> foo = 
-     <code>(a, b) -> System.out.println( a + b );</code>
+                                
+<pre><code>BiConsumer</code><<code>String</code>,<code>String</code><code>> foo = 
+    (a, b) -> System.out.println( a + b );</code>
 </pre>
-
-
-                                <p>
-
-							</p>
+</p>                       
 
                             <h2 class="m-l-20">2. Predicate</h2>
                                 <p>
                                     <b>Predicate</b> accepts an argument and returns a boolean value. <b>Predicate</b> functional interface in Java is a type of function
-                            that accepts a single argument and returns a boolean (True/ False). It provides the functionality of filtering, 
-                            it filter a stream components on the base of a provided <b>predicate</b>. 
-                                     <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="predicate interfaces in java 8" class="font-15">details..</a>
+                                    that accepts a single argument and returns a boolean (True/ False). It provides the functionality of filtering, 
+                                    it filter a stream components on the base of a provided <b>predicate</b>. 
+                                    <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="predicate interfaces in java 8" class="font-15">details..</a>
                                     
-                                     <h6>Predicate Interface Methods.</h6>
+                                    <h6 style="clear:both">Predicate Interface Methods.</h6>
                             <ol>
-                                <li><b><i>boolean test(T t)</i></b></li>
-                                <dd>- The <b>Predicate test()</b> method returns true if the input argument matches the predicate, otherwise false.</dd>
+                                <li class="list-title"><b><i>boolean test(T t)</i></b></li>
+                                <dd>The <b>Predicate test()</b> method returns true if the input argument matches the predicate, otherwise false.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-test-method-in-java-8" title="Predicate test method in java 8" class="font-15">Predicate test</a> method</h2>
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
-  <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr = a -> (a > 10);
+<pre><code><b>public static void main (</code><code>String</code><code>[] args) { </b> 
+  Predicate<</code><code>Integer</code><code>> pr = a -> (a > 10);
 
   <span class="code-comment">// Calling Predicate method </span> 
   System.<span class="blue">out</span>.println(pr.test(20));       
-<code>} </code> 
-
+<b>}</b>
+<span class="output">
 Output:
-true
-</pre>
-<li><b><i>static  Predicate isEqual(Object targetRef)</i></b></li>
-<dd>- The <b>Predicate isEqual()</b> method is a static method of the <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate interface in Java" class="font-15">Predicate interface</a> that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
+true</span></code> 
+</pre><br>
+<li class="list-title"><b><i>static  Predicate isEqual(Object targetRef)</i></b></li>
+<dd>The <b>Predicate isEqual()</b> method is a static method of the <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate interface in Java" class="font-15">Predicate interface</a> that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-isequal-method-in-java-8" title="Predicate isEqual method in java 8" class="font-15">Predicate isEqual</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
-<span class="orange">Predicate</span><<span class="blue"><code>String</code></span>> pr = 
-<span class="orange">Predicate</span>.<span class="orange">isEqual</span>("<span class="green">MyAllText</span>");
+<pre> <code><b>public static void main (</code><code>String</code><code>[] args){ </b> 
+  Predicate<</code><code>String</code><code>> pr = 
+    Predicate.isEqual( "<span class="green">MyAllText</span>" );
 
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr.test("<span class="green">AllText</span>")
-); 
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr.test("<span class="green">MyAllText</span>")
-);
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr.test("<span class="green">MyAll</span>")
-);   
+    <span class="code-comment">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(
+        pr.test( "<span class="green">AllText</span>" )
+    ); 
+    <span class="code-comment">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(
+        pr.test( "<span class="green">MyAllText</span>" )
+    );
+    <span class="code-comment">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(
+        pr.test( "<span class="green">MyAll</span>" )
+    );   
 
-<code>} </code>
-
+<b>  }
+} </b>
+<span class="output">
 Output:
-false
-true
-false
+    false
+    true
+    false</span></code>
 </pre>                                        
-                                       
-<li><b><i>default Predicate and(Predicate other)</i></b></li>
-<dd>- The <b>Predicate and()</b> method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
+<br>                                       
+<li class="list-title"><b><i>default Predicate and(Predicate other)</i></b></li>
+<dd>The <b>Predicate and()</b> method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-and-method-in-java-8" title="Predicate and method in java 8" class="font-15">Predicate and</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>  
-<span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr1 = 
-x <span class="orange">-></span> (x <span class="orange">></span> 20);
 
-<span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr2 = 
-x <span class="orange">-></span> (x <span class="orange"><</span> 80);
+<pre><code><b>public static void main(</code><code>String</code><code>[] args) { </b>  
+  Predicate<</code><code>Integer</code><code>> pr1 = 
+    x -> (x <span class="orange">></span> 20);
 
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr1.and(pr2).test(100)
-); 
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr1.and(pr2).test(50)
-); 
-<span class="code-comment">// Calling Predicate method </span> 
-System.<span class="blue">out</span>.println(
-  pr1.and(pr2).test(10)
-);
-<code>} </code>
+  Predicate<</code><code>Integer</code><code>> pr2 = 
+    x -> (x <span class="orange"><</span> 80);
 
+  <span class="code-comment">// Calling Predicate method </span> 
+  System.<span class="blue">out</span>.println(
+    pr1.and(pr2).test(100)
+  ); 
+  <span class="code-comment">// Calling Predicate method </span> 
+  System.<span class="blue">out</span>.println(
+    pr1.and(pr2).test(50)
+  ); 
+  <span class="code-comment">// Calling Predicate method </span> 
+  System.<span class="blue">out</span>.println(
+    pr1.and(pr2).test(10)
+  );
+<b>}</b>
+<span class="output">
 Output:
-false
-true
-false
+    false
+    true
+    false</span></code>
 </pre>
-
-      
-                                
-<li><b><i>default Predicate negate()</i></b></li>
-<dd>- The <b>Predicate negate()</b> method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
+<br>
+                                     
+<li class="list-title"><b><i>default Predicate negate()</i></b></li>
+<dd>The <b>Predicate negate()</b> method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-negate-method-in-java-8" title="Predicate negate method in java 8" class="font-15">Predicate negate</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{</code>
-<code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharJ = 
-s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-<code>Predicate</code><<span class="blue"><code>String</code></span>> hasLengthOfInt5 = 
-s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
+<pre><code><b>public static void main( </code><code>String</code><code>[] args) {</b>
+  Predicate<</code><code>String</code><code>> startsWithCharJ = 
+    s -> s.startsWith("<span class="orange">H</span>");
+  Predicate<</code><code>String</code><code>> hasLengthOfInt5 = 
+    s -> s.length() == <span class="orange">5</span>;
 
-<span class="code-comment">// Calling without negate method</span> 
-System.<span class="blue">out</span>.println(
-  startsWithCharJ.test("Horse")
-); 
-<span class="code-comment">// Calling without negate method</span> 
-System.<span class="blue">out</span>.println(
-  hasLengthOfInt5
-  .test("India")
-); 
+  <span class="code-comment">// Calling without negate method</span> 
+  System.<span class="blue">out</span>.println(
+    startsWithCharJ.<span class="red">test</span>( "<span class="green">Horse</span>" )
+  ); 
+  <span class="code-comment">// Calling without negate method</span> 
+  System.<span class="blue">out</span>.println(
+    hasLengthOfInt5
+    .<span class="red">test</span>( "<span class="green">India</span>" )
+  ); 
 
-<code>Predicate</code><<code>String</code>> negateStartsWithCharJ = 
-startsWithCharJ.negate();
-<code>Predicate</code><<code>String</code>> negatehasLengthOfInt5 = 
-  hasLengthOfInt5.negate();
+  Predicate<</code><code>String</code><code>> negateStartsWithCharJ = 
+    startsWithCharJ.<span class="red">negate()</span>;
+  Predicate<</code><code>String</code><code>> negatehasLengthOfInt5 = 
+    hasLengthOfInt5.<span class="red">negate()</span>;
 
-<span class="code-comment">// Calling after negate predicate</span> 
-System.<span class="blue">out</span>.println(
-  <span class="green">negateStartsWithCharJ</span>
-  .test("Horse")
-); 
-<span class="code-comment">// Calling after negate predicate</span> 
-System.<span class="blue">out</span>.println(
-  <span class="green">negatehasLengthOfInt5</span>
-  .test("India")
-); 
+  <span class="code-comment">// Calling after negate predicate</span> 
+  System.<span class="blue">out</span>.println(
+     negateStartsWithCharJ
+    .<span class="red">test</span>( "<span class="green">Horse</span>" )
+  ); 
 
-<code>} </code> 
+  <span class="code-comment">// Calling after negate predicate</span> 
+  System.<span class="blue">out</span>.println(
+     negatehasLengthOfInt5
+    .<span class="red">test</span>( "<span class="green">India</span>" )
+  ); 
 
+<b>}</b> 
+<span class="output">
 Output:
-true
-true
-false
-false
-
+    true
+    true
+    false
+    false
+</span></code>
 </pre>
+<br>                                    
                                        
                                        
-                                       
-<li><b><i>or(Predicate other)</i></b></li>
-<dd>- The <b>Predicate or()</b> method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
+<li class="list-title"><b><i>or(Predicate other)</i></b></li>
+<dd>The <b>Predicate or()</b> method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-or-method-in-java-8" title="Predicate or method in java 8" class="font-15">Predicate or</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>
-<code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharH = 
-s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-<code>Predicate</code><<span class="blue"><code>String</code></span>> hasLengthOfInt5 = 
-s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
 
-<code>Predicate</code><<code>String</code>> startsWithCharHOrHasLengthOf5 = 
-startsWithCharH.<span class="blue">or</span>(hasLengthOfInt5);
+<pre><code><b>public static void main (</code><code>String</code><code>[] args) { </b>
+  Predicate<</code><code>String</code><code>> startsWithCharH = 
+    s -> s.startsWith("<span class="orange">H</span>");
+  Predicate<</code><code>String</code><code>> hasLengthOfInt5 = 
+    s -> s.length() == <span class="orange">5</span>;
 
-System.<span class="blue">out</span>.println( 
-  startsWithCharHOrHasLengthOf5
-  .test("Hero")
-); 
-System.<span class="blue">out</span>.println(
-  startsWithCharHOrHasLengthOf5
-  .test("India")
-); 
-System.<span class="blue">out</span>.println(
-  startsWithCharHOrHasLengthOf5
-  .test("Method")
-);
+  Predicate<</code><code>String</code><code>> startsWithCharHOrHasLengthOf5 = 
+    startsWithCharH.<span class="red">or</span>(hasLengthOfInt5);
 
-<code>} </code> 
+  System.<span class="blue">out</span>.println( 
+    startsWithCharHOrHasLengthOf5
+    .<span class="red">test</span>( "<span class="green">Hero</span>" )
+  ); 
 
+  System.<span class="blue">out</span>.println(
+    startsWithCharHOrHasLengthOf5
+    .<span class="red">test</span>( "<span class="green">India</span>" )
+  ); 
+
+  System.<span class="blue">out</span>.println(
+    startsWithCharHOrHasLengthOf5
+    .<span class="red">test</span>( "<span class="green">Method</span>" )
+  );
+<b>}</b> 
+<span class="output">
 Output:
-true
-true
-false
-
+    true
+    true
+    false
+</span></code>
 </pre>
                                     <h2 class="m-l-20">Bi-Predicate</h2>
                                     <p>
@@ -2779,20 +2741,19 @@ false
                                   for the given key. <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="function interface in java 8" class="font-15">details..</a>
                                  
                                
-<pre>
-<b class="blue"><code>public static void main(<code>String</code>[] args) { </b> 
-  private static HashMap</code><<code>Integer</code>, <code>String</code>><code> Employee = 
-            new HashMap</code><><code>();
-  Function</code><<code>Integer</code>, <code>String</code>><code> addFunc = (Integer ID)-> {
+<pre><code><b>public static void main (</code><code>String</code><code>[] args) { </b> 
+  private static HashMap<</code><code>Integer</code><code>, </code><code>String</code><code>> Employee = 
+            new HashMap<>();
+  Function<</code><code>Integer</code><code>, </code><code>String</code><code>> addFunc = (Integer ID)-> {
     if(Employee.containsKey(ID)) {
         return Employee.get(ID);
     }else{
         return "Invalid ID";
     }
-  };</code>
- <span class="code-comment red">// Returns the Employee object if present in the hashmap or return Invalid Id message </span>       
- <code>System.out.println( addFunc.apply( 500 )); 
-<b class="blue">};</b></code>
+  };
+  <span class="code-comment">// Returns the Employee object if present in the hashmap or return Invalid Id message </span>       
+  System.out.println( addFunc.<span class="red">apply</span>( <span class="green">500</span> )); 
+<b>};</b>
 </code>
 </pre>  
 
@@ -2809,13 +2770,13 @@ false
                                 The <b>Supplier</b> interface</b> takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
                                 <a target="_blank" href="https://java2ee.com/supplier-interface-in-java-8" title="supplier interface in java 8" class="font-15">details..</a>
                                
-<pre><code>public static void main(<code>String</code>[] args) { 
-    Supplier</code><<code>String</code>> <code>supp = () -> "Hello World";
+<pre><code><b>public static void main (</code><code>String</code><code>[] args) { </b>
+    Supplier<</code><code>String</code><code>> supp = () -> "Hello World";
     System.out.println( supp.get() );        
-};
-
+<b>};</b>
+<span class="output">
 Output:
-Hello World</code>
+    Hello World</span></code>
 </pre>  
                         </p>   
                                  
@@ -2823,45 +2784,43 @@ Hello World</code>
                 <div class="col-sm-12 col-md-12 bottom-add">
                     
                 </div>            
-                <div class="container-fluid"> <br>  
-                    <a target="_blank" class="next-link" title="Consumer Interface In Java 8" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                <div class="container-fluid"><br>                    
+                    <div>
                         <span class="next-botton">
                             <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Consumer Interface In Java 8</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" title="Predicate Interface In Java 8" href="https://java2ee.com/predicate-interfaces-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Predicate Interface In Java 8</span>
-                        </span>&nbsp;        
-                    </a>
-                    <a target="_blank" class="next-link" title="Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream Operations In Details</span>
-                        </span>&nbsp;        
-                    </a><br><br>
-                    <a target="_blank" class="next-link" title="Stream API Tutorial" href="https://java2ee.com/stream/stream-api-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream API Tutorial</span>
-                        </span>&nbsp;        
-                    </a>  
-                    
-                    <a target="_blank" class="next-link" title="Stream filter method" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream filter() method</span>
-                        </span>&nbsp;        
-                    </a>
-                    <a target="_blank" class="next-link" title="Stream map method" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream map() method</span>
-                        </span>&nbsp;        
-                    </a>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
+                        </span>&nbsp;    
+                    </div>
+                    <div class="bottom-next-topic">                   
+                        <a target="_blank" class="next-link" title="Consumer Interface In Java 8" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                            Consumer Interface Example In Java 
+                        </a>
+                    </div>
+                    <div class="bottom-next-topic">
+                        <a target="_blank" class="next-link" title="Predicate Interface In Java 8" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                            Predicate Interface Example In Java 
+                        </a>
+                    </div>
+                    <div class="bottom-next-topic">
+                        <a target="_blank" class="next-link" title="Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                            Stream Operations In Details
+                        </a>
+                    </div>
+                    <div class="bottom-next-topic">
+                        <a target="_blank" class="next-link" title="Stream API Tutorial" href="https://java2ee.com/stream/stream-api-in-java-8">
+                            Stream API Tutorial In Details
+                        </a>
+                    </div>  
+                    <div class="bottom-next-topic">
+                        <a target="_blank" class="next-link" title="Stream filter method" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                            Stream filter() method Example In Java 
+                        </a>
+                    </div>
+                    <div class="bottom-next-topic">
+                        <a target="_blank" class="next-link" title="Stream map method" href="https://java2ee.com/stream/stream-map-method-in-java-8">
+                            Stream map() method Example In Java 
+                        </a>
+                    </div>
                 </div> <br><br> 
 
            

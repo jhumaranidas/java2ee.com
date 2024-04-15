@@ -1093,45 +1093,9 @@
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
-
-                <div class="container-fluid header">
-                    <h1>Predicate test() Method In Java</h1>
-                    <a target="_blank" class="next-link" title="Stream API Tutorial In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream API Tutorial In Details</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" title="Predicate Interface In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Predicate Interface In Details</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream filter() method in java 8</span>
-                        </span>&nbsp;        
-                    </a>
-                    <a target="_blank" class="next-link" title="Stream API map method in java 8" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream map() method in java 8</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Operations Types</span>
-                        </span>&nbsp;        
-                    </a>
-                </div>
 				<div id="right-main-div">
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						<h2> - Predicate test() Method</h2>
+						<h1>Predicate test() Method Example In Java</h1>
                         <p>
                             <b>Predicate</b> accepts an argument and returns a boolean value. <b>Predicate</b> functional interface in Java is a type of function
                             that accepts a single argument and returns a boolean (True/ False). It provides the functionality of filtering, 
@@ -1139,164 +1103,154 @@
                             
                             <h6>Predicate Interface Methods.</h6>
                             <ol>
-                                <li><b>boolean test(T t)</b></li>
-                                <dd>- The <b>Predicate test()</b> method returns true if the input argument matches the predicate, otherwise false.</dd>
+                                <li class="list-title"><b>boolean test(T t)</b></li>
+                                <dd>The <b>Predicate test()</b> method returns true if the input argument matches the predicate, otherwise false.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-test-method-in-java-8" title="Predicate test method in java 8" class="font-15">Predicate test</a> method</h2>
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
-  <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr = a -> (a > 10);
+<pre><code><b>public static void main( </code><code>String</code><code>[] args){</b> 
+  Predicate<</code><code>Integer</code><code>> pr = a -> ( a > 10 );
 
   <span class="code-comment">// Calling Predicate method </span> 
-  System.<span class="blue">out</span>.println(pr.test(20));       
-<code>} </code> 
-
+  System.<span class="blue">out</span>.println( pr.test(20) );       
+<b>}</b> 
+<span class="output">
 Output:
-true
+    true</span></code>
 </pre>
-                                <li><b>static  Predicate isEqual(Object targetRef)</b></li>
-                                <dd>- The <b>Predicate isEqual()</b> method is a static method of the <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate interface in Java" class="font-15">Predicate interface</a> that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
+<br>
+                                <li class="list-title"><b>static  Predicate isEqual(Object targetRef)</b></li>
+                                <dd>The <b>Predicate isEqual()</b> method is a static method of the <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate interface in Java" class="font-15">Predicate interface</a> that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-isequal-method-in-java-8" title="Predicate isEqual method in java 8" class="font-15">Predicate isEqual</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code> 
-  <span class="orange">Predicate</span><<span class="blue"><code>String</code></span>> pr = 
-        <span class="orange">Predicate</span>.<span class="orange">isEqual</span>("<span class="green">MyAllText</span>");
+<pre><code><b>public static void mai( </code></code>String</code><code>[] args) { </b> 
+  Predicate<</code><code>String</code><code>> pr = 
+        Predicate.<span class="red">isEqual</span>( "<span class="green">MyAllText</span>" );
   
   <span class="code-comment">// Calling Predicate method </span> 
-  System.<span class="blue">out</span>.println(
-    pr.test("<span class="green">AllText</span>")
+  System.out.println(
+    pr.<span class="red">test</span>( "<span class="green">AllText</span>" )
   ); 
   <span class="code-comment">// Calling Predicate method </span> 
   System.<span class="blue">out</span>.println(
-    pr.test("<span class="green">MyAllText</span>")
+    pr.<span class="red">test</span>( "<span class="green">MyAllText</span>" )
   );
   <span class="code-comment">// Calling Predicate method </span> 
   System.<span class="blue">out</span>.println(
-    pr.test("<span class="green">MyAll</span>")
+    pr.<span class="red">test</span>( "<span class="green">MyAll</span>" )
   );        
-<code>} </code>
-
+<b>}</b>
+<span class="output">
 Output:
-false
-true
-false
+    false
+    true
+    false</span></code>
 </pre>                                      
-                               
-                                <li><b>default Predicate and(Predicate other)</b></li>
-                                <dd>- The <b>Predicate and()</b> method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
+<br>                              
+                                <li class="list-title"><b>default Predicate and(Predicate other)</b></li>
+                                <dd>The <b>Predicate and()</b> method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-and-method-in-java-8" title="Predicate and method in java 8" class="font-15">Predicate and</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>  
-  <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr1 = 
-    x <span class="orange">-></span> (x <span class="orange">></span> 20);
 
-  <span class="orange">Predicate</span><<span class="blue"><code>Integer</code></span>> pr2 = 
-    x <span class="orange">-></span> (x <span class="orange"><</span> 80);
+<pre><code><b>public static void main( </code></code>String</code><code>[] args) { </b>  
+  Predicate<</code><code>Integer</code><code>> pr1 = 
+    x -> (x <span class="orange">></span> 20);
+
+  Predicate<</code><code>Integer</code><code>> pr2 = 
+    x -> (x <span class="orange"><</span> 80);
 
   <span class="code-comment">// Calling Predicate method </span> 
-  System.<span class="blue">out</span>.println(
-    pr1.and(pr2).test(100)
+  System.out.println(
+    pr1.<span class="red">and</span>( pr2 ).test(<span class="green">100</span>)
   ); 
   <span class="code-comment">// Calling Predicate method </span> 
-  System.<span class="blue">out</span>.println(
-    pr1.and(pr2).test(50)
+  System.out.println(
+    pr1.<span class="red">and</span>( pr2 ).test(<span class="green">50</span>)
   ); 
   <span class="code-comment">// Calling Predicate method </span> 
-  System.<span class="blue">out</span>.println(
-    pr1.and(pr2).test(10)
+  System.out.println(
+    pr1.<span class="red">and</span>( pr2 ).test(<span class="green">10</span>)
   );
-  
-<code>} </code>
-
+<b>}</b>
+<span class="output">
 Output:
-false
-true
-false
+    false
+    true
+    false</span></span></code>
 </pre>
+<br>                               
                                 
-                                
-                                <li><b>default Predicate negate()</b></li>
-                                <dd>- The <b>Predicate negate()</b> method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
+                                <li class="list-title"><b>default Predicate negate()</b></li>
+                                <dd>The <b>Predicate negate()</b> method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-negate-method-in-java-8" title="Predicate negate method in java 8" class="font-15">Predicate negate</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{</code>
-  <code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharJ = 
-    s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-  <code>Predicate</code><<span class="blue"><code>String</code></span>> hasLengthOfInt5 = 
-    s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
+<pre><code><b>public static void main( </code><code>String</code><code>[] args) {</b>
+  Predicate<</code><code>String</code><code>> startsWithCharJ = 
+    s -> s.startsWith( "<span class="orange">H</span>" );
+  Predicate<</code><code>String</code><code>> hasLengthOfInt5 = 
+    s -> s.length() == <span class="orange">5</span>;
 
     <span class="code-comment">// Calling without negate method</span> 
-    System.<span class="blue">out</span>.println(
-      startsWithCharJ.test("Horse")
+    System.out.println(
+      startsWithCharJ.<span class="red">test</span>( "<span class="green">Horse</span>" )
     ); 
     <span class="code-comment">// Calling without negate method</span> 
-    System.<span class="blue">out</span>.println(
-      hasLengthOfInt5
-      .test("India")
+    System.out.println(
+      hasLengthOfInt5.<span class="red">test</span>( "<span class="green">India</span>" )
     ); 
 
-  <code>Predicate</code><<code>String</code>> negateStartsWithCharJ = 
-    startsWithCharJ.negate();
-  <code>Predicate</code><<code>String</code>> negatehasLengthOfInt5 = 
-    hasLengthOfInt5.negate();
+  Predicate<</code><code>String</code><code>> negateStartsWithCharJ = 
+    startsWithCharJ.<span class="red">negate</span>();
+  Predicate<</code><code>String</code><code>> negatehasLengthOfInt5 = 
+    hasLengthOfInt5.<span class="red">negate</span>();
 
     <span class="code-comment">// Calling after negate predicate</span> 
-    System.<span class="blue">out</span>.println(
-       <span class="green">negateStartsWithCharJ</span>
-       .test("Horse")
+    System.out.println(
+       negateStartsWithCharJ.<span class="red">test</span>( "<span class="green">Horse</span>" )
     ); 
     <span class="code-comment">// Calling after negate predicate</span> 
-    System.<span class="blue">out</span>.println(
-      <span class="green">negatehasLengthOfInt5</span>
-      .test("India")
-    ); 
-    
-<code>} </code> 
-
+    System.out.println(
+      negatehasLengthOfInt5.<span class="red">test</span>( "<span class="green">India</span>" )
+    );     
+<b>}</b> 
+<span class="output">
 Output:
-true
-true
-false
-false
-
+    true
+    true
+    false
+    false
+</span></code>
 </pre>
+<br>                             
                                
                                
-                               
-                                <li><b>or(Predicate other)</b></li>
-                                <dd>- The <b>Predicate or()</b> method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
+                                <li class="list-title"><b>or(Predicate other)</b></li>
+                                <dd>The <b>Predicate or()</b> method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
                                 <h2 class="m-l-20">Example of <a target="_blank" href="https://java2ee.com/stream/stream-predicate-or-method-in-java-8" title="Predicate or method in java 8" class="font-15">Predicate or</a> method</h2>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) <code>{ </code>
-  <code>Predicate</code><<span class="blue"><code>String</code></span>> startsWithCharH = 
-    s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-  <code>Predicate</code><<span class="blue"><code>String</code></span>> hasLengthOfInt5 = 
-    s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
+<pre><code><b>public static void main( </code><code>String</code><code>[] args) { </b>
+  Predicate<</code><code>String</code><code>> startsWithCharH = 
+    s -> s.startsWith( "<span class="orange">H</span>" );
+  Predicate<</code><code>String</code><code>> hasLengthOfInt5 = 
+    s -> s.length() == <span class="orange">5</span>;
 
-  <code>Predicate</code><<code>String</code>> startsWithCharHOrHasLengthOf5 = 
-    startsWithCharH.<span class="blue">or</span>(hasLengthOfInt5);
+  Predicate<</code><code>String</code><code>> startsWithCharHOrHasLengthOf5 = 
+    startsWithCharH.<span class="red">or</span>( hasLengthOfInt5 );
 
-    System.<span class="blue">out</span>.println( 
+    System.out.println( 
         startsWithCharHOrHasLengthOf5
-        .test("Hero")
+        .<span class="red">test</span>( "<span class="green">Hero</span>" )
     ); 
- System.<span class="blue">out</span>.println(
+    System.out.println(
         startsWithCharHOrHasLengthOf5
-        .test("India")
+        .<span class="red">test</span>( "<span class="green">India</span>" )
     ); 
- System.<span class="blue">out</span>.println(
+    System.out.println(
         startsWithCharHOrHasLengthOf5
-        .test("Method")
+        .<span class="red">test</span>( "<span class="green">Method</span>" )
     );
-
-<code>} </code> 
-
+<b>}</b> 
+<span class="output">
 Output:
-true
-true
-false
-
+    true
+    true
+    false</span></code>
 </pre>
-
+<br>
                             <h2 class="m-l-20">Bi-Predicate</h2>
                             <p>
                                 Bi-Predicate is also an extension of the Predicate functional interface, which, instead of one, takes two arguments, does some processing, and returns the boolean value. 
@@ -1312,38 +1266,37 @@ false
 
 					
                     <div class="container-fluid"> <br>  
-                        <a target="_blank" class="next-link" title="Stream API Tutorial In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                        <div>
                             <span class="next-botton">
                                 <span class="next-topic">Next Topic </span>
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream API Tutorial In Details</span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
                             </span>&nbsp;        
-                        </a> 
-                        <a target="_blank" class="next-link" title="Predicate Interface In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
-                            <span class="next-botton">
-                                <span class="next-topic">Next Topic </span>
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Predicate Interface In Details</span>
-                            </span>&nbsp;        
-                        </a> <br><br>
-                        <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream filter() method in java 8</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream API map method in java 8" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream map() method in java 8</span>
-                            </span>&nbsp;        
-                        </a>  <br><br>
-                        <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                            <span class="next-botton">
-                                <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                <span class="next-topic-name">Stream Operations Types</span>
-                            </span>&nbsp;        
-                        </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream API Full Tutorial In Java In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream API Full Tutorial In Java In Details
+                            </a>
+                        </div> 
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Predicate Interface Example In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                Predicate Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="filter() Method Example In Java" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                filter() Method Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="map Method Example In java" href="https://java2ee.com/stream/stream-map-method-in-java-8">
+                                map() Method Example In java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operations Types In Java
+                            </a>
+                        </div>
                     </div> <br><br> 
 				
 				</div> <!--end left-->

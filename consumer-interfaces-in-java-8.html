@@ -795,43 +795,14 @@
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
-                <div class="container-fluid header">
-                    <h1>Consumer Interfaces In Java</h1>
-                    <a target="_blank" class="next-link" title="Predicate Interface In Java 8" href="https://java2ee.com/predicate-interfaces-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Predicate Interface In Java 8</span>
-                        </span>&nbsp;        
-                    </a>
-                   
-                    <a target="_blank" class="next-link" title="Stream API map method in java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream API Tutorial In Java 8</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream Operations Types</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream filter method in Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                            <span class="next-topic-name">Stream filter() method in Java 8</span>
-                        </span>&nbsp;        
-                    </a>
-                </div>
 				<div id="right-main-div">
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						<h2> - Consumer interface in Java</h2>
+						<h1>Consumer interface in Java</h1>
 							<p>
                                 The <b>consumer interface</b> of the functional interface accepts only one single argument without any return value.
                                 The consumer interface has no return value. It contains an abstract <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">accept()</a> 
                                 and a default <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8" title="andThen method example in java" class="font-15">andThen()</a>  method. 
-                                It can be used as the assignment target for a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java" title="lambda expression in java 8" class="font-15">lambda expression</a> or method reference.
+                                It can be used as the assignment target for a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-example-in-java" title="lambda expression in java 8" class="font-15">lambda expression</a> or method reference.
                                 
                                 <ol>
                                     <li><b>The consumer interface of the <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="Java Functional Interface">functional interface</a> accepts only one single argument without any return value.</b></li>
@@ -841,13 +812,13 @@
                                 </ol>
                                 <h6>Methods of Consumer Interface.</h6>
                                 <ol>
-                                    <li>void accept(T t)</li>
+                                    <li class="list-title">void accept(T t)</li>
                                     <dd>The <b>accept()</b> method takes as input the type T and returns no value. This is the single abstract method of Consumer.
                                             It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
-                                            by a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-in-java" title="Java Lambda Expression">lambda expression</a> or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">details..</a>
+                                            by a <a target="_blank" href="https://java2ee.com/lambda/lambda-expression-example-in-java" title="Java Lambda Expression">lambda expression</a> or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8" title="accept method in java 8" class="font-15">details..</a>
                                        
                                         </dd>
-                                    <li>andThen(Consumer<? super T> after)</li>
+                                    <li class="list-title">andThen(Consumer<? super T> after)</li>
                                     <dd>The <b>andThen()</b> is a default method in the interface. In other words, it has an implementation and it is non-abstract method.
                                             The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8" title="andThen method in java 8" class="font-15">details..</a>
                                             <br>
@@ -856,76 +827,72 @@
                                 </ol>
                                     
                                     <h2 class="m-l-20"> Example of accept() method of Consumer Interface </h2>
-<pre>
-<span class="blue"><code>import java.util.function.*;</code> </span>
-<code>public class ConsumerInterfaceAcceptExample{</code>
+<pre><code>import java.util.function.*;
+<b>public class ConsumerInterfaceAcceptExample{</b>
 
-    <code>static void  welcomeGreeting (String name){</code></span>
-        <code>System.out.println("Welcome "+name);</code>
-    <code>}</code>
-    <code>static void showAge (int age){</code>
-        <code>System.out.println("Age is "+age);</code> 
-    <code>}</code>
-    <code>static void showSalary (int sal){</code>
-        <code>System.out.println("Salary is "+sal);</code>
-    <code>}</code>
+    static void  welcomeGreeting ( </code><code>String</code><code> name){
+        System.out.println( "Welcome "+name );
+    }
+    static void showAge (int age){
+        System.out.println( "Age is "+age );
+    }
+    static void showSalary (int sal){
+        System.out.println( "Salary is "+sal );
+    }
 
-    <code>public static void main(String[] args) {</code>
-        <code>Consumer</code><<span class="blue"><code>String</code></span>> consumer1 =
-        <code>ConsumerInterfaceExample::welcomeGreeting; </code>
+    <b>public static void main(String[] args) {</b>
+        Consumer<</code><code>String</code><code>> consumer1 =
+            ConsumerInterfaceExample :: welcomeGreeting;
         <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer1.accept("Tejas");</code>  
+        consumer1.<span class="red">accept</span>( <span class="green">"Tejas"</span> ); 
 
         <span class="code-comment">//method reference</span>    
-        Consumer<<span class="blue">Integer</span>> consumer2 = 
-        <code>ConsumerInterfaceExample::showAge;</code>  
+        Consumer<</code><code>Integer</code><code>> consumer2 = 
+        ConsumerInterfaceExample :: showAge; 
         <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer2.accept(30);</code> 
+        consumer2.<span class="red">accept</span>( <span class="green">30</span> );
 
         <span class="code-comment">//method reference</span>
-        Consumer<<span class="blue">Integer</span>> consumer2 = 
-        <code>ConsumerInterfaceExample::showSalary; </code> 
+        Consumer<</code><code>Integer</code><code>> consumer2 = 
+        ConsumerInterfaceExample :: showSalary; 
         <span class="code-comment">// Calling Consumer method</span> 
-        <code>consumer2.accept(20000);  </code> 
-    <code>}</code>
-<code>}</code>
-
+        consumer2.<span class="red">accept</span>( <span class="green">20000</span> );
+    <b>}
+}</b>
+<span class="output">
 Output:
-Welcome Tejas
-Age is 30
-Salary is 20000
+    Welcome Tejas
+    Age is 30
+    Salary is 20000</span></code>
 </pre>
 
-<h2 class="m-l-20"> Example of andThen() method of Consumer Interface </h2>
+<h2 class="m-l-20">Example of andThen() method of Consumer Interface </h2>
 <ol>
-    <li>The andThen() method allows multiple Consumer operations sequentialy.</li>
+    <li>The <b>andThen()</b> method allows multiple Consumer operations sequentialy.</li>
     <li>If the original Consumer (the one calling andThen()) throws an exception, the after Consumer will not be executed.</li>
 </ol>
-<pre>
-<code>import java.util.function.Consumer;</code>
-<code>public class ConsumerInterfaceAndThenExample{</code>
+<pre><code>import java.util.function.Consumer;
+<b>public class ConsumerInterfaceAndThenExample{
 
-<code>public static void main(String[] args) {</code>
+  public static void main(String[] args) {</b>
         <span class="code-comment">//method reference</span> 
-        <code>Consumer</code><<span class="blue"><code>String</code></span>> consumer =
-        <code>s -> System.out.println( "Welcome "+s );</code>
+        Consumer<</code><code>String</code><code>> consumer =
+            s -> System.out.println( "<span class="green">Welcome </span>"+s );
 
-        <code>Consumer</code><<span class="blue"><code>String</code></span>> consumer2 =
-        <code>s -> System.out.println( "Welcome "+s+ "to the World!" );</code>
+        Consumer<</code><code>String</code><code>> consumer2 =
+            s -> System.out.println( "<span class="green">Welcome </span>"+s+ "<span class="green">to the World!</span>" );
         
-        <code>Consumer</code><<span class="blue"><code>String</code></span>> consumer2 =
-        <code>consumer.andThen( consumer2 );</code>
+        Consumer<</code><code>String</code><code>> consumer2 =
+            consumer.<span class="red">andThen</span>( consumer2 );
 
-        <span class="code-comment">// Calling Consumer method</span>
-        <code>consumer.accept( "Rahul" );</code>  
-
-    <code>}</code>
-<code>}</code>
-
+         <span class="code-comment">// Calling Consumer method</span>
+         consumer.<span class="red">accept</span>( "<span class="green">Rahul</span>" ); 
+    <b>}
+}</b>
+<span class="output">
 Output:
-
-Welcome Rahul
-Welcome Rahul to the World!
+    Welcome Rahul
+    Welcome Rahul to the World!</span></code>
 </pre>
 
                                 </p>
@@ -937,7 +904,7 @@ Welcome Rahul to the World!
                                     
                                 </p>
 
-                                <pre> BiConsumer<String,String> foo = (a, b) -> System.out.println(a + b); </pre>
+                                <pre><code>BiConsumer<</code><code>String,String</code><code>> foo = (a, b) -> System.out.println( a + b ); </code></pre>
 
 					
                                 <div class="col-sm-12 col-md-12 bottom-add">
@@ -947,46 +914,42 @@ Welcome Rahul to the World!
                     
                           
                                 <div class="container-fluid"> <br>  
-                                    <a target="_blank" class="next-link" title="Predicate Interface In Java 8" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                    <div>
                                         <span class="next-botton">
                                             <span class="next-topic">Next Topic </span>
                                              <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Predicate Interface In Java 8</span>
                                         </span>&nbsp;        
-                                    </a>
-                                   
-                                     
-                                    <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                                        <span class="next-botton">
-                                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                            <span class="next-topic-name">Stream Operations Types</span>
-                                        </span>&nbsp;        
-                                    </a>
-                                    <a target="_blank" class="next-link" title="Stream API Tutorial In Details" href="https://java2ee.com/stream/stream-api-in-java-8">
-                                        <span class="next-botton">
-                                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                            <span class="next-topic-name">Stream API Tutorial In Details</span>
-                                        </span>&nbsp;        
-                                    </a>   <br><br>
-                                    <a target="_blank" class="next-link" title="Stream filter method in Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                                        <span class="next-botton">
-                                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                            <span class="next-topic-name">Stream filter() method in Java 8</span>
-                                        </span>&nbsp;        
-                                    </a> 
-                                    
-                                    <a target="_blank" class="next-link" title="Stream collect method in Java 8" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
-                                        <span class="next-botton">
-                                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                            <span class="next-topic-name">Stream collect() method in Java 8</span>
-                                        </span>&nbsp;        
-                                    </a> 
-                                    <a target="_blank" class="next-link" title="map() method in details" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                                        <span class="next-botton">
-                                            <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                            <span class="next-topic-name">map() method in details</span>
-                                        </span>&nbsp;        
-                                    </a> 
+                                    </div>
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Predicate Interface Example In Java" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                        Predicate Interface Example In Java
+                                        </a>
+                                    </div>
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Stream Operations Types With Example In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                            Stream Operations Types With Example In Java
+                                        </a>
+                                    </div>
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Stream API Full Tutorial In Details" href="https://java2ee.com/stream/stream-api-in-java-8">
+                                            Stream API Full Tutorial In Details
+                                        </a>
+                                    </div>
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Stream filter() Method Example In Java" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                            Stream filter() Method Example In Java
+                                        </a>
+                                    </div> 
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Stream collect() Method Example In Java" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                                            Stream collect() Method Example In Java
+                                        </a>
+                                    </div>
+                                    <div class="bottom-next-topic">
+                                        <a target="_blank" class="next-link" title="Stream map() Method Example In Java" href="https://java2ee.com/stream/stream-map-method-in-java-8">
+                                            Stream map() Method Example In Java
+                                        </a>
+                                    </div>
                                 </div> <br><br> 
 				
 

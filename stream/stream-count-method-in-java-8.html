@@ -605,47 +605,10 @@
                     </ul>
                 </div> 
             </div> 
-            <!-- Page content wrapper  <h1 class="mt-2">Java 8 Stream</h1>
-            <span class="next-botton">Next Topic >></span>
-                        <a target="_blank" href="https://java2ee.com/stream/stream-perations-in-java">
-                            <span>Java Stream Operations In Java</span>
-                        </a>
-            -->
             <div id="page-content-wrapper">
-                <div class="container-fluid header"> 
-                    <h1>Stream count() Method In Java 8</h1>    
-                    <a target="_blank" class="next-link" title="Stream reduce Method In Java 8" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream reduce() method</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
-                        <span class="next-botton">
-
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Filter Method In Java</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                        <span class="next-botton">
-                            
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream map() method</span>
-                        </span>&nbsp;        
-                    </a> 
-                   
-                </div>
 				<div id="right-main-div">
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream count() Method In Java 8</h2>
+						    <h1>count() Method Example In Java</h1>
 							<p>
                              The <b>stream count()</b> method is a part of <a target="_blank" title="Terminal Operation In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">terminal operations</a> in java stream. 
                              The <b>count()</b> method returns the count of elements in the stream. The return type of <b>count()</b> method is long.
@@ -668,31 +631,31 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.*;
-<b class="blue">
+<b>
 public class CountMethodExample {
  public static void main(String args[]){</b>
   <span class="code-comment">//Declaring List</span>
-  List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
-  intList.add(6);
-  intList.add(11);
-  intList.add(14);
-  intList.add(7);
-  intList.add(3);
-  intList.add(2);
-  intList.add(16);
-  intList.add(15);
-  intList.add(19);
+  List<</code><code>Integer</code><code>> intList = new ArrayList< </code><code>Integer</code><code> >();
+  intList.add( <span class="green">6</span> );
+  intList.add( <span class="green">11</span> );
+  intList.add( <span class="green">14</span> );
+  intList.add( <span class="green">7</span> );
+  intList.add( <span class="green">3</span> );
+  intList.add( <span class="green">2</span> );
+  intList.add( <span class="green">16</span> );
+  intList.add( <span class="green">15</span> );
+  intList.add( <span class="green">19</span> );
 
   <span class="code-comment red">//calling count method</span>
   long count = intList.stream().count();
 
   System.out.println( count )
-  <b class="blue">
+  <b>
   }
 }</b>
-
+<span class="output">
 Output:
-9
+    9</span></code>
 </pre>
 
 
@@ -702,32 +665,32 @@ Output:
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.*;
-<b class="blue">
+<b>
 public class CountMethodExample {
  public static void main(String args[]){</b>
   <span class="code-comment">//Declaring List</span>
-  List<</code><code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
-  intList.add(6);
-  intList.add(11);
-  intList.add(14);
-  intList.add(7);
-  intList.add(3);
-  intList.add(2);
-  intList.add(16);
-  intList.add(15);
-  intList.add(19);
+  List<</code><code>Integer</code><code>> intList = new ArrayList< </code><code>Integer</code><code> >();
+  intList.add( <span class="green">6</span> );
+  intList.add( <span class="green">11</span> );
+  intList.add( <span class="green">14</span> );
+  intList.add( <span class="green">7</span> );
+  intList.add( <span class="green">3</span> );
+  intList.add( <span class="green">2</span> );
+  intList.add( <span class="green">16</span> );
+  intList.add( <span class="green">15</span> );
+  intList.add( <span class="green">19</span> );
 
   long count = intList.stream()
                 .filter(i -> i%2==0)
                 .count(); <span class="code-comment red">//calling count method</span>
 
   System.out.println( count )
-  <b class="blue">
+  <b>
   }
 }</b>
-
+<span class="output">
 Output:
-4
+    4</span></code>
 </pre>
                 
 </p>
@@ -739,49 +702,74 @@ Output:
 
 
 
-                        <div class="container-fluid"> <br>  
-                            <a target="_blank" class="next-link" title="Stream reduce Method In Java 8" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                                <span class="next-botton">
-                                    <span class="next-topic">Next Topic </span>
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream reduce() method</span>
-                                </span>&nbsp;        
-                            </a>  
-                            <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
-                                </span>&nbsp;        
-                            </a>  
-                            <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Filter Method In Java</span>
-                                </span>&nbsp;        
-                            </a>  <br><br>
-                            <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                                <span class="next-botton">
-                                    
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream map() method</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" title="Java Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream Operations In Details</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" title="Stream reduce() method In Details" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream reduce() method</span>
-                                </span>&nbsp;        
-                            </a>  
-                        </div> <br><br>
+                    <div class="container-fluid"> <br>  
+                        <div>
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
+                            </span>&nbsp;        
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream API Full Tutorial In Java In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream API Full Tutorial In Java In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Functional Interface Example In Details" href="https://java2ee.com/functional-interfaces-in-java-8">
+                                Functional Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Predicate Interface Example In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                Predicate Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Consumer Interface Example In Details" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                                Consumer Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Lambda Expression Example In Details" href="https://java2ee.com/lambda/lambda-expression-example-in-java">
+                                Lambda Expression Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operation Types With Example" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operation Types With Example
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="filter() Method Example In Java Stream" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                filter() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="reduce Method Example In Java Stream" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                reduce() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="forEach() Method Example In Java Stream" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                forEach() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="collect Method Example In Java Stream" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                                collect() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="accept Method Example In Java Stream" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
+                                accept() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="andThen Method Example In Java Stream" href="https://java2ee.com/stream/stream-andthen-method-in-java-8">
+                                andThen() Method Example In Java Stream
+                            </a>
+                        </div>
+                    </div> <br><br>
 
 
 					

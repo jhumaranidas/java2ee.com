@@ -599,48 +599,19 @@
                         </a>
             -->
             <div id="page-content-wrapper">
-                <div class="container-fluid header"> 
-                    <h1>Stream API Filter Method in Java 8</h1>  
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream Map() method</span>
-                        </span>&nbsp;        
-                    </a>   
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Terminal operations</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Intermediate operations</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Short circuit operations</span>
-                        </span>&nbsp;        
-                    </a>  
-                       
-                </div>
 				<div id="right-main-div">
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream filter() method</h2>
+						    <h1>filter() Method Example In Java</h1>
 							<p>
                                 
-                                The <b>stream filter()</b> method provides the functionality to filter stream's elements on the basis of given <a target="_blank" class="font-15" href="https://java2ee.com/lambda-expression-in-java">lambda</a> expression or 
+                                The <b>stream filter()</b> method provides the functionality to filter stream's elements on the basis of given <a target="_blank" class="font-15" href="https://java2ee.com/lambda-expression-example-in-java">lambda</a> expression or 
                                 <a target="_blank" title="Predicate in java" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a>. 
                                 The <b>stream filter()</b> method expects a lambda expression or predicate in argument and the lambda
                                 expression returns a boolean(true/false) value, based on boolean value filter method filters the elements.
                                 
                                 <ol>
                                     <li><b>filter() is an <a target="_blank" title="Intermediate Operation in Stream" href="https://java2ee.com/stream/stream-operations-in-java-8">intermediate stream operation</a>.</b></li>                                   
-                                    <li><b>filter method expects a <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-in-java">lambda</a>  expression or <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a> in argument.</b></li>
+                                    <li><b>filter method expects a <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-example-in-java">lambda</a>  expression or <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8">predicate</a> in argument.</b></li>
                                     <li><b>The <a target="_blank" title="Predicate in java" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java-8">Predicate</a>.  is a functional interface. So, you can also pass lambda expression here.</b></li>
                                     <li><b>filter() method does not change/modify the original source/collection.</b></li>
                                     <li><b>filter() method creates a new collection(list/array) based on the condition and returns the new collection.</b></li>
@@ -649,67 +620,63 @@
                                 </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                  
-<pre><code>Stream<</code><code>T</code>><code> filter(Predicate</code><<code>? super T> predicate)</code>  
-</pre>
+<pre><code>Stream<</code><code>T</code><code>> filter(Predicate</code><code><? super T> predicate)</code> </pre>
 
-<h2 class="m-l-20"> Example of filterig data using <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-in-java">Lambda Expression</a> in arguments</h2>
+<h2 class="m-l-20"> Example of filterig data using <a target="_blank" title="Lambda expression" class="font-15" href="https://java2ee.com/lambda-expression-example-in-java">Lambda Expression</a> in arguments</h2>
 
-<pre>
-<span class="code-comment">//Importing required classes</span>
-<span class="blue"><code>import java.util.*;</code> </span>
-<span class="blue"><code>import java.io.*;</code> </span>
-<span class="blue"><code>import java.util.stream.*;</code> </span>
+<pre><code><span class="code-comment">//Importing required classes</span>
+import java.util.*;
+import java.io.*;
+import java.util.stream.*;
 <b>
-<code>public</code> <span class="blue"> <code>class FilterExample {</code></span>
+public class FilterExample {
+  static void main ( </code><code>String</code><code> args[]) {</b>
 
-<code>static void main (String args[]){ </code></b>
-  <code>Integer</code><code>[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12};</code>
-
+  </code><code>Integer</code><code>[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
   <span class="code-comment">//Filtering the even numbers from a collection</span>
-  <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-  <code>Arrays.asList(numbers).stream() </code>
-  <span class="code-comment">//passing lambda expression in argument</span>
-            <code>.filter(i -> i % 2 == 0)</code>
-            <code>.collect(Collectors.toList());</code>
-            <code>         
-  System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList);</code>
-<b> <code>}</code>
-<code>}</code>
-</b>
+  List<</code><code>Integer</code><code>> evenList = 
+    Arrays.asList(numbers)
+        .stream()
+        <span class="code-comment">//passing lambda expression in argument</span>
+        .filter(i -> i % 2 == 0)
+        .collect(Collectors.toList());            
+    System.out.println( "<span class="green">Filtered even numbers : </span>"+ evenList );
+<b> }
+}</b>
+<span class="output">
 Output:
-Filtered even numbers : [2, 4, 6, 8, 10, 12]
+    Filtered even numbers : [2, 4, 6, 8, 10, 12]
+</span></code>
 </pre>   
 
 
 <h2 class="m-l-20"> Example of filterig with <a target="_blank" class="font-15" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate In Details">Predicate</a> argument:</h2>
 
-<pre>
-<span class="code-comment">//Importing required classes for stream</span>
-<span class="blue"><code>import java.util.*;</code> </span>
-<span class="blue"><code>import java.io.*;</code> </span>
-<span class="blue"><code>import java.util.stream.*;</code> </span>
+<pre><code><span class="code-comment">//Importing required classes for stream</span>
+import java.util.*;
+import java.io.*;
+import java.util.stream.*;
 <b>
-<code>public</code> <span class="blue"> <code>class PredicateFilterExample </span></code>
+public class PredicateFilterExample
+   static void main ( </code><code>String</code><code> args[] ){</b>
+     <span class="code-comment red">//Creating predicate</span>
+     Predicate<</code><code>Integer</code><code>> pr = i -> ( i % 2 == 0 );
+     </code><code>Integer</code><code>[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
- <code>static void main (String args[]){ </code></b>
- <span class="code-comment red">//Creating predicate</span>
- Predicate<<code>Integer</code>> pr = i -> (i % 2 == 0);
- <span class="blue"><code>Integer</code></span><code>[] numbers = {1,2,3,4,5,6,7,8};</code>
-
- <span class="code-comment">//Filtering the even numbers from a collection</span>
- <code>List</code><<span class="blue"><code>Integer</code></span>> evenList = 
-    <code>Arrays.asList(numbers).stream() </code>
-        <span class="code-comment" style="color:red;">//passing predicate in argument</span>
-        <code>.filter(pr)</code>
-        <code>.collect(Collectors.toList());</code>
-        <code>         
- System.out.println("<span class="green">Filtered even numbers : </span>"+ evenList); </code>
-<b> <code>}</code>
-<code>}</code>
-</b>
-
+     <span class="code-comment">//Filtering the even numbers from a collection</span>
+     List<</code><code>Integer</code><code>> evenList = 
+        Arrays.asList(numbers)
+        .stream()
+        <span class="code-comment red">//passing predicate in argument</span>
+        .filter(pr)
+        .collect(Collectors.toList());
+               
+      System.out.println( "<span class="green">Filtered even numbers : </span>"+ evenList );
+<b>  }
+}</b>
+<span class="output">
 Output:
-Filtered even numbers : [2, 4, 6, 8]
+    Filtered even numbers : [2, 4, 6, 8]</code></span>
 </pre>   
                                 
 </p>
@@ -721,45 +688,74 @@ Filtered even numbers : [2, 4, 6, 8]
 
 
 
-                        <div class="container-fluid"> <br>  
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                                <span class="next-botton">
-                                    <span class="next-topic">Next Topic </span>
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream Map() method</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Terminal operations</span>
-                                </span>&nbsp;        
-                            </a>  
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Intermediate operations</span>
-                                </span>&nbsp;        
-                            </a> <br><br>
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Short circuit operations</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-sorted-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Sorted() Method In Java</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Reduce() Method In Java</span>
-                                </span>&nbsp;        
-                            </a>   
-                        </div> <br><br>
+                    <div class="container-fluid"> <br>  
+                        <div>
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
+                            </span>&nbsp;        
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream API Full Tutorial In Java In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream API Full Tutorial In Java In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Functional Interface Example In Details" href="https://java2ee.com/functional-interfaces-in-java-8">
+                                Functional Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Predicate Interface Example In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                Predicate Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Consumer Interface Example In Details" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                                Consumer Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Lambda Expression Example In Details" href="https://java2ee.com/lambda/lambda-expression-example-in-java">
+                                Lambda Expression Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operation Types With Example" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operation Types With Example
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="filter() Method Example In Java Stream" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                filter() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="reduce Method Example In Java Stream" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                reduce() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="forEach() Method Example In Java Stream" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                forEach() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="collect Method Example In Java Stream" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                                collect() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="accept Method Example In Java Stream" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
+                                accept() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="andThen Method Example In Java Stream" href="https://java2ee.com/stream/stream-andthen-method-in-java-8">
+                                andThen() Method Example In Java Stream
+                            </a>
+                        </div>
+                    </div> <br><br>
 
 
 					

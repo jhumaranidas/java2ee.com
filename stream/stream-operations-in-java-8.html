@@ -329,153 +329,136 @@
                     </ul>
                 </div> 
             </div> 
-            <!-- Page content wrapper  <h1 class="mt-2">Java 8 Stream</h1>
-            <span class="next-botton">Next Topic >></span>
-                        <a target="_blank" href="https://java2ee.com/stream/stream-perations-in-java">
-                            <span>Java Stream Operations In Java</span>
-                        </a>
-            -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid header"> 
-                    <h1>Stream Operations Types In ava 8</h1>
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream Filter() method</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Terminal operations</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                        <span class="next-botton">
-                            
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream map() method</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-api-in-java-8">
-                        <span class="next-botton">
-
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream API Tutorial In Details</span>
-                        </span>&nbsp;        
-                    </a>    
-                </div>
-				<div id="right-main-div">
-                       <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream API Operations Types</h2>
-							<p>
-                                
-                                There are mainly 3 types of operations.
-                                <ol style="padding-top:0px;">
-                                    <li><b>Intermediate operations</b></li>   
-                                    <dd style="padding-left:10px;">
-                                           The <b>intermediate operation</b> returns another stream as a result,
-                                            they can be chained together to form a pipeline of operations.
-                                            <br>
-                                         - <b class="red">filter()</b><br>
-                                          <span class="sub-text">Filter the elements based on a specified condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details" class="dec-none">details...</a></span><br>
-                                          - <b class="red">map()</b> <br>
-                                          <span class="sub-text">Transforms each of the elements in a stream to another value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" class="dec-none">details...</a></span><br>
-                                          - <b class="red">sorted()</b> <br>
-                                          <span class="sub-text">Sorts the elements of a stream.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details" class="dec-none">details...</a></span>
-                                    </dd>                           
-                                    <li><b>Terminal operations</b></li>
-                                    <dd style="padding-left:10px;">
-                                        The <b>terminal operation</b> means after calling this method on Stream, you cannot call any other method on Stream.
-                                        <br>
-                                        - <b class="red">forEach() </b><br>
-                                        <span class="sub-text">It iterates all the elements in a stream. &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details" class="dec-none"><span>details...</a></span><br>
-                                        - <b class="red">collect()</b> <br>
-                                        <span class="sub-text">The stream.collect() method accumulate elements of any Stream into a Collection, it is a part of stream terminal operation.  The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() 
-                                            to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java. It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection such as <span class="red">stream().collect(Collectors.toList())</span>.
-                                            &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details" class="dec-none">details...</a></span><br>
-                                        - <b class="red">anyMatch() and allMatch()</b> <br>
-                                        <span class="sub-text">The anyMatch operation checks if any element of a stream matches a given condition, while the allMatch operation checks if all elements &nbsp;&nbsp;satisfy the given condition.&nbsp; <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details" class="dec-none">details...</a></span><br>
-                                        - <b class="red">count()</b> <br>
-                                        <span class="sub-text">The count operation returns the number of elements in a stream as a long value&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details" class="dec-none">details...</a></span><br>
-                                        - <b class="red">reduce()</b> <br>
-                                        <span class="sub-text">It is used to reduce the elements of a stream to a single value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details" class="dec-none">details...</a></span>
-                                  </dd> 
-                                    <li><b>Short-circuit operations</b></li>
-                                    <dd style="padding-left:10px;">
-                                        - <b class="red">findFirst() </b><br>
-                                        <span class="sub-text">The findFirst() method finds the first element in a Stream. we use this method when we specifically want the first element from a &nbsp;&nbsp;sequence.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details" class="dec-none">details...</a></span><br>
-                                        - <b class="red">anyMatch()</b> <br>
-                                        <span class="sub-text">It checks the stream if it satisfies the given condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details" class="dec-none">details...</a></span>
-                                  </dd> 
-                                </ol>
-                            </p>             
-                            <div class="col-sm-12 col-md-12 bottom-add">
-                        
-                            </div> 
-        
-        
-        
-                                <div class="container-fluid"> <br>  
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                                        <span class="next-botton">
-                                            <span class="next-topic">Next Topic </span>
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Java Stream Filter() method</span>
-                                        </span>&nbsp;        
-                                    </a>  
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                                        <span class="next-botton">
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Stream Terminal operations</span>
-                                        </span>&nbsp;        
-                                    </a>  
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                                        <span class="next-botton">
-                                            
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Java Stream map() method</span>
-                                        </span>&nbsp;        
-                                    </a> <br><br>
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
-                                        <span class="next-botton">
+            <div id="right-main-div">
+                <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
+                    <h>Operations Types In Java Stream API</h1>
+                    <p>                       
+                        <h6>There are mainly 3 types of operations.</h6><br>
+                        <ol style="padding-top:5px;">
+                            <li><b>Intermediate operations</b></li>   
+                            <dd style="padding-left:10px;">
+                                    The <b>intermediate operation</b> returns another stream as a result,
+                                    they can be chained together to form a pipeline of operations.
+                                    <br>
+                                    - <b class="red">filter()</b><br>
+                                    <span class="sub-text">Filter the elements based on a specified condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details" class="dec-none">details...</a></span><br>
+                                    - <b class="red">map()</b> <br>
+                                    <span class="sub-text">Transforms each of the elements in a stream to another value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" class="dec-none">details...</a></span><br>
+                                    - <b class="red">sorted()</b> <br>
+                                    <span class="sub-text">Sorts the elements of a stream.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details" class="dec-none">details...</a></span>
+                            </dd>                           
+                            <li><b>Terminal operations</b></li>
+                            <dd style="padding-left:10px;">
+                                The <b>terminal operation</b> means after calling this method on Stream, you cannot call any other method on Stream.
+                                <br>
+                                - <b class="red">forEach() </b><br>
+                                <span class="sub-text">It iterates all the elements in a stream. &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details" class="dec-none"><span>details...</a></span><br>
+                                - <b class="red">collect()</b> <br>
+                                <span class="sub-text">The stream.collect() method accumulate elements of any Stream into a Collection, it is a part of stream terminal operation.  The Collector class provides different methods like toList(), toSet(), toMap(), and toConcurrentMap() 
+                                    to collect the result of Stream into List, Set, Map, and ConcurrentMap in Java. It accepts a Collector in arguments to accumulate elements of Stream into a specified Collection such as <span class="red">stream().collect(Collectors.toList())</span>.
+                                    &nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details" class="dec-none">details...</a></span><br>
+                                - <b class="red">anyMatch() and allMatch()</b> <br>
+                                <span class="sub-text">The anyMatch operation checks if any element of a stream matches a given condition, while the allMatch operation checks if all elements &nbsp;&nbsp;satisfy the given condition.&nbsp; <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details" class="dec-none">details...</a></span><br>
+                                - <b class="red">count()</b> <br>
+                                <span class="sub-text">The count operation returns the number of elements in a stream as a long value&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details" class="dec-none">details...</a></span><br>
+                                - <b class="red">reduce()</b> <br>
+                                <span class="sub-text">It is used to reduce the elements of a stream to a single value.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details" class="dec-none">details...</a></span>
+                            </dd> 
+                            <li><b>Short-circuit operations</b></li>
+                            <dd style="padding-left:10px;">
+                                - <b class="red">findFirst() </b><br>
+                                <span class="sub-text">The findFirst() method finds the first element in a Stream. we use this method when we specifically want the first element from a &nbsp;&nbsp;sequence.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details" class="dec-none">details...</a></span><br>
+                                - <b class="red">anyMatch()</b> <br>
+                                <span class="sub-text">It checks the stream if it satisfies the given condition.&nbsp;<a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details" class="dec-none">details...</a></span>
+                            </dd> 
+                        </ol>
+                    </p>             
+                    <div class="col-sm-12 col-md-12 bottom-add">
                 
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Java Stream forEach() method</span>
-                                        </span>&nbsp;        
-                                    </a>  
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-api-in-java-8">
-                                        <span class="next-botton">
-                
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Java Stream API Tutorial</span>
-                                        </span>&nbsp;        
-                                    </a>  
-                                    <a target="_blank" class="next-link" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                                        <span class="next-botton">
-                
-                                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                             <span class="next-topic-name">Java Stream Operations In Details</span>
-                                        </span>&nbsp;        
-                                    </a>   
-                                </div> <br><br>
-        
-        
-                            
-                                </div> <!--end left-->
-                                <!--start right-->
-                                <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
-                                   
-                                </div>   <!--end right-->
-                            </div>
-                            
+                    </div> 
+    
+    
+    
+                    <div class="container-fluid"> <br>  
+                        <div>
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
+                            </span>&nbsp;        
                         </div>
-                    </div>
-                </div>       
-
-
-
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream API Full Tutorial In Java In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream API Full Tutorial In Java In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Functional Interface Example In Details" href="https://java2ee.com/functional-interfaces-in-java-8">
+                                Functional Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Predicate Interface Example In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                Predicate Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Consumer Interface Example In Details" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                                Consumer Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Lambda Expression Example In Details" href="https://java2ee.com/lambda/lambda-expression-example-in-java">
+                                Lambda Expression Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operation Types With Example" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operation Types With Example
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="filter() Method Example In Java Stream" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                filter() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="reduce Method Example In Java Stream" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                reduce() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="forEach() Method Example In Java Stream" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                forEach() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="collect Method Example In Java Stream" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                                collect() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="accept Method Example In Java Stream" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
+                                accept() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="andThen Method Example In Java Stream" href="https://java2ee.com/stream/stream-andthen-method-in-java-8">
+                                andThen() Method Example In Java Stream
+                            </a>
+                        </div>
+                    </div> <br><br>
+    
+    
+                        
+                    </div> <!--end left-->
+                    <!--start right-->
+                    <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                        
+                    </div>   <!--end right-->
+                </div>          
+            </div>
+        </div>
+    </div>       
     <div class="cookie-consent">      
             By using our site, you acknowledge that you have read and understood our
             <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;

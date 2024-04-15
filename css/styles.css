@@ -93,11 +93,11 @@
 
 body {
   margin: 0;
-  /*font-family: var(--bs-body-font-family);*/
+  /*font-family: var(--bs-body-font-family);
   font-family: sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
+  line-height: var(--bs-body-line-height);*/
   /*color: var(--bs-body-color);*/
   color:darkslategrey;
   text-align: var(--bs-body-text-align);
@@ -106,6 +106,9 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /*text-align: justify; */
   background: #EAEDED;
+  font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 hr {
@@ -144,7 +147,7 @@ h2, .h2 {
   h2, .h2 {
     font-size: 30px;
     line-height: 50px;
-    font-style: oblique;
+   
     /*margin-left: -30px;*/
   }
 }
@@ -263,7 +266,7 @@ sup {
 a {
   color: var(--bs-link-color);
   text-decoration: underline;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -10868,7 +10871,7 @@ textarea.form-control-lg {
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
-  transition: margin 0.25s ease-out;background:#E8F6F3;
+  transition: margin 0.25s ease-out;
 }
 
 #sidebar-wrapper .sidebar-heading {

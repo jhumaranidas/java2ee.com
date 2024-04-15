@@ -780,53 +780,22 @@
                         </a>
             -->
             <div id="page-content-wrapper">
-                <div class="container-fluid header"> 
-                    <h1>Stream findFirst() Method In Java 8</h1>    
-                    <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream anyMatch() method</span>
-                        </span>&nbsp;        
-                    </a> 
-                    <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
-                        <span class="next-botton">
-
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Filter Method In Java</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                        <span class="next-botton">
-                            
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Java Stream map() method</span>
-                        </span>&nbsp;        
-                    </a> 
-                   
-                </div>
 				<div id="right-main-div">
                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						    <h2> - Stream findFirst() Method</h2>
+						    <h1>findFirst() Method Example In Java Stream</h1>
 							<p>
 
                             The <b>findFirst()</b> method is a part of <a target="_blank" title="Short circuit operation" href="https://java2ee.com/stream/stream-operations-in-java-8">Short circuit operation</a> in Java Stream.
-                            It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.
+                            It returns an Optional 1st element of the stream or empty if the stream is empty.
  
                             <ol>
                                 <li><b>The <i>findFirst()</i> method is a part of stream short circuit operation.</b></li>
-                                <li><b>It returns an <a target="_blank" class="font-15" title="Optional In Java 8" href="https://java2ee.com/core-java/optional-in-java-8.html">Optional</a> 1st element of the stream or empty if the stream is empty.</b></li>
+                                <li><b>It returns an Optional 1st element of the stream or empty if the stream is empty.</b></li>
                                 <li><b>Syntex is <span class="red">Optional<<code>T</code>> findFirst()</span>.</b></li>
                             </ol>
                                 <h2 class="m-l-20"> Syntax:</h2>
                                            
-<pre>Optional<<code>T</code>> findFirst()</pre>
+<pre><code>Optional<</code><code>T</code><code>> findFirst()</code></pre>
 
 <h2 class="m-l-20"> Example of findFirst() method of Strings in Java Stream</h2>
                                            
@@ -834,28 +803,27 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-<b class="blue">
+<b>
 public class FindFirstExample {
-
   public static void main(String args[]) {</b>
-    List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
-    strList.add("One");
-    strList.add("Two");
-    strList.add("Three");
-    strList.add("Four");
-    strList.add("Five");
+    List<</code><code>String</code><code>> strList = new ArrayList< </code><code>String</code><code> >();
+    strList.add( "One" );
+    strList.add( "Two" );
+    strList.add( "Three" );
+    strList.add( "Four" );
+    strList.add( "Five" );
 
-    Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+    Optional<</code><code>String</code><code>> firstElement = strList.stream().findFirst();
 
-    System.out.println(firstElement);
-    System.out.println(firstElement.get());
-<b class="blue"> 
+    System.out.println( firstElement );
+    System.out.println( firstElement.get() );
+<b> 
   }
 }</b>
-
+<span class="output">
 Output:
-Optional[One]
-One
+    Optional[One]
+    One</span></code>
 </pre>
 
 <h2 class="m-l-20"> Example of findFirst() method of Integers in Java Stream</h2>
@@ -864,28 +832,27 @@ One
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-<b class="blue">
+<b>
 public class FindFirstExample {
-
   public static void main(String args[]) {</b>
-    List<<code>Integer</code>> intList = new ArrayList<<code>Integer</code>>();
-    intList.add(100);
-    intList.add(90);
-    intList.add(80);
-    intList.add(70);
-    intList.add(200);
+    List<</code><code>Integer</code><code>> intList = new ArrayList< </code><code>Integer</code><code> >();
+    intList.add( 100 );
+    intList.add( 90 );
+    intList.add( 80 );
+    intList.add( 70 );
+    intList.add( 200 );
 
-    Optional<<code>Integer</code>> firstElement = intList.stream().findFirst();
+    Optional<</code><code>Integer</code><code>> firstElement = intList.stream().findFirst();
 
-    System.out.println(firstElement);
-    System.out.println(firstElement.get());
-<b class="blue">
+    System.out.println( firstElement );
+    System.out.println( firstElement.get() );
+<b>
     }
 }</b>
-
+<span class="output">
 Output:
-Optional[100]
-100
+    Optional[100]
+    100</span></code>
 </pre>
            
     <h2 class="m-l-20"> Example of findFirst() method of empty list in Java Stream</h2>
@@ -894,27 +861,27 @@ Optional[100]
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-<b class="blue">
+<b>
 public class FindFirstExample {
-
   public static void main(String args[]) {</b>
-    List<<code>String</code>> strList = new ArrayList<<code>String</code>>();
+    List<</code><code>String</code><code>> strList = new ArrayList< </code><code>String</code><code> >();
     
-    Optional<<code>String</code>> firstElement = strList.stream().findFirst();
+    Optional<</code><code>String</code><code>> firstElement = strList.stream().findFirst();
 
     System.out.println( firstElement );
     System.out.println( "Optional.get() of empty" );
     System.out.println( firstElement.get() );
-<b class="blue">   
+<b>   
     }
 }</b>
-
+<span class="output">
 Output:
-Optional.empty
-Optional.get() of empty
-<span class="red">Exception in thread "main" java.util.NoSuchElementException: No value present
-	at java.base/java.util.Optional.get(Optional.java:143)
-	at com.school.stream.FindFirstExample.main(FindFirstExample.java:21)</span>
+    Optional.empty
+    Optional.get() of empty
+    <span class="red">Exception in thread "main" java.util.NoSuchElementException: No value present
+        at java.base/java.util.Optional.get(Optional.java:143)
+        at com.school.stream.FindFirstExample.main(FindFirstExample.java:21)</span>
+    </span></code>
 </pre>
 
 </p>
@@ -926,49 +893,75 @@ Optional.get() of empty
 
 
 
-                        <div class="container-fluid"> <br>  
-                            <a target="_blank" class="next-link" title="Stream anyMatch Method In Java 8" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8">
-                                <span class="next-botton">
-                                    <span class="next-topic">Next Topic </span>
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream anyMatch() method</span>
-                                </span>&nbsp;        
-                            </a>  
-                            <a target="_blank" class="next-link" title="Stream Api Tutorial In Java 8" href="https://java2ee.com/stream/stream-api-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Api Tutorial In Java 8</span>
-                                </span>&nbsp;        
-                            </a> <br><br> 
-                            <a target="_blank" class="next-link" title="Stream Filter Method In Java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                                <span class="next-botton">
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream Filter Method In Java</span>
-                                </span>&nbsp;        
-                            </a>  
-                            <a target="_blank" class="next-link" title="Java Stream map() method" href="https://java2ee.com/stream/stream-map-method-in-java-8-8">
-                                <span class="next-botton">
-                                    
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream map() method</span>
-                                </span>&nbsp;        
-                            </a> <br><br>
-                            <a target="_blank" class="next-link" title="Java Stream Operations In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Java Stream Operations In Details</span>
-                                </span>&nbsp;        
-                            </a> 
-                            <a target="_blank" class="next-link" title="Stream reduce() method In Details" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                                <span class="next-botton">
-        
-                                     <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                     <span class="next-topic-name">Stream reduce() method</span>
-                                </span>&nbsp;        
-                            </a>  
-                        </div> <br><br>
+                    <div class="container-fluid"> <br>  
+                        <div>
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
+                            </span>&nbsp;        
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="filter() Method Example In Java Stream" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                filter() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="reduce Method Example In Java Stream" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                reduce() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream API Full Tutorial In Java In Details" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream API Full Tutorial In Java In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Functional Interface Example In Details" href="https://java2ee.com/functional-interfaces-in-java-8">
+                                Functional Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Predicate Interface Example In Details" href="https://java2ee.com/predicate-interfaces-in-java-8">
+                                Predicate Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Consumer Interface Example In Details" href="https://java2ee.com/consumer-interfaces-in-java-8">
+                                Consumer Interface Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Lambda Expression Example In Details" href="https://java2ee.com/lambda/lambda-expression-example-in-java">
+                                Lambda Expression Example In Details
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operation Types With Example" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operation Types With Example
+                            </a>
+                        </div>
+                        
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="forEach() Method Example In Java Stream" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                forEach() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="collect Method Example In Java Stream" href="https://java2ee.com/stream/stream-collect-method-in-java-8">
+                                collect() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="accept Method Example In Java Stream" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
+                                accept() Method Example In Java Stream
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="andThen Method Example In Java Stream" href="https://java2ee.com/stream/stream-andthen-method-in-java-8">
+                                andThen() Method Example In Java Stream
+                            </a>
+                        </div>
+                    </div> <br><br>
 
 
 					

@@ -289,78 +289,49 @@
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
-                <div class="container-fluid header">
-                    <h1>Function Interfaces In Java</h1>
-                    <a target="_blank" class="next-link" title="Supplier Interface In Java 8" href="https://java2ee.com/supplier-interface-in-java-8">
-                        <span class="next-botton">
-                            <span class="next-topic">Next Topic </span>
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Supplier Interface In Java</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream filter() method in java 8</span>
-                        </span>&nbsp;        
-                    </a>
-                    <a target="_blank" class="next-link" title="Stream API map method in java 8" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream map() method in java 8</span>
-                        </span>&nbsp;        
-                    </a>  
-                    <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                        <span class="next-botton">
-                             <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                             <span class="next-topic-name">Stream Operations Types</span>
-                        </span>&nbsp;        
-                    </a> 
-                </div>
 				<div id="right-main-div">
                     <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-						<h2> - Function interface</h2>
+						<h1>Function interface In Java With Example</h1>
                         <p>
                             The <b>function</b> type functional interface receives a single argument, processes it, and returns a value.
                              Functional interface is taking the key from the user as input and searching for the value in the map
                               for the given key. <a target="_blank" href="https://java2ee.com/function-interface-in-java" title="function interface in java 8" class="font-15">details..</a>
                              
                               <h2 class="m-l-20">Example of Function interface </h2>             
-<pre>
-<b class="blue"><code>public static void main(<code>String</code>[] args) { </b> 
-private static HashMap</code><<code>Integer</code>, <code>String</code>><code> employeeMap = 
-        new HashMap</code><><code>();
-Function</code><<code>Integer</code>, <code>String</code>><code> addFunc = (Integer ID)-> {
+<pre><code><b>public static void main (</code><code>String</code><code>[] args) { </b> 
+  private static HashMap<</code><code>Integer</code><code>, </code><code>String</code><code>> employeeMap = 
+        new HashMap<>();
+  Function<</code><code>Integer</code><code>, </code><code>String</code><code>> addFunc = (Integer ID)-> {
     if(employeeMap.containsKey(ID)) {
         return employeeMap.get(ID);
     }else{
         return "Invalid ID";
     }
-};</code>
-<span class="code-comment red">// Returns the Employee object if present in the hashmap or return Invalid Id message </span>       
-<code>System.out.println( addFunc.apply( 500 )); 
-<b class="blue">};</b></code>
+  };
+
+  <span class="code-comment">// Returns the Employee object if present in the hashmap or return Invalid Id message </span>       
+  System.out.println( addFunc.<span class="red">apply</span>( <span class="green">500</span> )); 
+<b>};</b>
 </code>
 </pre>  
 
 
 <h2 class="m-l-20">Example of Function interface </h2>             
-<pre>
-import java.util.HashMap;
+<pre><code>import java.util.HashMap;
 import java.util.function.Function;
-<b class="blue">
+<b>
 public class EmployeeFunctionExample {</b>
 
-    private static HashMap<<code>Integer, String</code>> employeeMap =
+    private static HashMap<</code><code>Integer, String</code><code>> employeeMap =
             new HashMap<>();
-    static Function<<code>Integer, String</code>> addFunc = (Integer ID) -> {
+    static Function<</code><code>Integer, String</code><code>> addFunc = (Integer ID) -> {
         if (employeeMap.containsKey(ID)) {
             return employeeMap.get(ID);
         } else {
             return "Invalid ID";
         }
     };
-    <b class="blue">
+    <b>
     public static void main(String args[]) {</b>
 
         employeeMap.put(100, "Employee1");
@@ -369,14 +340,14 @@ public class EmployeeFunctionExample {</b>
 
         System.out.println(addFunc.apply(500));
         System.out.println(addFunc.apply(100));
-        <b class="blue">
+        <b>
     }
 }</b>
-
+<span class="output">
 Output:
-Invalid ID
-Employee1
-    </pre> 
+    Invalid ID
+    Employee1</span></code>
+</pre> 
 
                         <h2 class="m-l-20">Bi Function</h2>
                          <p>
@@ -386,54 +357,48 @@ Employee1
                     <div class="col-sm-12 col-md-12 bottom-add">
                         
                     </div> 
-                    
-
-
-					
-                    <div class="container-fluid"> <br>  
-                        <a target="_blank" class="next-link" title="Supplier Interface In Java 8" href="https://java2ee.com/supplier-interface-in-java-8">
+                    <div class="container-fluid"><br>  
+                        <div>
                             <span class="next-botton">
                                 <span class="next-topic">Next Topic </span>
                                  <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Supplier Interface In Java 8</span>
                             </span>&nbsp;        
-                        </a>  
-                        <a target="_blank" class="next-link" title="Stream API filter method in java 8" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream filter() method in java 8</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream API map method in java 8" href="https://java2ee.com/stream/stream-map-method-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream map() method in java 8</span>
-                            </span>&nbsp;        
-                        </a>  <br><br>
-                        <a target="_blank" class="next-link" title="Stream Operations Types In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream Operations Types</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream Reduce Method In Java 8" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream reduce method</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream Sorted Method In Java 8" href="https://java2ee.com/stream/stream-sorted-method-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream Sorted Method</span>
-                            </span>&nbsp;        
-                        </a>
-                        <a target="_blank" class="next-link" title="Stream Accept Method In Java 8" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
-                            <span class="next-botton">
-                                 <i class="fa fa-angle-double-right ficon-arraw"></i> 
-                                 <span class="next-topic-name">Stream Accept Method</span>
-                            </span>&nbsp;        
-                        </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Supplier Interface Example In Java" href="https://java2ee.com/supplier-interface-in-java-8">
+                                Supplier Interface Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">  
+                            <a target="_blank" class="next-link" title="Stream filter() Method Example In Java" href="https://java2ee.com/stream/stream-filter-method-in-java-8">
+                                Stream filter() Method Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream map() Method Example In Java" href="https://java2ee.com/stream/stream-map-method-in-java-8">
+                            Stream map() Method Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Operations Types With Example In Java" href="https://java2ee.com/stream/stream-operations-in-java-8">
+                                Stream Operations Types With Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Reduce Method Example In Java" href="https://java2ee.com/stream/stream-reduce-method-in-java-8">
+                                Stream Reduce Method Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Sorted Method Example In Java" href="https://java2ee.com/stream/stream-sorted-method-in-java-8">
+                            Stream Sorted Method Example In Java
+                            </a>
+                        </div>
+                        <div class="bottom-next-topic">
+                            <a target="_blank" class="next-link" title="Stream Accept Method Example In Java" href="https://java2ee.com/stream/stream-accept-method-in-java-8">
+                                Stream Accept Method Example In Java
+                            </a>
+                        </div>
                     </div> <br><br> 
 				 
 					
