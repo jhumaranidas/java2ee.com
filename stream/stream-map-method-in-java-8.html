@@ -693,8 +693,8 @@ public class StreamMapExample {
   Arrays.asList(numbers).stream()
         <span class="code-comment">//passing lambda expression in argument</span>
         .filter(i -> i % 2 == 0)
-        <span class="code-comment red">//multiplying by 2 for each element after filter</span>
-        .map(i -> i*2)
+        <span class="code-comment red">//multiplying by 3 for each element after filter</span>
+        .map(i -> i*3)
         <span class="code-comment red">//forEach with method reference</span>
         .forEach(System.out::println);    
   <b>}
