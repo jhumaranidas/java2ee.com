@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kafka Tutorial</title>
+        <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="kafka tutorial, apache kafka tutorial, kafka architecture, kafka cluster, kafka topic, kafka brokers, kafka producer, kafka consumer">          
+        <meta name="description" content="1st May 2024 - Apache Kafka is an open source platform and distributed messaging system with publish and subscribe events. It is a mediator between the producer and consumer systems. The producer send data to the Kafka, where consumer consumes the data from Kafka.">
+
+        <link rel="canonical" href="https://java2ee.com/apache-kafka/kafka-tutorial?t=1&ind=kafka-complete-tutorial">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">
+
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
+        <link rel="manifest" href="../image/fevicon/site.webmanifest">
+        <link rel="mask-icon" href="../image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
+        <link rel="shortcut icon" sizes="16x16" href="../image/fevicon/favicon-16x16.png" type=image/x-icon>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/kafka-custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Kafka Tutorial">
+        <meta property="og:description" content="1st May 2024 - Apache Kafka is an open source platform and distributed messaging system with publish and subscribe events. It is a mediator between the producer and consumer systems. The producer send data to the Kafka, where consumer consumes the data from Kafka."/>
+        <meta property="og:url" content="https://java2ee.com/apache-kafka/kafka-tutorial?t=1&ind=kafka-complete-tutorial">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Kafka Tutorial">
+        <meta property="article:tag" content="Kafka">
+        <meta property="article:tag" content="Tutorial">
+       
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@DasJhum9">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Tutorial">
+        <meta name="twitter:description" property="og:description" content="1st May 2024 - Apache Kafka is an open source platform and distributed messaging system with publish and subscribe events. It is a mediator between the producer and consumer systems. The producer send data to the Kafka, where consumer consumes the data from Kafka.">
+        <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
+         
+        <meta property="article:published_time" content="2024-05-01T02:59:35+00:00">
+        <meta property="article:modified_time" content="2024-05-01T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-05-01T02:59:35+00:00">
+    </head>
+    <body>      
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div id="sidebar-wrapper">
+                <div class="sidebar-heading">
+                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
+                </div>
+                <div class="list-group list-group-flush">
+                    <ul>    
+                        <li class="next-botton">     
+                            <a id="kafka-cluster" target="_blank" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?rank=1&title=kafka-cluster-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Cluster In Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton active">     
+                            <a target="_blank" id="kafka-tutorial" title="Kafka Tutorial" href="https://java2ee.com/apache-kafka/kafka-tutorial?rank=1&title=kafka-complete-tutorial">
+                                <span class="left-link-button active">
+                                     <i class="fa fa-angle-double-right f-arraw-left green"></i> 
+                                     <span class="left-topic-name active">Kafka Tutorial</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-api" title="Kafka API" href="https://java2ee.com/apache-kafka/kafka-api?rank=1&title=kafka-api-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka API In Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-brokers" title="Kafka Brockers" href="https://java2ee.com/apache-kafka/kafka-brokers?rank=1&title=kafka-brockers">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Brockers</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" class="next-link" id="kafka-topics" title="Kafka Topics" href="https://java2ee.com/apache-kafka/kafka-topics?rank=1&title=kafka-topics-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Topics in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" class="next-link" id="kafka-topic-partitions" title="Kafka Topics Partitions" href="https://java2ee.com/apache-kafka/kafka-topics-partitions?rank=3&title=kafka-topics-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Topics Partitions</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" class="next-link" id="create-kafka-topic" title="Create Kafka Topic" href="https://java2ee.com/apache-kafka/create-kafka-topic?rank=3&title=create-kafka-topic">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Create Kafka Topic</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-producer" title="Kafka Producer" href="https://java2ee.com/apache-kafka/kafka-producer?rank=1&title=kafka-producer-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Producer in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-consumer" title="Kafka Consumer" href="https://java2ee.com/apache-kafka/kafka-consumer?rank=1&title=kafka-consumer-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Consumer in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-cluster-setup" title="Kafka Cluster Setup" href="https://java2ee.com/apache-kafka/create-kafka-cluster?rank=1&title=setup-kafka-cluster-on-windows">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Setup Kafka Cluster</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="create-kafka-producer" title="Create Kafka Producer in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=1&title=kafka-producer-in-java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Producer in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=1&title=kafka-consumer-in-java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Consumer in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" id="create-kafka-producer" title="Write Kafka Messages in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=1&title=Write Kafka Messages in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Write Kafka Messages in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=1&title=Read Kakfa Messages in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Read Kakfa Messages in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>           
+                    </ul>
+                </div> 
+            </div> 
+            <div id="right-main-div">
+                <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
+                    <h1>Apache Kafka Tutorial</h1>
+                    <p>                       
+                        <ol>
+                            <li class="list-h2"><h2>What is Apache Kafka?</h2></li>
+                            <dd>
+                               <p> <b>Apache Kafka</b> is an open source platform and distributed messaging system with publish and subscribe events.
+                                It is a mediator between the producer and consumer systems. The <b>producer</b> send data to the Kafka, where  <b>consumer</b> 
+                                consumes the data from Kafka. 
+                            </p>
+                            <p>
+                                Basically <b>Apache Kafka</b> is a Messaging system to pass messages between applications, the messaging sytem means its simple 
+                                exchanging of messages between two or more sources, end-points, servers etc.
+                                 It can handle high volume of data and enables us to send messages from one source to another source.
+                              </p>
+                              <p>
+                                 Kafka was originally developed by <b>LinkedIn</b> and later it was donated to the Apache Software Foundation. 
+                                </p>
+                            
+                               <p><b>Benefits of Apache Kafka</b>
+                                <ol class="top-list-ol">
+                                    <li class="top-list">Reliability and Durability</li>
+                                    <dd class="top-list-dd">Kafka stores data in a fault-tolerant, distributed manner, with multiple copies of each message
+                                        stored across multiple servers. This ensures that your data is always available, even in the event of hardware failure.</dd>
+                                    <li class="top-list">Scalability</li>
+                                    <dd class="top-list-dd"> Kafka is designed to be highly scalable, it can handle a large volume of data 
+                                        and can grow as your need. Kafka is also highly available and fault-tolerant, so you can rely on it 
+                                        to handle your data processing needs even in the event of hardware failure.</dd>
+                                    <li class="top-list">Performance</li>
+                                    <dd class="top-list-dd">Kafka is designed to handle large volumes of data with high throughput and low latency. This is the great solution for applications that require real-time data processing.
+                                         Kafka can handle millions of events per second and has been shown to achieve sub-millisecond latency.</dd>
+                                    <li class="top-list">Real-time processing</li>
+                                    <dd class="top-list-dd">Kafka enables real-time data processing, it can process data as it arrives.</dd>
+                                </ol>
+                               </p>
+                            </dd>
+                            <li class="list-h2"><h2>What is messaging system?</h2></li>
+                            <dd>
+                                <b>Messaging system</b> is the process of exchanging messages between two or more sources, end-points, servers etc.
+                                There are two processes of messaging system.
+                                <ol>
+                                    <li class="list-title">Sender or Producer</li>
+                                    <dd>The responsibility of <b>sender</b> is to send/write the messages. The sender is also known as <b>Producer</b> 
+                                        who publishes the messages.</dd>
+                                    <li class="list-title">Receiver or Consumer </li>
+                                    <dd>The responsibility of <b>receiver</b> is to read that messages. The receiver is also known as <b>Consumer</b> 
+                                        who consumes the messages.</dd>
+                                </ol> 
+                            </dd>
+                            <li class="list-h2"><h2>What is Streaming In The Messaging system?</h2></li>
+                            <dd>
+                                The Streaming process allows parallel execution of the data, where one record executes without waiting for the output of the previous record. 
+                                In a distributed system normally we see the streaming process and parallel execution to simplify the task and improve performance.
+                                Its executes the thread/data without waiting for another.  
+                            </dd>
+                        </ol>         
+                    </p>
+                    <p>In the next topic, you will understand about 
+                        <a id="kafka-cluster" target="_blank" class="next-link" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters">
+                                Kafka Cluster
+                                <i class="fa fa-angle-double-right ficon-arraw red"></i>
+                        </a><br><br><br>
+                    </p>              
+                    <div class="col-sm-12 col-md-12 bottom-add">
+                
+                    </div> 
+                    <div class="row container-fluid">
+                        <div class="col-md-6 col-lg-6 col-sm-12" style="padding:0px;">
+                            
+                            
+                        </div> 
+                        <div class="col-md-6 col-lg-6 col-sm-12" style="text-align:right;padding:0px;">
+                            <div>
+                                <span class="next-botton">
+                                    <span class="next-topic">Next Topics </span>
+                                    <i class="fa fa-angle-double-right ficon-arraw"></i>
+                                </span>      
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a id="kafka-cluster" target="_blank" class="next-link" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?p=1&code=kafka-cluster">
+                                    Kafka Cluster
+                            </a><br>
+                            </div>    
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-brokers" class="next-link" title="Kafka Brockers" href="https://java2ee.com/apache-kafka/kafka-brokers?p=1&code=kafka-brokers">
+                                    Kafka Brockers
+                                </a>
+                            </div>  
+                            <div class="bottom-next-topic">
+                                <a target="_blank" class="next-link" id="kafka-topics" title="Kafka Topics" href="https://java2ee.com/apache-kafka/kafka-topics?p=1&code=kafka-topics">
+                                    Kafka Topics
+                                </a>
+                            </div>  
+                        </div> 
+                                           
+                    </div> <br><br>       
+                </div> <!--end left-->
+                <!--start right-->
+                <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                    
+                </div>   <!--end right-->
+            </div>          
+        </div>     
+    <div class="cookie-consent">      
+            By using our site, you acknowledge that you have read and understood our
+            <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;
+            <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
+    </div>		 
+        <script>
+            window.addEventListener("load", (event) => {               
+                if(document.getElementById('right-adv')!=0){
+                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                    if(height>300){
+                        height=height-117;
+                    }
+                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+                }  
+            });   
+        </script>
+    </body>
+</html>

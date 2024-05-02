@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Kafka Topic</title>
+        <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="create kafka topic, create kafka topic commandline, create kafka topic command prompt">          
+        <meta name="description" content="1st MAy 2024 - In this article you will learn about create kafka topic in command prompt. You will see the example of create topic in details.">
+
+        <link rel="canonical" href="https://java2ee.com/apache-kafka/create-kafka-topic?fo=1&rt=how-to-create-kafka-topic">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+       <!-- <meta name="google-adsense-account" content="ca-pub-1973149732345742">-->
+
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
+        <link rel="manifest" href="../image/fevicon/site.webmanifest">
+        <link rel="mask-icon" href="../image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
+        <link rel="shortcut icon" sizes="16x16" href="../image/fevicon/favicon-16x16.png" type=image/x-icon>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/kafka-custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Create Kafka Topic">
+        <meta property="og:description" content="1st MAy 2024 - In this article you will learn about create kafka topic in command prompt. You will see the example of create topic in details."/>
+        <meta property="og:url" content="https://java2ee.com/apache-kafka/create-kafka-topic?fo=1&rt=how-to-create-kafka-topic">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Create Kafka Topic">
+        <meta property="article:tag" content="Create">
+        <meta property="article:tag" content="Kafka">
+        <meta property="article:tag" content="Topic">
+     
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@DasJhum9">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Create Kafka Topic">
+        <meta name="twitter:description" property="og:description" content="1st MAy 2024 - In this article you will learn about create kafka topic in command prompt. You will see the example of create topic in details.">
+        <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
+         
+        <meta property="article:published_time" content="2024-05-01T02:59:35+00:00">
+        <meta property="article:modified_time" content="2024-05-01T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-05-01T02:59:35+00:00">
+    </head>
+    <body>      
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div id="sidebar-wrapper">
+                <div class="sidebar-heading">
+                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
+                </div>
+                <div class="list-group list-group-flush">
+                    <ul>    
+                        <li class="next-botton">     
+                            <a id="kafka-cluster" target="_blank" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?rank=8&title=kafka-cluster-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Cluster In Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-tutorial" title="Kafka Tutorial" href="https://java2ee.com/apache-kafka/kafka-tutorial?rank=8&title=kafka-complete-tutorial">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Tutorial</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-api" title="Kafka API" href="https://java2ee.com/apache-kafka/kafka-api?rank=8&title=kafka-api-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka API In Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-brokers" title="Kafka Brockers" href="https://java2ee.com/apache-kafka/kafka-brokers?rank=8&title=kafka-brockers">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Brockers</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-topics" title="Kafka Topics" href="https://java2ee.com/apache-kafka/kafka-topics?rank=8&title=kafka-topics-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Topics</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-topic-partitions" title="Kafka Topics Partitions" href="https://java2ee.com/apache-kafka/kafka-topics-partitions?rank=3&title=kafka-topics-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Topics Partitions</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton active">     
+                            <a target="_blank" class="next-link" id="create-kafka-topic" title="Create Kafka Topic" href="https://java2ee.com/apache-kafka/create-kafka-topic?rank=3&title=create-kafka-topic">
+                                <span class="left-link-button active">
+                                     <i class="fa fa-angle-double-right f-arraw-left green"></i> 
+                                     <span class="left-topic-name active">Create Kafka Topic</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-producer" title="Kafka Producer" href="https://java2ee.com/apache-kafka/kafka-producer?rank=8&title=kafka-producer-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Producer in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-consumer" title="Kafka Consumer" href="https://java2ee.com/apache-kafka/kafka-consumer?rank=8&title=kafka-consumer-in-details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Consumer in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="kafka-cluster-setup" title="Kafka Cluster Setup" href="https://java2ee.com/apache-kafka/create-kafka-cluster?rank=8&title=setup-kafka-cluster-on-windows">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Setup Kafka Cluster</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="create-kafka-producer" title="Create Kafka Producer in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=8&title=kafka-producer-in-java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Producer in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=8&title=kafka-consumer-in-java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Kafka Consumer in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" id="create-kafka-producer" title="Write Kafka Messages in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=8&title=Write Kafka Messages in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Write Kafka Messages in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=8&title=Read Kakfa Messages in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Read Kakfa Messages in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>           
+                    </ul>
+                </div> 
+            </div> 
+            <div id="right-main-div">
+                <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
+                    <h1>Create Kafka Topic</h1>
+              
+                <h2>How to create Kafka Topic?</h2>
+                <p>   
+                  In the previous topic, we have covered about how to setup kafka cluster on windows.
+                  Please check the previous topic of <a id="create-kafka-cluster-on-windows" href="https://java2ee.com/apache-kafka/create-kafka-cluster?kt=1&uc=create-kafka-cluster-on-windows" target="_blank">Kafka Cluster Setup</a> to understand the setup of kafka cluster so that
+                  you can easily create the kafka topic under kafka cluster.
+                </p>
+                <p>
+                <ol class="num-list-ol">
+                    <li class="num-list" style="color:#D98880 !important;">
+                        After completed the kafka setup, you need to open command prompt and go to the <b>bin/windows</b> directory of kafka extracted folder in the command prompt.
+                    </li>
+                    <li class="num-list" style="color:#D98880 !important;">
+                        Write the command below in the command prompt.
+                    <pre><code>zookeeper-server-start.bat C:\kafka\config\zookeeper.properties
+
+kafka-server-start.bat C:\kafka\config\server.properties
+                    </code></pre>
+                    <li class="num-list" style="color:#D98880 !important;">Create Topic
+                      <dd>
+                        <ol class="num-list-ol">
+                            <li class="num-list">
+                                To create a topic, write the command below in the command prompt.
+                                <pre style="width:80%;background:black;color:white;"><code>kafka-topics.bat --create --topic first-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1</code></pre>
+                            </li>
+                            <li class="num-list">
+                                To check a topic is created or not, write the command below in the command prompt.
+                                <pre style="width:80%;background:black;color:white;"><code>kafka-topics.bat --list --bootstrap-server localhost:9092</code></pre>
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">--create --topic</span> : It is the create command to create a topic, it indicates to create a topic.
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">first-topic</span> : It is the name of topic that you want to create, it indicates to create a topic with this name only.
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">--bootstrap-server</span> : It is the name of kafka broker.
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">localhost:9092</span> : It is the address of kafka broker.
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">replication-factor 1</span> : It is the topic's replication factor.
+                            </li>
+                            <li class="num-list">
+                                <span style="font-weight: bold;color:#D98880 !important;">--partitions 1</span> : It defines about how many partitions for this topic.
+                            </li>
+
+                            <br>
+                            <img id="kafka-topic-creation" src="../image/kafka topic create.PNG" title="Kafka Topic Creation" style="width:90%;"><div class="image-text" style="width:100%;text-align: center;">kafka Download</div></image>
+                            <br>
+                        </ol>
+                      </dd>
+                    </li>
+                </li>
+            </ol>      
+        </p>
+        <p>In the next topic, you will understand about 
+            <a target="_blank" id="java-example-of-kafka-producer" class="next-link" title="What is Kafka Brocker?" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?vt=1&uc=java-example-of-kafka-producer">
+                    Create Kafka Producer In Java
+            </a><br><br><br>
+        </p>
+                
+                    <div class="col-sm-12 col-md-12 bottom-add">
+                
+                    </div> 
+                    <div class="row container-fluid">
+                        <div class="col-md-6 col-lg-6 col-sm-12" style="padding:0px;">
+                            <div>
+                                <span class="next-botton">      
+                                    <i class="fa fa-angle-double-left ficon-arraw"></i>
+                                    <span class="next-topic">Previous Topics </span>
+                                </span>&nbsp;        
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-broker" class="next-link" title="Kafka Brokers" href="https://java2ee.com/apache-kafka/kafka-brokers?f=1&rr=what-is-kafka-broker">
+                                    Kafka Brokers
+                                </a><br>   
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-api" class="next-link" title="Kafka API" href="https://java2ee.com/apache-kafka/kafka-api?rank=1&vt=kafka-api-in-details">
+                                    Kafka API
+                                </a><br>   
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka -cluster" class="next-link" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?rank=2&v=what-is-kafka-cluster">
+                                    Kafka Cluster
+                                </a><br>   
+                            </div>   
+                        </div> 
+                        <div class="col-md-6 col-lg-6 col-sm-12" style="text-align:right;padding:0px;">
+                            <div>
+                                <span class="next-botton">
+                                    <span class="next-topic">Next Topics </span>
+                                    <i class="fa fa-angle-double-right ficon-arraw"></i>
+                                </span>      
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-producer" class="next-link" title="Kafka Producer" href="https://java2ee.com/apache-kafka/kafka-producer?m=2&cl=what-is-kafka-producer">
+                                    Kafka Producer
+                                </a><br>
+                            </div> 
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-consumer" class="next-link" title="Kafka Consumer" href="https://java2ee.com/apache-kafka/kafka-consumer?vt=9&cl=what-is-kafka-consumer">
+                                    Kafka Consumer
+                                </a><br>
+                            </div>
+                            <div class="bottom-next-topic">
+                                <a target="_blank" id="kafka-cluster-setup" class="next-link" title="Kafka Cluster Setup" href="https://java2ee.com/apache-kafka/create-kafka-cluster?vt=9&cl=how-to-setup-kafka-cluster">
+                                    Create Kafka Cluster
+                                </a><br>
+                            </div>   
+                        </div> 
+                                           
+                    </div> <br><br>      
+            </div> <!--end left-->
+            <!--start right-->
+            <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                
+            </div>   <!--end right-->
+        </div>          
+    </div>     
+<div class="cookie-consent">      
+        By using our site, you acknowledge that you have read and understood our
+        <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;
+        <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
+</div>		 
+    <script>
+        window.addEventListener("load", (event) => {               
+            if(document.getElementById('right-adv')!=0){
+                var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                if(height>300){
+                    height=height-117;
+                }
+                document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+            }  
+        });   
+    </script>
+</body>
+</html>
