@@ -158,57 +158,57 @@
   <priority>0.68</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-tutorial?t=1&ind=kafka-complete-tutorial</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-tutorial</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.67</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-clusters?rank=1&title=kafka-cluster-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-clusters</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.66</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-api?rank=6&title=kafka-api-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-api</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.65</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-brokers?rank=7&title=kafka-brockers</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-brokers</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-topics?rank=6&title=kafka-topics-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-topics</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.63</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-topics-partitions?rank=3&title=kafka-topics-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-topics-partitions</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.62</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-producer?rank=8&title=kafka-producer-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-producer</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.61</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/kafka-consumer?rank=4&title=kafka-consumer-in-details</loc>
+  <loc>https://java2ee.com/apache-kafka/kafka-consumer</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/create-kafka-cluster?rank=5&title=setup-kafka-cluster-on-windows</loc>
+  <loc>https://java2ee.com/apache-kafka/create-kafka-cluster</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.59</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=12&title=kafka-producer-in-java</loc>
+  <loc>https://java2ee.com/apache-kafka/create-kafka-producer-in-java</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.58</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=10&title=kafka-consumer-in-java</loc>
+  <loc>https://java2ee.com/apache-kafka/create-kafka-consumer-in-java</loc>
   <lastmod>2024-05-06T02:20:24+00:00</lastmod>
   <priority>0.57</priority>
 </url>
