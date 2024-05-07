@@ -641,3 +641,6 @@ li.next-botton{
 .image-text{width:100%;text-align: center;}
 
 .description{margin:20px;}
+.non-underline{
+	text-decoration: none; 
+}
