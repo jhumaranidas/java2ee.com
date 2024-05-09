@@ -283,16 +283,31 @@
             <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
             <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
     </div>		 
-        <script>
-            window.addEventListener("load", (event) => {               
-                if(document.getElementById('right-adv')!=0){
-                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
-                    if(height>300){
-                        height=height-117;
-                    }
-                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
-                }  
-            });   
-        </script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WNN8BHZLNW');
+    </script>
+    <script>
+        window.addEventListener("load", (event) => {
+           
+            if(document.getElementById('right-adv')!=0){
+                var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                if(height>300){
+                    height=height-117;
+                }
+                document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+            }
+            
+        });
+       
+    </script>
+</body>
 </html>
+

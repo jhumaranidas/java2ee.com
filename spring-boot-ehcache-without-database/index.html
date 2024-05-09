@@ -13,7 +13,7 @@
         <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
         <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
         <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
-       <!-- <meta name="google-adsense-account" content="ca-pub-1973149732345742">-->
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742"> 
 
         <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
@@ -525,16 +525,31 @@ public class BookService {
             <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
             <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
     </div>		 
-        <script>
-            window.addEventListener("load", (event) => {               
-                if(document.getElementById('right-adv')!=0){
-                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
-                    if(height>300){
-                        height=height-117;
-                    }
-                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
-                }  
-            });   
-        </script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WNN8BHZLNW');
+    </script>
+    <script>
+        window.addEventListener("load", (event) => {
+           
+            if(document.getElementById('right-adv')!=0){
+                var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                if(height>300){
+                    height=height-117;
+                }
+                document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+            }
+            
+        });
+       
+    </script>
+</body>
 </html>
+
