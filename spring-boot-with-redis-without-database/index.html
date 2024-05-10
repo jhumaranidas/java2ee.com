@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spring Boot Ehcache Without Database</title>
+        <title>Spring Boot Redis Without Database</title>
         <meta charset=utf-8>
         <meta name="theme-color" content="#f10d0d">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
-        <meta name="keywords" content="Spring Boot Ehcache Without Database">          
-        <meta name="description" content="08 May 2024 - In this tutorial you will see the example about how to integrate Ehcache with Spring Boot without database. EhCache is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application.">
+        <meta name="keywords" content="Spring Boot Redis Without Database">          
+        <meta name="description" content="09 May 2024 - In this tutorial you will see the example about how to integrate Redis with Spring Boot without database. Redis is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application.">
 
-        <link rel="canonical" href="https://java2ee.com/spring-boot-ehcache-without-database">
+        <link rel="canonical" href="https://java2ee.com/spring-boot-with-redis-without-database">
 
         <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
         <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
@@ -31,14 +31,14 @@
         
         <meta property="og:locale" content="en_US">
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Spring Boot Ehcache Without Database">
-        <meta property="og:description" content="08 May 2024 - In this tutorial you will see the example about how to integrate Ehcache with Spring Boot without database. EhCache is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application."/>
-        <meta property="og:url" content="https://java2ee.com/spring-boot-ehcache-without-database">
-        <meta property="og:site_name" content="java2ee - Spring Boot Ehcache Without Database">
-        <meta property="article:section" content="Spring Boot Ehcache Without Database">
+        <meta property="og:title" content="Spring Boot Redis Without Database">
+        <meta property="og:description" content="09 May 2024 - In this tutorial you will see the example about how to integrate Redis with Spring Boot without database. Redis is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application."/>
+        <meta property="og:url" content="https://java2ee.com/spring-boot-with-redis-without-database">
+        <meta property="og:site_name" content="java2ee - Spring Boot Redis Without Database">
+        <meta property="article:section" content="Spring Boot Redis Without Database">
         <meta property="article:tag" content="Spring">
         <meta property="article:tag" content="Boot">
-        <meta property="article:tag" content="Ehcache">
+        <meta property="article:tag" content="Redis">
         <meta property="article:tag" content="Without">
         <meta property="article:tag" content="Database">
      
@@ -46,13 +46,13 @@
         <meta name="twitter:site" content="@DasJhum9">
         <meta name="twitter:creator" content="@DasJhum9">
         <meta name="twitter:domain" content="www.java2ee.com">
-        <meta name="twitter:title" property="og:title" content="Spring Boot Ehcache Without database">
-        <meta name="twitter:description" property="og:description" content="08 May 2024 - In this tutorial you will see the example about how to integrate Ehcache with Spring Boot without database. EhCache is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application.">
+        <meta name="twitter:title" property="og:title" content="Spring Boot Redis Without database">
+        <meta name="twitter:description" property="og:description" content="09 May 2024 - In this tutorial you will see the example about how to integrate Redis with Spring Boot without database. Redis is an open source and Java based library, it is used to cache data to increase the performance. It is lightweight and Flexible, we can easyly integrate in the application.">
         <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
          
-        <meta property="article:published_time" content="2024-05-08T02:59:35+00:00">
-        <meta property="article:modified_time" content="2024-05-08T02:59:35+00:00">
-        <meta property="og:updated_time" content="2024-05-08T02:59:35+00:00">
+        <meta property="article:published_time" content="2024-05-09T02:59:35+00:00">
+        <meta property="article:modified_time" content="2024-05-09T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-05-09T02:59:35+00:00">
     </head>
     <body>      
         <div class="d-flex" id="wrapper">
@@ -62,36 +62,28 @@
                     <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
                 </div>
                 <div class="list-group list-group-flush">
-                    <ul>  
-                        <li class="next-botton">     
-                            <a id="stream-api-complete-tutorial" target="_blank" title="Kafka Cluster" href="https://java2ee.com">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Stream API Complete Tutorial</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li> 
-                        <li class="next-botton active">     
-                            <a id="spring-boot-ehcache" target="_blank" title="Spring Boot With Ehcache Without Database" href="https://java2ee.com/spring-boot-ehcache-without-database">
-                                <span class="left-link-button active">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name active">Spring Boot With Ehcache Without Database</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a id="spring-boot-redis" target="_blank" title="Spring Boot With Redis Without Database" href="https://java2ee.com/spring-boot-with-redis-without-database">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Spring Boot With Redis Without Database</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
+                    <ul>    
                         <li class="next-botton">     
                             <a id="kafka-cluster" target="_blank" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?rank=11&title=kafka-cluster-in-details">
                                 <span class="left-link-button">
                                      <i class="fa fa-angle-double-right f-arraw-left"></i> 
                                      <span class="left-topic-name">Kafka Cluster In Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">     
+                            <a id="spring-boot-ehcache" target="_blank" title="Spring Boot With Ehcache Without Database" href="https://java2ee.com/spring-boot-ehcache-without-database">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Spring Boot With Ehcache Without Database</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton active">     
+                            <a id="spring-boot-redis" target="_blank" title="Spring Boot With Redis Without Database" href="https://java2ee.com/spring-boot-with-redis-without-database">
+                                <span class="left-link-button active">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name active">Spring Boot With Redis Without Database</span>
                                 </span>&nbsp;        
                             </a>
                         </li>
@@ -175,11 +167,11 @@
                                 </span>&nbsp;        
                             </a>
                         </li>
-                        <li class="next-botton">     
+                        <li class="next-botton active">     
                             <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=11&title=kafka-consumer-in-java">
-                                <span class="left-link-button">
+                                <span class="left-link-button active">
                                      <i class="fa fa-angle-double-right f-arraw-left green"></i> 
-                                     <span class="left-topic-name">Kafka Consumer in Java</span>
+                                     <span class="left-topic-name active">Kafka Consumer in Java</span>
                                 </span>&nbsp;        
                             </a>
                         </li> 
@@ -204,213 +196,157 @@
             </div> 
             <div id="right-main-div">
                 <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-                    <h1>Spring Boot With Ehcache Without Database</h1>  
-                
-                    <p>
-                       <h2><i class="arrow right"></i>What is Ehcache?</h2>
+                    <h1>Spring Boot With Redis Without Database</h1>  
+                    
+                    <h2>What is Redis?</h2></a></li>                       
+                    <p><b>Redis</b> stands for <b>Remote Dictionary Server</b>. It is an open source NoSQL database.
+                        It doesn’t have any tables, rows and columns. Also, it doesn’t allow statements like select 
+                        statement, insert statements, update statements etc.
                     </p>
                     <p>
-                        <b>EhCache</b> is an open source and Java based library, it is used to cache data to 
-                        increase the performance. 
-                        It is lightweight and Flexible, we can easyly integrate in the application.
+                        It stores objects using key/value and basically used to cache and quick-response in an application 
+                        to speed or increase performance.
+                    </p>
+                    <p>Various ways of Redis</p>
+                    <ol class="num-list-ol">
+                        <li class="num-list">In-Memory Database</li>
+                        <li class="num-list">Cache</li>
+                    </ol>
+
+                    <h2>In-Memory Database</h2>                       
+                    <p>
+                        <b>In-Memory Database(IMDS)</b> enables minimal response times. It provides responses in microsecond of times. 
+                            It is the good choice for the application if an application handles the large numbers of traffic.
+                    </p>
+                    <p>Advantages:<br>
                         <ol class="num-list-ol">
-                            <li class="num-list">
-                                On-Heap - Heap memory is used to store cache.
-                            </li>
-                            <li class="num-list">
-                                Off-Heap - RAM memory is used to store cache.
-                            </li>
-                            <li class="num-list">
-                                Disk - Disk is used to store cache.
-                            </li>
-                            <li class="num-list">
-                                Clustered: Remote server is used to store cache.
-                            </li>
-                            <!--<li class="num-list">
-                                Cache-aside: It is used to read and update the data to and from the data store.
-                            </li>
-                            <li class="num-list">
-                                Cache-as-SoR or system-of-record: This pattern delegates SOR reading and writing 
-                                activities to the cache so that the application code is absolved of this responsibility.
-                            </li>
-                            <li class="num-list">Read-through: Copies the cache-aside pattern while 
-                                reading data from the cache.
-                            </li>
-                            <li class="num-list">Write-through: This pattern copies the cache-aside pattern while 
-                                writing data in the cache.
-                            </li>
-                            <li class="num-list">Write-behind: It is a caching strategy in which the cache layer 
-                                itself connects to the backing database.
-                            </li>-->
+                            <li class="num-list">Low latency - provides real time responses</li>
+                            <li class="num-list">High throughput</li>
+                            <li class="num-list">High scalability</li>
                         </ol>
                     </p>
-                   
-                        <h2><i class="arrow right"></i>Maven Dependency for Ehcache</h2>
-                    
+                        
+
+                    <h2>Cache</h2>
+                    <p>The <b>cache</b> provides data quickly with high latency to increase the data retrieval performance. 
+                        Redis is the good choice for caching API calls, session states, and 
+                        database queries etc.
+                    </p>
+                    <p>Advantages:<br>
+                        <ol class="num-list-ol">
+                            <li class="num-list">High latency - provides data quickly and increase performance.</li>
+                            <li class="num-list">Faster access to cached data.</li>
+                            <li class="num-list">Response time is faster because data is retrieved from memory.</li>
+                        </ol>
+                    </p>
+                        
+
+                    <h2>How Redis Works?</h2>
+                    <p>When a request comes, the code of logic checks in the Redis cache for the desired 
+                        data. If appropriate data is available in the redis cache, logic simply returns the 
+                            data from redis cache.
+                    </p>
+                    <p>If the requested data is not available/found in the redis cache, the logic 
+                            falls back to the database or original data source to retrieve the required information 
+                            to return required data. Subsequently, the fetched data is stored in the Redis cache. 
+                    </p>   
+                        
+                    <h2>Spring Boot with Redis Configuration</h2>                  
                     <p>
-                    
+                        <ol>
+                            <li class="num-list" style="color:#D98880 !important;">
+                                Below dependencies are required in spring boot application.
+                            </li>
+                            <dd><p>
 <pre>
     
 <code><</code><code>dependency>
-    <</code><code>groupId> org.springframework.boot <</code><code>/groupId>
-    <</code><code>artifactId> spring-boot-starter-web <</code><code>/artifactId>
-<</code><code>/dependency>
+  <</code><code>groupId> org.springframework.boot <</code><code>/groupId>
+  <</code><code>artifactId> spring-boot-starter-data-redis <</code><code>/artifactId>
+<</code><code>/dependency></code>
 
-<</code><code>dependency>
+<code><</code><code>dependency>
     <</code><code>groupId> org.springframework.boot <</code><code>/groupId>
     <</code><code>artifactId> spring-boot-starter-cache <</code><code>/artifactId>
-<</code><code>/dependency>
-
-<</code><code>dependency>
-    <</code><code>groupId> javax.cache <</code><code>/groupId>
-    <</code><code>artifactId> cache-api <</code><code>/artifactId>
-<</code><code>/dependency>
-
-<</code><code>dependency>
-    <</code><code>groupId> org.ehcache <</code><code>/groupId>
-    <</code><code>artifactId> ehcache <</code><code>/artifactId>
-    <</code><code>version> 3.10.8 <</code><code>/version>
 <</code><code>/dependency></code>
 
 </pre>
-<br>
-<h2><i class="arrow right"></i>EhCache Configuration in properties file</h2>
-<p>
-    Need to add below line in application.properties file.
-<pre>
-<code>spring.cache.jcache.config=classpath:ehcache.xml</code>
-</pre>
-</p>
-<br>
-<h2><i class="arrow right"></i>EhCacheConfig.java</h2>
-<p>
-    Need to create a EhCacheConfig.java in the application.
-<pre><code>import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-    
-@Configuration
-@EnableCaching
-@ComponentScan("com.service")//add the package where you want to cache
-public class CacheConfig {
-}</code>
-</pre>
-</p>
-<br>
-<h2><i class="arrow right"></i>ehcache.xml</h2>
-<p>
-    Need to create a ehcache.xml inside resources folder in the application.
-    Copy the below code and paste into ehcache.xml file.
-
-<pre><code><</code><code>config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.ehcache.org/v3"
-    xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
-    xsi:schemaLocation="
-        http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
-        http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
-
-<</code><code>cache alias="books">
-    <span style="color:green"><</code><code style="color:green">!--Caching key type need to add here</code><code style="color:green">--></code><code></span>
-    <</code><code>key-type>java.lang.Integer<</code><code>/key-type>
-    <span style="color:green"><</code><code style="color:green">!--Caching value type here need to add here</code><code style="color:green">--></code><code></span>
-    <</code><code>value-type>com.inventory.entity.Book<</code><code>/value-type>
-    <</code><code>expiry>
-        <span style="color:green"><</code><code style="color:green">!--Caching expiry time</code><code style="color:green">--></code><code></span>
-        <</code><code>ttl unit="seconds">30<</code><code>/ttl>
-    <</code><code>/expiry><</code><code>/code>
-    <</code><code>resources>
-        <</code><code>heap unit="entries">2<</code><code>/heap>
-            <span style="color:green"><</code><code style="color:green">!--offheap - RAM memory will be added here</code><code style="color:green">--></code><code></span>
-        <</code><code>offheap unit="MB">10<</code><code>/offheap>
-    <</code><code>/resources>
-<</code><code>/cache>
-<</code><code>/config></pre>
-<br>
-<h2><i class="arrow right"></i>Spring Boot Main Class</h2>
-<p>
+                            </p></dd>
+                            <li class="num-list" style="color:#D98880 !important;">
+                                Need to add <b>@EnableCaching</b> annotation in the main class. Also create bean of 
+                                <b>cacheConfiguration</b> as per below example.
+                            </li>
+                            <dd><p>
 <pre><code>import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
+import java.time.Duration;
+    
 @SpringBootApplication
-public class BookApplicationMainClass {
+@EnableCaching <span class="red">// Annotation need to declare</span>
+public class SpringBootMainApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BookApplicationMainClass.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootMainApplication.class, args);
+    }
 
+    <span class="red">//Need to add below bean</span>
+    @Bean
+    public RedisCacheConfiguration cacheConfiguration() {
+        return RedisCacheConfiguration
+                .defaultCacheConfig()
+                <span class="red">//Cache Expiry time</span>
+                .entryTtl(Duration.ofMinutes(60))
+                .serializeValuesWith(RedisSerializationContext
+                        .SerializationPair
+                        .fromSerializer( new GenericJackson2JsonRedisSerializer() ));
+    }
 }
 </code></pre>
+                            </p></dd>
 
-<br>
-<h2><i class="arrow right"></i>Book Class/POJO Class</h2>
-<p>
-<pre><code>import lombok.Data;
-import java.io.Serializable;
+                            <li class="num-list" style="color:#D98880 !important;">
+                               Create POJO class
+                            </li>
+                            <dd><p>
+<pre><code>import java.io.Serializable;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public class Book implements Serializable {
     
-@Data
-public class Book implements Serializable {
-
-    private Integer bookId;
-    private String bookName;
-
-    public Book(Integer bookId, String bookName) {
-        this.bookId=bookId;
-        this.bookName=bookName;
-    }
-}
-</code></pre>
-</p>
-<br>
-<h2><i class="arrow right"></i>Rest Controller class</h2>
-<p>
-<pre><code>import com.entity.Book;
-import com.service.impl.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+        private Integer bookId;
+        private String bookName;
     
-@RestController
-@RequestMapping(path="/api")
-public class BookController {
-
-    @Autowired
-    BookService service;
-
-    @GetMapping("/books/{id}")
-    public @ResponseBody Book findById(@PathVariable("id") Integer postId) {
-        return service.findById(postId);
     }
-
-    @PostMapping("/updatebook")
-    public void updatePost(Book post) {
-        service.updateBook(post);
-    }
-
-    @DeleteMapping("/book/{id}")
-    public void deleteById(@PathVariable("id") Integer postId) {
-        service.deleteById(postId);
-    }
-
-}
 </code></pre>
-</p>
-<br>
-<h2><i class="arrow right"></i>Java Service class for Ehcache</h2>
-<p>
-<pre><code>import com.inventory.entity.Book;
-import org.springframework.stereotype.Service;
+                            </p></dd>
+
+                            <li class="num-list" style="color:#D98880 !important;">
+                                Create Service class
+                             </li>
+                             <dd><p>
+ <pre><code>import com.entity.Book;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-    
+
 @Service
+@CacheConfig(cacheNames = "book")
 public class BookService {
-    <span style="color:green">//Keeping the Books objects in a list</span>
+
     private static List<Book> bookList=new ArrayList<Book>();
-    <span style="color:green">//adding the Books objects into  list</span>
     static{
         bookList.add(new Book(1, "Sample Book1"));
         bookList.add(new Book(2, "Sample Book2"));
@@ -420,22 +356,21 @@ public class BookService {
         bookList.add(new Book(6, "Sample Book6"));
     }
 
-    @Cacheable("books")
-    public Book findById(Integer bookId) {
+    @Cacheable(value = "Book", key = "#id", condition="#id!=null")
+    public Book findById(Integer id) {
         System.out.println("Fetching book");
-        return getBookbyId(bookId);
+        return getBookbyId(id);
     }
 
-    @CachePut("books")
+    @CachePut(cacheNames = "Book", key = "#id")
     public void updateBook(Book post) {
         // updatebook();
     }
-    @CacheEvict("books")
+    @CacheEvict(cacheNames = "Book", key = "#id", beforeInvocation = true)
     public void deleteById(Integer bookId) {
-        // delete post
+        // delete book
     }
 
-    <span style="color:green">//Getting the Book by id from the array list</span>
     private Book getBookbyId(Integer bookId){
         System.out.println("Finding book");
         Optional<Book> book = bookList
@@ -446,28 +381,65 @@ public class BookService {
         return book.get();
     }
 }
-</code></pre>
-</p>
-<br>
-<h2><i class="arrow right"></i>Cache Testing with POSTMAN</h2>
-<p>
-    Start the Spring Boot Application and hit the GET URL on POSTMAN.
-    You can see that <b>"Finding book"</b> will be prited once time only if you hit the URL multiple times with 
-    the same ID.<br>
-    The cached will be removed automatically after 30 seconds as the <b>ttl</b> time is configured with 30 seconds
-    in the ecache.xml.
+ </code></pre>
+                             </p></dd>
 
-    <br>
-<img id="spribg-boot-ecache-in-java" src="../image/Ehcache.PNG" title="Spring Boot Ehcache in Java" style="width:90%;"><div class="image-text" style="width:100%;text-align: center;">Spring Boot Ehcache In Java</div></image>
-<br>
-</p>
-          
-      <!--  <p>In the next topic, you will understand about Stream API In Java 8
-            <a target="_blank" id="stream-api-in-java-8" class="next-link" title=" Stream API In Java 8" href="https://java2ee.com/?d=1&jt=stream-api-in-java-8">
-                Stream API In Java 8
-                <i class="fa fa-angle-double-right ficon-arraw red"></i>
-            </a><br><br><br>
-        </p> -->      
+                             <li class="num-list" style="color:#D98880 !important;">
+                                Create Controller class
+                             </li>
+                             <dd><p>
+ <pre><code>import com.entity.Book;
+import com.inventory.service.impl.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(path="/api")
+
+public class BookController {
+
+    @Autowired
+    BookService service;
+
+    @GetMapping("/books/{id}")
+    public @ResponseBody Book findById(@PathVariable("id") Integer postId) {
+        return service.findById(postId);
+    }
+
+    @PostMapping("/updatepost")
+    public void updatePost(Book post) {
+        service.updateBook(post);
+    }
+
+    @DeleteMapping("/posts/{id}")
+    public void deleteById(@PathVariable("id") Integer postId) {
+        service.deleteById(postId);
+    }
+}
+ </code></pre>
+                             </p></dd>
+
+
+                             <li class="num-list" style="color:#D98880 !important;">
+                                Cache Testing with POSTMAN
+                             </li>
+                             <dd>
+                                <p>
+                                    Start the Spring Boot Application and hit the GET URL on POSTMAN.
+                                    You can see that <b>"Finding book"</b> will be prited once time only if you hit the URL multiple times with 
+                                    the same ID.<br>
+                                    The cached will be removed automatically after 60 minutes as the <b>ttl</b> time is configured with 60 minutes
+                                    in the bean of cacheConfiguration.
+
+                                    <br>
+                                    <img id="spribg-boot-redis-in-java" src="../image/Ehcache.PNG" title="Spring Boot Redis in Java" style="width:90%;"><div class="image-text" style="width:100%;text-align: center;">Spring Boot Redis In Java</div></image>
+                                    <br>
+                                </p>
+                        </dd>
+                                    </p>  
+                                </p> 
+
+      
                     <div class="col-sm-12 col-md-12 bottom-add">
                 
                     </div> 
@@ -533,31 +505,16 @@ public class BookService {
             <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
             <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
     </div>		 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-WNN8BHZLNW');
-    </script>
-    <script>
-        window.addEventListener("load", (event) => {
-           
-            if(document.getElementById('right-adv')!=0){
-                var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
-                if(height>300){
-                    height=height-117;
-                }
-                document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
-            }
-            
-        });
-       
-    </script>
-</body>
+        <script>
+            window.addEventListener("load", (event) => {               
+                if(document.getElementById('right-adv')!=0){
+                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                    if(height>300){
+                        height=height-117;
+                    }
+                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+                }  
+            });   
+        </script>
+    </body>
 </html>
-

@@ -134,13 +134,13 @@ pre{
     /* color: #145A32; */
     /* font-size: medium; */
     /* font-family: monospace;color: #07a; */
-    border: 3px solid #7FB3D5 !important;
+        border: 1px solid #D4E6F1 !important;
     font-weight: 200;
-	font-family: monospace;
-	font-size:10px !important;
-	width:90%;
-	background:grey;
-	color:white;
+    font-family: monospace;
+    font-size: 10px !important;
+    width: 90%;
+    background: #F5F5F7;
+    color: grey;
 	
 }
 pre code {
