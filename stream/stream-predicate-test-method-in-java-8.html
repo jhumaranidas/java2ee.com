@@ -1184,7 +1184,7 @@ Output:
     s -> s.startsWith( "<span class="orange">H</span>" );
   Predicate<</code><code>String</code><code>> hasLengthOfInt5 = 
     s -> s.length() == <span class="orange">5</span>;
-
+	System.out.println("**Before Negating**")
     <span class="code-comment">// Calling without negate method</span> 
     System.out.println(
       startsWithCharJ.<span class="red">test</span>( "<span class="green">Horse</span>" )
@@ -1194,11 +1194,14 @@ Output:
       hasLengthOfInt5.<span class="red">test</span>( "<span class="green">India</span>" )
     ); 
 
+  <span class="code-comment red">// Here we are negating</span> 
   Predicate<</code><code>String</code><code>> negateStartsWithCharJ = 
     startsWithCharJ.<span class="red">negate</span>();
   Predicate<</code><code>String</code><code>> negatehasLengthOfInt5 = 
     hasLengthOfInt5.<span class="red">negate</span>();
 
+    System.out.println("**After Negating**")
+   
     <span class="code-comment">// Calling after negate predicate</span> 
     System.out.println(
        negateStartsWithCharJ.<span class="red">test</span>( "<span class="green">Horse</span>" )
@@ -1210,8 +1213,10 @@ Output:
 <b>}</b> 
 <span class="output">
 Output:
+	**Before Negating**
     true
     true
+	**After Negating**
     false
     false
 </span></code>
