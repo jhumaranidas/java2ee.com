@@ -254,7 +254,25 @@
                     <h2>Spring Boot with Redis Configuration</h2>                  
                     <p>
                         <ol>
-                            <li class="num-list" style="color:#D98880 !important;">
+                            <li class="num-list">
+                                First, you need to run redis on your local machine.                              
+                            </li>
+                            <dd>
+                                - Create a <b>docker-compose.yaml</b> file in the root directory in your application.<br>
+                                - Copy the below code and paste into docker-compose.yaml.<br>
+                                - Open command prompt and go to the directory where you have created docker-compose.yaml file.<br>
+                                - Run command as <b>docker compose up</b> in the command prompt.<br>
+                               <br> <b>docker-compose.yaml</b> file
+<pre><code>version: '3.7'
+services:
+    redis:
+    image: redis
+    volumes:
+    - ./data:/data
+    ports:
+    - "6379:6379"</code></pre>
+                            </dd>
+                            <li class="num-list">
                                 Below dependencies are required in spring boot application.
                             </li>
                             <dd><p>
@@ -272,7 +290,7 @@
 
 </pre>
                             </p></dd>
-                            <li class="num-list" style="color:#D98880 !important;">
+                            <li class="num-list">
                                 Need to add <b>@EnableCaching</b> annotation in the main class. Also create bean of 
                                 <b>cacheConfiguration</b> as per below example.
                             </li>
@@ -309,7 +327,7 @@ public class SpringBootMainApplication {
 </code></pre>
                             </p></dd>
 
-                            <li class="num-list" style="color:#D98880 !important;">
+                            <li class="num-list">
                                Create POJO class
                             </li>
                             <dd><p>
@@ -327,7 +345,7 @@ public class SpringBootMainApplication {
 </code></pre>
                             </p></dd>
 
-                            <li class="num-list" style="color:#D98880 !important;">
+                            <li class="num-list">
                                 Create Service class
                              </li>
                              <dd><p>
@@ -384,7 +402,7 @@ public class BookService {
  </code></pre>
                              </p></dd>
 
-                             <li class="num-list" style="color:#D98880 !important;">
+                             <li class="num-list">
                                 Create Controller class
                              </li>
                              <dd><p>
@@ -420,7 +438,7 @@ public class BookController {
                              </p></dd>
 
 
-                             <li class="num-list" style="color:#D98880 !important;">
+                             <li class="num-list">
                                 Cache Testing with POSTMAN
                              </li>
                              <dd>

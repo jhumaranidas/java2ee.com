@@ -2395,13 +2395,13 @@
 							<p>
 								An Interface that contains exactly one abstract method is known as <b>functional interface</b>.
 								It can have any number of <b>default and static methods</b> but can contain only one <b>abstract method</b>.
-								 <b>Functional Interface</b> is the approach of fundamental programming
+								 <b>Functional Interface</b> is the approach of functional programming
 								in Java. It is also known as <b>SAM interfaces</b> <b>Single Abstract Method Interfaces</b>.
-								<h6 style="white-space:nowrap">
-									<a href="https://java2ee.com/lambda/lambda-expression-example-in-java?ref=lambda expression" target="_blank" title="Lambda expressions" class="font-15">
+								<h3 style="white-space:nowrap">
+									<a href="https://java2ee.com/lambda/lambda-expression-example-in-java?ref=1&content=lambda expression example" target="_blank" title="Lambda expressions" class="font-15">
 										Lambda expressions
 									</a>
-								</h6>
+								</h3>
 								can be used to represent the instance of a functional interface.							
 							</p>
 						
@@ -2418,27 +2418,25 @@
 					 
 						<h2>Example of functional interface with <a target="_blank" class="font-15" href="https://java2ee.com/lambda/lambda-expression-example-in-java?code=lambda expression in java" title="Lambda Expression Example In Java">lambda expression</a></h2>
 <pre><code>/*@FunctionalInterface*/</code> <span class="code-comment red">//It is optional</span>
-<b><code>public interface MultipleInterface {</b>
-  public int multiple(int x,int y);
-<b>}</b>
-
-<b>public class Calculate{
- public static void main (</code><code>String</code>[] args) {</b>
-   <span class="code-comment">//with lambda</span>
-   <code>MultipleInterface m = (x, y) -> {
-     //System.out.println( "Drawing "+width);
-     return x * y;
-   };
-
-   int multipleVal =   m.multiple(10,30);
-   System.out.println( "Multiple Value is "+multipleVal);
-  <b>}
-}</b>
-<span class="output">
-Output:
-    Multiple Value is 300</span>
-</code>
-</pre>
+    <b><code>public interface MultipleInterface {</b>
+        public int multiple(int x,int y);
+    <b>}</b>
+    
+    <b>public class Calculate{
+        public static void main (</code><code>String</code><code>[] args) {</b>
+        <span class="code-comment red">//with lambda</span>
+        </code><code>MultipleInterface m = (x, y) -> {
+            return x * y;
+        };
+    
+        int multipleVal =   m.multiple(10,30);
+        System.out.println( "Multiple Value is "+multipleVal);
+        <b>}
+    }</b>
+    <span class="output">
+    Output:
+        Multiple Value is 300</span>
+</code></pre>
 					
 
 					
@@ -2501,14 +2499,14 @@ Output:
                                              by a lambda expression or method reference. <a target="_blank" href="https://java2ee.com/stream/stream-accept-method-in-java-8?data=stream accept method in java" title="accept method in java 8" class="font-15">details..</a>
                                             </dd>
                                         <li class="list-title"><b><i>andThen(Consumer<? super T> after)</i></b></li>
-                                        <dd>- The <b>andThen()</b> method is a default method. In other words, it has an implementation and is thus non-abstract.
+                                        <dd>- The <b>andThen()</b> method is a default method.
                                              The method accepts a Consumer and returns another Consumer. <a target="_blank" href="https://java2ee.com/stream/stream-andthen-method-in-java-8?tt=stream andthen method in java" title="andThen method in java 8" class="font-15">details..</a>
                                         </dd>
                                     </ol>
                                     
                                     <h2 class="m-l-20">Example of Consumer Interface</h2>
 <pre><code>import java.util.function.Consumer;
-<b>public class ConsumerInterfaceExample Area {</b>
+<b>public class ConsumerInterfaceExample{</b>
 
     static void welcomeGreeting (</code><code>String</code><code> name){
         System.out.println( "Welcome "+name);
@@ -2522,22 +2520,22 @@ Output:
 
     <b>public static void main(</code><code>String</code><code>[] args) {</b>
         <span class="code-comment">//method reference</span>
-        <code>Consumer<</code><code>String</code><code> consumer1 = 
+        <code>Consumer<</code><code>String></code><code> consumer1 = 
             ConsumerInterfaceExample :: welcomeGreeting; 
             <span class="code-comment">// Calling Consumer method</span>
             consumer1.accept("Tejas");
          
         <span class="code-comment">//method reference</span>
-        </code>Consumer</code><<code>Integer</code> <code>consumer2 =
+        </code>Consumer<</code><code>Integer></code> <code>consumer2 =
             ConsumerInterfaceExample :: showAge;
             <span class="code-comment">// Calling Consumer method</span>
             <code>consumer2.accept(30);   
 
         <span class="code-comment">//method reference</span>
-        <code>Consumer</code><<code>Integer</code>> <code>consumer2 = 
+        <code>Consumer<</code><code>Integer></code> <code>consumer3 = 
             ConsumerInterfaceExample :: showSalary;
             <span class="code-comment">// Calling Consumer method</span>
-            <code>consumer2.accept(20000);     
+            <code>consumer3.accept(20000);     
    <b> }
 }</b>
 <span class="output">
@@ -2564,7 +2562,7 @@ Output:
                                 <p>
                                     <b>Predicate</b> accepts an argument and returns a boolean value. <b>Predicate</b> functional interface in Java is a type of function
                                     that accepts a single argument and returns a boolean (True/ False). It provides the functionality of filtering, 
-                                    it filter a stream components on the base of a provided <b>predicate</b>. 
+                                    it filters a stream components on the base of a provided <b>predicate</b>. 
                                     <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8?m=predicate interface in java" title="predicate interfaces in java 8" class="font-15">details..</a>
                                     
                                     <h6 style="clear:both">Predicate Interface Methods.</h6>
