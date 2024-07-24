@@ -1,7 +1,7 @@
 body{
 	font-family: Verdana, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.4;
 }
 
 #logo{
@@ -554,3 +554,14 @@ li.next-botton{
 .list-title{color:#E74C3C !important;font-weight: bold;}
 .list-title b{color:#E74C3C !important;font-weight: bold;}
 .list-title b i{color:#E74C3C !important;font-weight: bold;}
+
+
+.ang-list{list-style:number !important;}
+ .ang-list a{text-decoration:none;}
+ .ang-list-h3{font-size:18px !important;}
+ 
+ .top-border{
+	 border-top: 1px solid #DBDBDB !important;
+	 padding:15px 0px 15px 0px;
+	 color:#9617EE;
+	 font-size:25px !important;}

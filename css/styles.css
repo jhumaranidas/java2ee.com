@@ -160,6 +160,9 @@ h3, .h3 {
     font-size: 20px;
     line-height: 25px;
   }
+ .ang-list{list-style:number !important;}
+ .ang-list a{text-decoration:none;}
+ .ang-list-h3{font-size:18px !important;}
 }
 
 h4, .h4 {
@@ -171,6 +174,7 @@ h4, .h4 {
     font-size: 17px;
     padding: 3px 3px 5px 20px;
   }
+
 }
 
 h5, .h5 {

@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Angular Complete Tutorial</title>
+        <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="angular, angular tutorial, angular complete tutorial">          
+        <meta name="description" content="Angular Complete Tutorial.">
+
+        <link rel="canonical" href="https://java2ee.com/angular-complete-tutorial">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">              
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+       
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
+        <link rel="manifest" href="../image/fevicon/site.webmanifest">
+        <link rel="mask-icon" href="../image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
+        <link rel="shortcut icon" sizes="16x16" href="../image/fevicon/favicon-16x16.png" type=image/x-icon>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">      
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Angular Complete Tutorial">
+        <meta property="og:description" content="6th May 2024 - ngular Complete Tutorial.">
+        <meta property="og:url" content="https://java2ee.com/angular-complete-tutorial">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Angular Complete Tutorial">
+        <meta property="article:tag" content="Angular">
+        <meta property="article:tag" content="Tutorial">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@DasJhum9">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Filter Method in Java 8">
+        <meta name="twitter:description" property="og:description" content="6th May 2024 - Angular Complete Tutorial.">
+        <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
+        
+        <meta property="article:published_time" content="2024-07-20T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-07-20T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-07-20T02:59:35+00:00">
+    </head>
+    <body>      
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div id="sidebar-wrapper">
+                <div class="sidebar-heading">
+                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
+                </div>
+                <div class="list-group list-group-flush">
+                    <ul>
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        
+                    
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>      
+                            
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anyMatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">anyMatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-count-method-in-java-8" title="Stream Count Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Count Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-reduce-method-in-java-8" title="Stream Reduce Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Stream Reduce Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-findfirst-method-in-java-8" title="Stream findFirst Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">findFirst Method in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-anymatch-method-in-java-8" title="Stream anymatch Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream anymatch Method</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Intermediate operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Intermediate operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Stream Terminal operations">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-operations-in-java-8.html" title="Short-circuit operations In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Short Circuit Operations</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">     
+                            <a target="_blank" href="https://java2ee.com/stream/stream-api-in-java-8" title="Java Stream API in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Java Stream API in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-operations-in-java-8" title="Stream Operations in Java">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">Stream Operations in Java</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-filter-method-in-java-8" title="Stream Filter Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Filter Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-map-method-in-java-8" title="Stream Map Method in Details" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Map Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" class="selected" href="https://java2ee.com/stream/stream-sorted-method-in-java-8" title="Stream Sorted Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Sorted Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>   
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/functional-interfaces-in-java-8" title="Functional Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Functional Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/consumer-interfaces-in-java-8.html" title="Consumer Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Consumer Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/predicate-interfaces-in-java-8" title="Predicate Interface In Stream API">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">Predicate Interface In Stream API</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>    
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8" title="Stream forEach Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">forEach Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-collect-method-in-java-8" title="Stream Collect Method in Details">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">Stream Collect Method in Details</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a target="_blank" href="https://java2ee.com/stream/stream-foreach-method-in-java-8">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Stream Terminal operations</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>        
+                    </ul>
+                </div> 
+            </div> 
+            <!-- Page content wrapper  <h1 class="mt-2">Java 8 Stream</h1>
+            <span class="next-botton">Next Topic >></span>
+                        <a target="_blank" href="https://java2ee.com/stream/stream-perations-in-java">
+                            <span>Java Stream Operations In Java</span>
+                        </a>
+            -->
+            <div id="page-content-wrapper">
+				<div id="right-main-div">
+                       <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
+						    <h1>Angular Complete Tutorial</h1>
+							<p>
+                                <b>Angular</b> is a TypeScript-based free and open-source single-page web application framework. 
+                                It is developed by Google. Angular is a web framework that empowers developers to build fast, reliable applications.
+                                Angular provides solid platform, tools, APIs, and libraries to simplify and streamline your development workflow.
+
+                                You need basic knowledge of OOP, Javascript, TypeScript, HTML & CSS to build an Angular application.
+                                <h2>Topics</h2>
+                                <ol>
+                                    <li class="ang-list"><a href="#components" id="jumptocomponents"><h3 class="ang-list-h3">Angular Components</h3></a></li>  
+                                    <li class="ang-list"><a href="#directives" id="jumptodirectives"><h3 class="ang-list-h3">Angular Directives</h3></a></li>
+                                    <li class="ang-list"><a href="#customdirectives" id="jumptocustomdirectives"><h3 class="ang-list-h3">Angular Create Custom Directives</h3></a></li>
+                                    <li class="ang-list"><a href="#hostlisner" id="jumptohostlisner"><h3 class="ang-list-h3">Handling user events in Directives. HostListener in Angular directive.</h3></a></li>                                   
+                                    <li class="ang-list"><a href="#atinput" id="jumptoatinput"><h3 class="ang-list-h3">Passing values into an attribute directive. @Input in Angular directive.</h3></a></li> 
+                                    <li class="ang-list"><a href="#atinputmorethanone" id="jumptoatinputmorethanone"><h3 class="ang-list-h3">Passing more than one values into an attribute directive. @Input in Angular directive.</h3></a></li>                      
+                                    <li class="ang-list"><a href="#pipes" id="jumptopipes"><h3 class="ang-list-h3">Angular Pipes</h3></a></li>
+                                    <li class="ang-list"><a href="#angularforms" id="jumptoangularforms"><h3 class="ang-list-h3">Angular Forms</h3></a></li>
+                                    <li class="ang-list"><a href="#templatedrivenform" id="jumptotemplatedrivenform"><h3 class="ang-list-h3">Template-driven Forms</h3></a></li>
+                                    <li class="ang-list"><a href="#reactiveform" id="jumptoreactiveform"><h3 class="ang-list-h3">Reactive Forms</h3></a></li>
+                                    <li class="ang-list"><a href="#groupform" id="jumptogroupform"><h3 class="ang-list-h3">Form Group</h3></a></li>
+                                    <li class="ang-list"><a href="#nestedform" id="jumptonestedform"><h3 class="ang-list-h3">Nested Form or Form array</h3></a></li>
+                                    <li class="ang-list"><a href="#formbuilderForm" id="jumptoformbuilderForm"><h3 class="ang-list-h3">Form Builder</h3></a></li>
+                                    <li class="ang-list"><a href="#formvalidation" id="jumptoformvalidation"><h3 class="ang-list-h3">Form Validation</h3></a></li>
+                                    
+
+<!--
+                                    <li>Component Communication</li>
+                                    <li>Component Life Cycle Hook</li>   
+                                    <li>Services & Dependency Injection</li>  
+                                    <li>Angular Forms Validation</li>  
+                                    <li>HTTP </li>  
+                                    <li>Angular Router</li>  
+                                    <li>Angular Route Guards</li>  
+                                    <li>Angular Module</li>  
+                                    <li>Advanced Components</li>  
+                                    <li>Observable in Angular</li>  
+                                    <li>Styling the Application</li>    
+                                    <li>Configuration</li>  
+                                    <li>Handling Errors</li>  
+                                    <li>Angular CLI</li>  
+                                    <li>Angular Universal</li>  
+                                    <li>Building & Hosting</li>  
+                                    <li>Angular Resources</li>  
+                                    <li>Module Loaders</li>  
+                                    <li>How to Create a new project in Angular</li>  
+                                    <li>Bootstrapping in Angular</li>  
+                                    <li>ElementRef</li>  
+                                    <li>ng-container</li>  
+                                    <li>index of *ngFor</li>  
+                                    <li>Tracking items with *ngFor trackBy</li>  
+                                    NgNonBindable, @Input, @Output, ngClass, ngSwitch, 
+-->
+                                </ol>
+                                </p>
+
+                                
+                                <div id="components">
+                                    <h3 class="top-border">Angular Components</h3>
+                                    <p> 
+                                        <b>Component</b> is the main block of an Angular Application. A Component contains the definition 
+                                        of the View and the data that defines how the View looks and behaves.  The Angular Components are 
+                                        plain javascript classes and defined using. <b>@component</b> Decorator. This Decorator provides 
+                                        the component with the View to display & Metadata about the class.<br>
+
+                                        The component contains selector, templateUrl, styleUrls etc.
+<pre><code>
+  @Component({
+    selector: 'selector-name', // selector for 
+    templateUrl: './home.component.html', templateUrl for HTML template
+    styleUrls: ['./home.component.scss'] // styleUrls for CSS
+  })
+</code></pre>                                 
+                                    </p>
+                            
+                                </div>
+
+                                <div id="directives">
+                                    <h3 class="top-border">Angular Directives</h3>
+                                    <p> 
+                                        
+                                        Angular provides many Built-in directives such as NgClass, NgStyle, NgModel, NgIf, NgFor, NgSwitch etc.
+                                        There are two types of directives <b>Attribute Directives</b> and <b>Structural Directives</b>.
+                                        NgClass, NgStyle, NgModel are the part of Attribute Directives and NgIf, NgFor, NgSwitch are the part of 
+                                        Structural Directives. Attribute directives let us change how things are rendered in the DOM. Structural 
+                                        directive lets us change DOM layout by adding or removing DOM elements.
+                                    </p>
+                                    <h3 class="top-border">Attribute Directives</h3>  
+                                    <p> 
+                                        Attribute directives provides the functionality of rendering the DOM. NgClass, NgStyle, NgModel are the 
+                                        Attribute Directives in Angular.
+
+                                    </p>
+
+                                    <p>
+<pre><code><</code><code>!--Example of ngClass Attribute Directive--</code><code>>
+<</code><code>div [ngClass]="isHero ? 'hero' : ''">{{person.name}}<</code><code>/div>
+
+<</code><code>!--Example of ngStyle Attribute Directive--</code><code>>
+<</code><code>div [ngStyle]="currentStyles">Example of ngStyle.<</code><code>/div>
+    
+    // In ts file
+    this.currentStyles = {
+        'font-style': 'italic',
+        'font-weight': 'bold',
+        'font-size': '12px'
+      };
+
+<</code><code>!--Example of ngModel Attribute Directive--</code><code>>
+<</code><code>input [(ngModel)]="currentItem.name" id="example-ngModel">
+</code></pre>
+                                    </p>
+
+                                    <h3 class="top-border">Structural Directives</h3>
+                                    <p> 
+                                        Structural Directive allow to change DOM layout by adding or removing DOM elements. NgIf, NgFor, NgSwitch are the 
+                                        Structural Directives in Angular.
+                                    </p>
+                                    <p>
+<pre><code><</code><code>!--Example of NgIf Structural Directive--</code><code>>
+<</code><code>div *ngIf="hero">{{hero.name}}<</code><code>/div>
+
+<</code><code>!--Example of ngFor Structural Directive--</code><code>>
+<</code><code>div *ngFor="let item of items">{{item.name}}<</code><code>/div>
+
+    <</code><code>!--Example of ngSwitch Structural Directive--</code><code>>
+<</code><code>div [ngSwitch]="currentItem.feature">
+    <</code><code>app-stout-item    *ngSwitchCase="'stout'"    [item]="currentItem"></</code><code>app-stout-item>
+    <</code><code>app-device-item   *ngSwitchCase="'slim'"     [item]="currentItem"></</code><code>app-device-item>
+    <</code><code>app-lost-item     *ngSwitchCase="'vintage'"  [item]="currentItem"></</code><code>app-lost-item>
+    <</code><code>app-best-item     *ngSwitchCase="'bright'"   [item]="currentItem"></</code><code>app-best-item>
+    <</code><code>app-unknown-item  *ngSwitchDefault           [item]="currentItem"></</code><code>app-unknown-item>
+<</code><code>/div></code></code>
+</code></pre>
+                                    </p>
+                                </div>
+Aasaeas
+                                <div id="customdirectives">
+                                    <h3 class="top-border">Custom Directives In Angular</h3>
+                                    <p>1. To create custom directive execute below command.
+<pre style="background: gray;color:white;"><code>
+    ng generate directive <</code><code>directive name>
+
+    
+    PS E:\application\angular-mainapp\mainapp> ng generate directive directives/highlight
+    CREATE src/app/directives/highlight.directive.spec.ts (236 bytes)
+    CREATE src/app/directives/highlight.directive.ts (147 bytes)
+    UPDATE src/app/app.module.ts (1452 bytes)
+</code></pre>
+                                        Angular CLI will be created a highlight.directive.ts file in the  src/app folder. 
+                                        The corresponding test file will be created as src/app/highlight.directive.spec.ts,
+                                         and declares the directive 
+                                        class in the AppModule.
+
+                                    </p>
+                                    <p>2. Inject ElementRef in the Custom created directive.  ElementRef has direct access to the host DOM element through its nativeElement property.</p>
+                                    <p><b><i>src/app/highlight.directive.ts</i></b></b>
+<pre><code>import { Directive , ElementRef} from '@angular/core';
+
+@Directive({
+    selector: '[appHighlight]'
+})
+export class HighlightDirective {
+
+    constructor(private el: ElementRef) { 
+    this.el.nativeElement.style.backgroundColor = 'yellow';
+    }
+
+}
+
+In HTML Declare directive
+<</code><code>p appHighlight>HighlightDirective Example Text!<</code><code>/p></code></code>
+</code></pre>
+                                    </p>
+                                </div>
+ 
+                                <div id="hostlisner">
+                                    <h3 class="top-border">Handling user events in Directives. HostListener in Angular directive.</h3>
+                                    <p>HostListener provides the functionality to capture of DOM event
+                                        to listen and provides a handler method to run when that event occurs.
+<pre><code>import { Directive , ElementRef, HostListener} from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+
+  constructor(private el: ElementRef) {}
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight('yellow');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight('');
+  }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.appHighlight || 'red');
+  }
+
+  private highlight(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+
+}
+</code></pre>
+                                    </p>   
+                                </div>
+
+                                <div id="atinput">
+                                    <h3 class="top-border">Passing values into an attribute directive. @Input in Angular directive.</h3>
+                                    <p>You need to inject @Input in the directive to get value from component. 
+<pre><code>import { Directive , ElementRef, HostListener, Input} from '@angular/core';
+
+    @Directive({
+      selector: '[highLightColor]'
+    })
+    
+    export class HighLightColor {
+      @Input() highLightColor = '';
+    
+      constructor(private el: ElementRef) {}
+    
+      @HostListener('mouseenter') onMouseEnter() {
+        this.highlight(this.highLightColor || 'yellow');
+      }
+    
+      @HostListener('mouseleave') onMouseLeave() {
+        this.highlight('');
+      }
+    
+      private highlight(color: string) {
+        this.el.nativeElement.style.backgroundColor = color;
+      }
+    
+    }
+
+    HTML Declaration 
+
+<</code><code>h5 [highLightColor]="'red'">H5<</code><code>/h5>
+<</code><code>h6 highLightColor>H6<</code><code>/h6>
+
+</code></pre>
+                                    </p>   
+                                </div>
+                                <div id="atinputmorethanone">
+                                    <h3 class="top-border">Passing more than one values into an attribute directive</h3>
+                                    <p>You need declare more than one @Input in the directive to get multiple values from component. 
+<pre><code>import { Directive , ElementRef, HostListener, Input} from '@angular/core';
+
+    @Directive({
+      selector: '[appHighlight]'
+    })
+    
+    export class HighlightDirective {
+      @Input() appHighlight = '';
+      @Input() defaultColor = '';
+    
+      constructor(private el: ElementRef) {}
+    
+      @HostListener('mouseenter') onMouseEnter() {
+        console.log(this.appHighlight+"--"+this.defaultColor);
+        this.highlight(this.defaultColor || this.appHighlight || 'yellow');
+      }
+    
+      @HostListener('mouseleave') onMouseLeave() {
+        this.highlight('');
+      }
+    
+      private highlight(color: string) {
+        this.el.nativeElement.style.backgroundColor = color;
+      }
+    
+    }
+
+    HTML Declaration 
+<</code><code>h4 appHighlight defaultColor="blue">H4<</code><code>/h4>
+<</code><code>h5 [highLightColor]="'red'">H5<</code><code>/h5>
+<</code><code>h6 highLightColor>H6<</code><code>/h6>
+
+</code></pre>
+                                    </p>   
+                                </div>
+                                
+                                <div id="pipes">
+                                    <h3 class="top-border">Angular Pipes</h3>
+                                    <p><b>Pipes</b> are simple functions to use in template to accept an input value and return a transformed value. 
+                                        Angular provides many Built-in Pipes such as  DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, DecimalPipe
+                                        PercentPipe, AsyncPipe, JsonPipe etc. <br>
+                                        To check the complete list of built-in pipes, see the pipes API documentation of <a href="https://v17.angular.io/api/common#pipes" target="_blank" title="Angular Pipes">Angular Pipes</a>
+                                    </p>
+
+
+<pre><code>
+To create a custom Pipe execute below command.
+ng g p <</code><code>pipe name>
+
+example:
+ng g p capital // capital is the pipe name. 
+
+TS.file
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'capital'
+})
+export class CapitalPipe implements PipeTransform {
+
+  transform(value: any): any {
+    if (typeof value !== 'string') {
+       return value;
+     }
+     return value.charAt(0).toUpperCase() + value.slice(1);
+   }
+
+}
+
+Declare Pipes in HTML 
+{{ </code><code>'tata' | capital }}
+
+Output: Tata
+</code></pre>
+                                    </p>   
+                                </div>
+
+                                <div id="angularforms">
+                                    <h3 class="top-border">Angular Forms</h3>
+                                    <p>
+                                        Form is the important part of application. You can submit data using Form.
+                                        Angular provides two different approaches to handling user input through forms.
+                                        <ol>
+                                            <li class="ang-list"><a href="#templatedrivenform" id="jumptocomponents"><h3 class="ang-list-h3">Template-driven forms</h3></a></li>  
+                                            <li class="ang-list"><a href="#" id="reactiveform"><h3 class="ang-list-h3">Reactive forms</h3></a></li>
+                                        </ol>
+
+                                        <div id="templatedrivenform">
+                                            <h3 class="top-border">Template-driven forms</h3>
+                                            <p>
+                                                If you have very basic form requirements and logic that can be managed by the  <b>Template-driven forms</b>.
+                                                It could be a good fit for basic form such as signup form with few fields.
+                                                It rely on directives in the template to create and manipulate the underlying object model.
+                                                Template-driven forms uses <b>ngModel</b> to bind data and it is asynchronous in data binding.
+                                            </p>
+                                            <p>
+                                                To use Template-driven forms need to use/inject <b>ngModel</b> inside the form and also need to inject <b>NgModule</b>, <b>FormsModule</b> in the App Module.
+                                            
+<pre><code><b style="color:red !important;">Component TS File Example of emplate-driven form</b>
+    
+    import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+    import { NgForm } from '@angular/forms';
+    
+    @Component({
+        selector: 'app-templateformtest',
+        templateUrl: './templateformtest.component.html',
+        styleUrls: ['./templateformtest.component.scss']
+    })
+    export class TemplateformtestComponent implements OnInit, OnDestroy{
+    
+        constructor() { }
+    
+        submitted = false;
+    
+        cities = ['Select City', 'Mumbai', 'Kolkata', 'Banglore', 'Delhi'];
+    
+        model = {
+        name: "",
+        emailId: "",
+        mobileNumber:"",
+        address:"",
+        city: this.cities[0]
+    
+        }
+    
+        onSubmit() { 
+        this.submitted = true; 
+        }
+    }
+
+
+</code>
+</pre>
+
+<pre><code><b style="color:red !important;">HTML File Example of Template-driven form</b>
+    
+<</code><code>div class="container">
+<</code><code>div [hidden]="submitted">
+    <</code><code>h1>Registration Form</h1>
+    <</code><code>form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+    <</code><code>div class="form-group">
+        <</code><code>label for="name">Name<</code><code>/label>
+        <</code><code>input type="text" class="form-control" id="name"
+                required
+                [(ngModel)]="model.name" name="name"
+                #name="ngModel">
+        <</code><code>div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Name is required
+        <</code><code>/div>{{</code><code>name.valid</code><code>}} -
+    <</code><code>/div>
+
+    <</code><code>div class="form-group">
+        <</code><code>label for="emailId">Email ID<</code><code>/label>
+        <</code><code>input type="text" class="form-control" id="emailId"
+                required
+                [(ngModel)]="model.emailId" name="emailId" 
+                #emailId="ngModel">
+        <</code><code>div [hidden]="emailId.valid || emailId.pristine" class="alert alert-danger">
+            Email ID is required
+        <</code><code>/div>
+    <</code><code>/div>
+
+    <</code><code>div class="form-group">
+        <</code><code>label for="mobileNumber">Mobile Number<</code><code>/label>
+        <</code><code>input type="text" class="form-control" id="mobileNumber"
+                required
+                [(ngModel)]="model.mobileNumber" name="mobileNumber"
+                #mobileNumber="ngModel">
+        <</code><code>div [hidden]="mobileNumber.valid || mobileNumber.pristine" class="alert alert-danger">
+            Mobile Number is required
+        <</code><code>/div>
+    <</code><code>/div>
+
+    <</code><code>div class="form-group">
+        <</code><code>label for="address">Address<</code><code>/label>
+        <</code><code>input type="text" class="form-control" id="address"
+            required
+            [(ngModel)]="model.address" name="address"
+            #address="ngModel">
+        <</code><code>div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+            Address is required
+        <</code><code>/div>
+    <</code><code>/div>
+
+    <</code><code>div class="form-group">
+        <</code><code>label for="city">City</label>
+        <</code><code>select class="form-control" id="city"
+                required
+                [(ngModel)]="model.city" name="city"
+                #city="ngModel">
+        <</code><code>option *ngFor="let city of cities" [value]="city">{{city}}<</code><code>/option>
+        <</code><code>/select>
+        <</code><code>div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+        City is required
+        <</code><code>/div>
+    <</code><code>/div>
+    
+    <</code><code>button type="submit" class="btn btn-success" [disabled]="!registrationForm.form.valid">Submit<</code><code>/button>
+    <</code><code>/form>
+<</code><code>/div>
+
+<</code><code>div [hidden]="!submitted">
+    <</code><code>h2>You submitted the following:<</code><code>/h2>
+    <</code><code>div class="row">
+    <</code><code>div class="col-xs-3">Name<</code><code>/div>
+    <</code><code>div class="col-xs-9">{{ model.name }}<</code><code>/div>
+    <</code><code>/div>
+    <</code><code>div class="row">
+    <</code><code>div class="col-xs-3">Email ID<</code><code>/div>
+    <</code><code>div class="col-xs-9">{{ model.emailId }}<</code><code>/div>
+    <</code><code>/div>
+    <</code><code>div class="row">
+    <</code><code>div class="col-xs-3">Mobile Number<</code><code>/div>
+    <</code><code>div class="col-xs-9">{{ model.mobileNumber }}<</code><code>/div>
+    <</code><code>/div>
+    
+    <</code><code>button type="button" class="btn btn-primary" (click)="submitted=false">Edit<</code><code>/button>
+<</code><code>/div>
+<</code><code>/div>
+
+</code>
+</pre>
+                                            </p>
+                                        </div>
+
+                                        <div id="reactiveform">
+                                            <h3 class="top-border">Reactive forms</h3>
+                                            <p>
+                                                <b>Reactive forms</b> are synchronous. The logic resides mainly in the typescript code.
+                                                Compared to Template-driven forms, It is more robust, scalable, reusable, and testable. 
+                                                If forms are a key part of your application, or you're already using reactive patterns 
+                                                for building your application, use reactive forms.
+                                                
+                                            </p>
+                                            <p>
+                                                Reactive forms use an explicit and immutable approach to managing the state of a form at a given point in time. 
+                                                Each change to the form state returns a new state, which maintains the integrity of the model between changes.
+                                                Reactive forms are built around observable streams, where form inputs and values are provided as streams of 
+                                                input values, which can be accessed synchronously.
+                                            </p>
+                                            <p>
+                                                <b>Reactive forms types</b> 
+                                                <ol>
+                                                    <li class="ang-list"><a href="#groupform" id="groupformexample"><h3 class="ang-list-h3">Form group</h3></a></li> 
+                                                    <li class="ang-list"><a href="#nestedform" id="nestedformExample"><h3 class="ang-list-h3">Form array oe Nested Form</h3></a></li>     
+                                                    <li class="ang-list"><a href="#formbuilderForm" id="formbuilderExample"><h3 class="ang-list-h3">Form Builder</h3></a></li>
+                                                </ol>
+                                            </p>
+
+                                            <div id="groupform">
+                                                <h3 class="top-border">Form group</h3>
+                                                <p>Form group provides the functionality of grouping of a fixed set of controls that you can manage together.
+                                                   All fields in a form will be collected within a group and a FormGroup instance provides its model value 
+                                                   as an object.
+                                                </p>                                   
+                                                <p><b>Create a FormGroup</b>
+                                                    <ol style="padding:0px;">
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">ReactiveFormsModule</b> in the app.module.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">Component from</b> '@angular/core' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">FormGroup and FormControl</b> from '@angular/forms' in the component.ts.</li>     
+                                                    </ol>
+                                                </p>
+<pre><code><b style="color:red !important;">app.module.ts</b>
+
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppRoutingModule } from './app-routing.module';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+    @NgModule({
+    
+        imports: [
+        // other imports ...
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+        ],
+    })
+    export class AppModule {}
+
+</code></pre>
+<pre><code><span style="color:red;">component.ts file </span>
+
+    import { Component } from '@angular/core';
+    import { FormGroup, FormControl } from '@angular/forms';
+    
+    @Component({
+        selector: 'app-reactiveform-group',
+        templateUrl: './reactiveform-group.component.html',
+        styleUrls: ['./reactiveform-group.component.scss']
+    })
+    export class ReactiveformGroupComponent {
+        userForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        emailId: new FormControl(''),
+        mobileNumber: new FormControl(''),
+        address: new FormControl('')
+        });
+    
+        onSubmit(){
+        console.warn(this.userForm.value);
+        }                                                  
+    }
+</code></pre>
+
+<pre><code><span style="color:red;">component.html file </span>
+    
+<</code><code>form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <</code><code>div>
+        <</code><code>label for="first-name">First Name: <</code><code>/label>
+        <</code><code>input id="first-name" type="text" formControlName="firstName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Last Name: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="lastName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Email ID: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="emailId">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Mobile Number: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="mobileNumber">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Address: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="address">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>button type="submit" [disabled]="!userForm.valid">Submit<</code><code>/button>
+    <</code><code>/div>
+<</code><code>/form>
+    
+</code></pre>
+                                            
+                                            </div>
+
+                                            <div id="nestedform">
+                                                <h3 class="top-border">Form array or Nested Form</h3>
+                                                <p>Form array provides the functionality of nested form. It is a dynamic form, where you can add and remove 
+                                                    controls at run time.
+                                                </p>
+                                                <p><b>Create a Nested Form</b>
+                                                    <ol style="padding:0px;">
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">ReactiveFormsModule</b> in the app.module.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">Component from</b> '@angular/core' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">FormGroup and FormControl</b> from '@angular/forms' in the component.ts.</li>     
+                                                    </ol>
+                                                </p>
+                                                <p>
+<pre><code><b style="color:red !important;">app.module.ts</b>
+    
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppRoutingModule } from './app-routing.module';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+    @NgModule({
+    
+        imports: [
+        // other imports ...
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+        ],
+    })
+    export class AppModule {}
+
+</code></pre>
+<pre><code><span style="color:red;">component.ts file </span>
+
+    import { Component } from '@angular/core';
+    import { FormControl, FormGroup } from '@angular/forms';
+
+    @Component({
+    selector: 'app-reactivenestedform',
+    templateUrl: './reactivenestedform.component.html',
+    styleUrls: ['./reactivenestedform.component.scss']
+    })
+    export class ReactivenestedformComponent {
+    userForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        emailId: new FormControl(''),
+        mobileNumber: new FormControl(''),
+        address: new FormGroup({
+        street: new FormControl(''),
+        city: new FormControl(''),
+        state: new FormControl(''),
+        zip: new FormControl(''),
+        }),
+    });
+
+    onSubmit(){
+        console.warn(this.userForm.value);
+        console.warn(this.userForm.controls.address.value);
+    }
+  }
+</code></pre>
+
+<pre><code><span style="color:red;">component.html file </span>
+    
+<</code><code>form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <</code><code>div>
+        <</code><code>label for="first-name">First Name: <</code><code>/label>
+        <</code><code>input id="first-name" type="text" formControlName="firstName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Last Name: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="lastName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Email ID: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="emailId">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Mobile Number: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="mobileNumber">
+    <</code><code>/div>
+    <</code><code>div formGroupName="address">
+        <</code><code>h2>Address</h2>
+        <</code><code>label for="street">Street: <</code><code>/label>
+        <</code><code>input id="street" type="text" formControlName="street">
+        <</code><code>label for="city">City: <</code><code>/label>
+        <</code><code>input id="city" type="text" formControlName="city">
+        <</code><code>label for="state">State: <</code><code>/label>
+        <</code><code>input id="state" type="text" formControlName="state">
+        <</code><code>label for="zip">Zip Code: <</code><code>/label>
+        <</code><code>input id="zip" type="text" formControlName="zip">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>button type="submit" [disabled]="!userForm.valid">Submit<</code><code>/button>
+    <</code><code>/div>
+<</code><code>/form>
+    
+</code></pre>
+                                                </p>
+                                            </div>
+
+                                            
+                                            <div id="formbuilderForm">
+                                                <h3 class="top-border">FormBuilder</h3>
+                                                <p>
+                                                    <b>FormBuilder</b> API makes it easier to build reactive forms. 
+                                                    <b>Angular FormBuilder</b> provides the functionality to add the FormGroup, 
+                                                    nested FormGroup, FormArray & FormControls easily. It also allows us to set up the Validation rules for each of the controls.
+                                                </p>
+                                                <p><b>Create a Nested Form</b>
+                                                    <ol style="padding:0px;">
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">ReactiveFormsModule</b> in the app.module.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">Component from</b> '@angular/core' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">FormBuilder and FormControl</b> from '@angular/forms' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to initialize in constructor<b style="font-weight: bold !important;">constructor(private formBuilder: FormBuilder) {}</b></li>    
+                                                    </ol>
+                                                </p>
+                                                <p>
+<pre><code><b style="color:red !important;">app.module.ts</b>
+    
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppRoutingModule } from './app-routing.module';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+    @NgModule({
+    
+        imports: [
+        // other imports ...
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+        ],
+    })
+    export class AppModule {}
+
+</code></pre>
+<pre><code><span style="color:red;">component.ts file </span>
+
+    import { Component } from '@angular/core';
+    import { FormBuilder, FormControl } from '@angular/forms';
+
+    @Component({
+    selector: 'app-form-builder-example',
+    templateUrl: './form-builder-example.component.html',
+    styleUrls: ['./form-builder-example.component.scss']
+    })
+    export class FormBuilderExampleComponent {
+    constructor(private formBuilder: FormBuilder) {}
+
+    userForm = this.formBuilder.group({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        emailId: new FormControl(''),
+        mobileNumber: new FormControl(''),
+        address: this.formBuilder.group({
+            street: new FormControl(''),
+            city: new FormControl(''),
+            state: new FormControl(''),
+            zip: new FormControl('')
+        })
+    });
+    
+  get firstname() {
+    return this.userForm.get('firstname');
+  }
+ 
+  get lastname() {
+    return this.userForm.get('lastname');
+  }
+
+  onSubmit(){
+    console.log(this.userForm.value);
+  }
+}
+
+</code></pre>
+
+<pre><code><span style="color:red;">component.html file </span>
+    
+<</code><code>form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <</code><code>div>
+        <</code><code>label for="first-name">First Name: <</code><code>/label>
+        <</code><code>input id="first-name" type="text" formControlName="firstName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Last Name: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="lastName">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Email ID: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="emailId">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>label for="last-name">Mobile Number: <</code><code>/label>
+        <</code><code>input id="last-name" type="text" formControlName="mobileNumber">
+    <</code><code>/div>
+    <</code><code>div formGroupName="address">
+        <</code><code>h2>Address</h2>
+        <</code><code>label for="street">Street: <</code><code>/label>
+        <</code><code>input id="street" type="text" formControlName="street">
+        <</code><code>label for="city">City: <</code><code>/label>
+        <</code><code>input id="city" type="text" formControlName="city">
+        <</code><code>label for="state">State: <</code><code>/label>
+        <</code><code>input id="state" type="text" formControlName="state">
+        <</code><code>label for="zip">Zip Code: <</code><code>/label>
+        <</code><code>input id="zip" type="text" formControlName="zip">
+    <</code><code>/div>
+    <</code><code>div>
+        <</code><code>button type="submit" [disabled]="!userForm.valid">Submit<</code><code>/button>
+    <</code><code>/div>
+<</code><code>/form>
+    
+</code></pre>
+                                                </p>
+                                            </div>
+
+
+
+                                            <div id="formvalidation">
+                                                <h3 class="top-border">Angular Form Validation</h3>
+                                                <p>
+                                                    <ol style="padding:0px;">
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">ReactiveFormsModule</b> in the app.module.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">Component from</b> '@angular/core' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to import <b style="font-weight: bold !important;">Validators, FormBuilder and FormControl</b> from '@angular/forms' in the component.ts.</li> 
+                                                        <li class="ang-list">Need to initialize in constructor<b style="font-weight: bold !important;">constructor(private formBuilder: FormBuilder) {}</b></li>    
+                                                    </ol>
+                                                </p>
+                                                <p>
+<pre><code><b style="color:red !important;">app.module.ts</b>
+    
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppRoutingModule } from './app-routing.module';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+    @NgModule({
+    
+        imports: [
+        // other imports ...
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+        ],
+    })
+    export class AppModule {}
+
+</code></pre>
+<pre><code><span style="color:red;">component.ts file </span>
+
+import { Component } from '@angular/core';
+import { FormBuilder, FormControl, Validators  } from '@angular/forms';
+
+@Component({
+selector: 'app-form-builder-example',
+templateUrl: './form-builder-example.component.html',
+styleUrls: ['./form-builder-example.component.scss']
+})
+export class FormBuilderExampleComponent {
+    userForm : any;
+    constructor(private formBuilder: FormBuilder) {
+        this.userForm = this.formBuilder.group({
+            firstname: ['', Validators.required],
+            lastname: ['', [Validators.required, Validators.minLength(10)]],
+            emailId: [Validators.required, Validators.email],
+            mobileNumber: [Validators.required, Validators.minLength(10)],
+            address: this.formBuilder.group({
+                street: new FormControl(''),
+                city: new FormControl(''),
+                state: new FormControl(''),
+                zip: new FormControl('')
+            })
+    });
+} 
+  
+  onSubmit(){
+    console.log(this.userForm.value);
+    if (this.userForm.dirty && this.userForm.valid) {
+      alert(
+        `Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`
+      );
+    }
+  
+  }
+}
+
+</code></pre>
+
+<pre><code><span style="color:red;">component.html file </span>
+    
+    <</code><code></code>div>
+        <</code><code>label for="firstname">First Name <</code><code>/label>
+        <</code><code>input type="text" id="firstname" name="firstname" formControlName="firstname">  
+        <</code><code>div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.required">
+            First Name Required.
+        <</code><code>/div>
+        
+    <</code><code>/div>
+     
+    <</code><code>div>
+        <</code><code>label for="lastname">Last Name <</code><code>/label>
+        <</code><code>input type="text" id="lastname" name="lastname" formControlName="lastname">
+        <</code><code>div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.required">
+            Last Name Required.
+        <</code><code>/div>
+        <</code><code>div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.minlength">
+            Minimum 10 Character Required.
+        <</code><code>/div>
+    <</code><code>/div>
+</code></pre>
+                                                </p>
+                                            </div>
+                                            <p>
+                                                
+
+                                            </p>
+                                        </div>
+
+                                    </p>
+                                </div>            
+                   <div class="col-sm-12 col-md-12 bottom-add">
+                        
+                    </div> 
+
+
+
+                    <div class="container-fluid"> <br>  
+                        <div>
+                            <span class="next-botton">
+                                <span class="next-topic">Next Topic </span>
+                                <i class="fa fa-angle-double-right ficon-arraw"></i>
+                            </span>&nbsp;        
+                        </div>
+                        
+                       
+                    
+                    </div> <br><br>
+
+
+					
+				        </div> <!--end left-->
+                        <!--start right-->
+                        <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                           
+                        </div>   <!--end right-->
+                    </div>
+                    
+		        </div>
+	        </div>
+        </div>
+    <div class="cookie-consent">      
+            By using our site, you acknowledge that you have read and understood our
+            <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;
+            <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
+    </div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/scripts.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WNN8BHZLNW');
+        </script>
+        <script>
+            window.addEventListener("load", (event) => {
+               
+                if(document.getElementById('right-adv')!=0){
+                    var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+                    if(height>300){
+                        height=height-117;
+                    }
+                    document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+                }
+                
+            });
+           
+        </script>
+    </body>
+</html>
