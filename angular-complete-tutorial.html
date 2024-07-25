@@ -622,13 +622,14 @@
                                     <li class="ang-list"><a href="#nestedform" id="jumptonestedform"><h3 class="ang-list-h3">Nested Form or Form array</h3></a></li>
                                     <li class="ang-list"><a href="#formbuilderForm" id="jumptoformbuilderForm"><h3 class="ang-list-h3">Form Builder</h3></a></li>
                                     <li class="ang-list"><a href="#formvalidation" id="jumptoformvalidation"><h3 class="ang-list-h3">Form Validation</h3></a></li>
+                                    <li class="ang-list"><a href="#componentlifecycle" id="jumptocomponentlifecycle"><h3 class="ang-list-h3">Anglar Component Lifecycle / Angular Lifecycle Hook Method</h3></a></li>
                                     
 
 <!--
                                     <li>Component Communication</li>
                                     <li>Component Life Cycle Hook</li>   
                                     <li>Services & Dependency Injection</li>  
-                                    <li>Angular Forms Validation</li>  
+                                     
                                     <li>HTTP </li>  
                                     <li>Angular Router</li>  
                                     <li>Angular Route Guards</li>  
@@ -931,7 +932,7 @@ Output: Tata
                                         Angular provides two different approaches to handling user input through forms.
                                         <ol>
                                             <li class="ang-list"><a href="#templatedrivenform" id="jumptocomponents"><h3 class="ang-list-h3">Template-driven forms</h3></a></li>  
-                                            <li class="ang-list"><a href="#" id="reactiveform"><h3 class="ang-list-h3">Reactive forms</h3></a></li>
+                                            <li class="ang-list"><a href="#reactiveform" id="jumreactiveform"><h3 class="ang-list-h3">Reactive forms</h3></a></li>
                                         </ol>
 
                                         <div id="templatedrivenform">
@@ -1503,11 +1504,254 @@ export class FormBuilderExampleComponent {
 </code></pre>
                                                 </p>
                                             </div>
-                                            <p>
-                                                
 
+                                            <div id="componentlifecycle">
+                                                <h3 class="top-border">Angular Component Lifecycle / Lifecycle Hook Methods</h3>
+                                                <p>        
+                                                    <b>Angular Lifecycle</b> provides the functionality of input data change detection. 
+                                                    Angular checks when data-bound properties change, and updates both the view and the component 
+                                                    instance as needed. 
+                                                </p>
+                                                <p>
+                                                    Angular Components and Directives has same Lifecycle methods.
+                                                    Angular creates, updates, and destroys instances using lifecycle hook methods.
+
+                                                </p><b>Lifecycle Hook Method</b>
+
+                                                    <ol style="padding:0px;margin-left:10px;">
+                                                        <li class="ang-list"><a href="#ngonchanges">ngOnChanges()</a></li>
+                                                        <li class="ang-list"><a href="#ngoninit">ngOnInit()</a></li>    
+                                                        <li class="ang-list"><a href="#ngdocheck">ngDoCheck()</a></li> 
+                                                        <li class="ang-list"><a href="#ngaftercontentinit">ngAfterContentInit()</a></li>    
+                                                        <li class="ang-list"><a href="#ngaftercontentchecked">ngAfterContentChecked()</a></li>  
+                                                        <li class="ang-list"><a href="#ngafterviewinit">ngAfterViewInit()</a></li>  
+                                                        <li class="ang-list"><a href="#ngafterviewchecked">ngAfterViewChecked()</a></li>
+                                                        <li class="ang-list"><a href="#ngondestroy">ngOnDestroy()</a></li>  
+                                                    </ol>
+                                                </p>
+                                            </div>
+                                            <div id="ngonchanges">
+                                                <h3 class="top-border">ngOnChanges()</h3>
+                                                <p>
+                                                   The <b>ngOnChanges()</b> method called before the ngOnInit(). If the component has inputs and   
+                                                    whenever any input properties value change then Angular framework calls to the ngOnChanges() method.
+                                                    This happens frequently, so any operation you perform here impacts performance significantly.
+                                                </p>
+                                                <p>    
+                                                    If component has no inputs or you use it without providing any inputs, the framework will not 
+                                                    call to the ngOnChanges() method.
+                                                </p>
+                                                <p>
+                                                    ngOnChanges() uses <b>SimpleChanges</b> as an argument.
+<pre><code> <span style="color:rgb(194, 47, 108);">//SimpleChanges Class</span>
+    class <span style="color:deeppink;">SimpleChanges</span>{
+        constructor(previousValue: any, currentValue: any, firstChange: boolean)
+        previousValue: any;
+        currentValue: any;
+        firstChange: any;
+        isFirstChane: any;
+    }
+
+</code></pre>
+                                                </p>
+<p>
+    <pre><code>import { <span style="color:darkgreen;">Component, DoCheck, Input, OnChanges, SimpleChanges</span>} from '@angular/core';
+            
+    @Component({
+        <span style="color:darkgreen;">selector: 'app-docheck',
+        templateUrl: './docheck.component.html',
+        styleUrls: ['./docheck.component.css']</span>
+    })
+    export class <span style="color:deeppink;">DoCheckCityComponent</span> implements DoCheck, OnChanges {
+        <span style="color:darkgreen;">@Input() city = 'Mumbai';
+        oldCity = 'Mumbai';
+        diff = undefined;</span>
+    
+        <span style="color:darkgoldenrod;">ngOnChanges</span><span style="color:blueviolet;">(changes: SimpleChanges)</span> {
+            <span style="color:rgb(194, 47, 108);">// This will only capture city changes as @Input uses</span>
+            console.log('Is first change?', changes.rates.firstChange);
+        }
+    
+        <span style="color:darkgoldenrod;">ngDoCheck</span><span style="color:blueviolet;">()</span> {
+            <span style="color:rgb(194, 47, 108);">// This will capture all changes (@Input or input fields both)</span>
+            if (this.city !== this.oldCity) {
+                console.log("changes detected");
+            }
+        }
+    }
+            
+    </code></pre>
                                             </p>
+                                                    
+
+
+                                            </div>
+
+                                            <div id="ngoninit">
+                                                <h3 class="top-border">ngOnInit()</h3>
+                                                <p>
+                                                   The <b>ngOnInit()</b> method called only once after the ngOnChanges().                  
+                                                   The purpose of the <b>ngOnInit()</b> method is to initialize the directive or component after 
+                                                   Angular first displays the data-bound properties and sets the directive or component's input properties.
+                                                </p>
+                                               <p>If you required to fetch data on the time of page loading, ngOnInit() is a good place for a component 
+                                                to fetch its initial data.</p>    
+<p>
+<pre><code>import { <span style="color:darkgreen;">Component, OnInit , SimpleChanges</span>} from '@angular/core';
+        
+@Component({
+    <span style="color:darkgreen;">selector: 'app-docheck',
+    templateUrl: './docheck.component.html',
+    styleUrls: ['./docheck.component.css']</span>
+})
+export class <span style="color:deeppink;">OnInitComponentExample</span> implements OnInit {
+    <span style="color:darkgreen;">data: any;</span>
+
+    <span style="color:darkgoldenrod;">ngOnInit</span><span style="color:blueviolet;">()</span> {
+        <span style="color:rgb(194, 47, 108);">// This method called only once </span>
+        this.fetchDataFromDatabase();
+    }
+}
+        
+</code></pre>
+                                        </p>
+                                            </div>
+
+                                            <div id="ngdocheck">
+                                                <h3 class="top-border">ngDoCheck()</h3>
+                                                <p>
+                                                    The <b>ngDoCheck()</b> is called whenever any change detection, changes
+                                                     from either @Input or fields value. 
+                                                    The <b>ngDoCheck()</b> method called immediately after ngOnChanges() on every 
+                                                    change detection run, and immediately after ngOnInit() on the first time.
+                                                </p>
+                                                <p>The <b>ngOnChanges()</b> method called if we use @Input in the component or directive 
+                                                but <b>ngDoCheck()</b> is called whenever any change detection from either @Input or input fields value.  </p>    
+                                            <p>
+<pre><code>import { <span style="color:darkgreen;">Component, DoCheck, Input, OnChanges, SimpleChanges</span>} from '@angular/core';
+      
+@Component({
+    <span style="color:darkgreen;">selector: 'app-docheck',
+    templateUrl: './docheck.component.html',
+    styleUrls: ['./docheck.component.css']</span>
+})
+export class <span style="color:deeppink;">DoCheckCityComponent</span> implements DoCheck, OnChanges {
+    <span style="color:darkgreen;">@Input() city = 'Mumbai';
+    oldCity = 'Mumbai';
+    diff = undefined;</span>
+
+    <span style="color:darkgoldenrod;">ngOnChanges</span><span style="color:blueviolet;">(changes: SimpleChanges)</span> {
+        <span style="color:rgb(194, 47, 108);">// This will only capture city changes as @Input uses</span>
+        console.log('Is first change?', changes.rates.firstChange);
+    }
+
+    <span style="color:darkgoldenrod;">ngDoCheck</span><span style="color:blueviolet;">()</span> {
+        <span style="color:rgb(194, 47, 108);">// This will capture all changes (@Input or input fields both)</span>
+        if (this.city !== this.oldCity) {
+            console.log("changes detected");
+        }
+    }
+}
+      
+</code></pre>
+                                        </p>
                                         </div>
+
+                                        <div id="ngaftercontentinit">
+                                            <h3 class="top-border">ngAfterContentInit()</h3>
+                                            <p>
+                                                The <b>ngAfterContentInit()</b> method runs once after the first ngDoCheck() method.
+                                                This will not be executed after one time execution.
+                                            </p>
+                                        <p>
+<pre><code>import { <span style="color:darkgreen;">Component, DoCheck, Input, OnChanges, AfterContentInit, SimpleChanges</span>} from '@angular/core';
+  
+@Component({
+    <span style="color:darkgreen;">selector: 'app-docheck',
+    templateUrl: './docheck.component.html',
+    styleUrls: ['./docheck.component.css']</span>
+})
+export class <span style="color:deeppink;">AfterContentInitComponent</span> implements DoCheck, OnChanges, AfterContentInit {
+    <span style="color:darkgreen;">@Input() city = 'Mumbai';
+    oldCity = 'Mumbai';
+    diff = undefined;</span>
+
+    <span style="color:darkgoldenrod;">ngOnChanges</span><span style="color:blueviolet;">(changes: SimpleChanges)</span> {
+        <span style="color:rgb(194, 47, 108);">// This will only capture city changes as @Input uses</span>
+        console.log('Is first change?', changes.rates.firstChange);
+    }
+
+    <span style="color:darkgoldenrod;">ngDoCheck</span><span style="color:blueviolet;">()</span> {
+        <span style="color:rgb(194, 47, 108);">// This will capture all changes (@Input or input fields both)</span>
+        if (this.city !== this.oldCity) {
+            console.log("changes detected");
+        }
+    }
+
+    <span style="color:darkgoldenrod;">ngAfterContentInit</span><span style="color:blueviolet;">()</span>{
+        <span style="color:rgb(194, 47, 108);">// This method runs once after the first ngDoCheck() method</span>
+        console.log("after content init");
+    }
+}
+  
+</code></pre>
+                                    </p>
+</div>
+                                            
+                                        </div>
+
+                                        <div id="ngaftercontentchecked">
+                                            <h3 class="top-border">ngAfterContentChecked()</h3>
+                                            <p>
+                                                The <b>ngAfterContentChecked()</b> method executes every time when ngDoCheck() method called.
+                                                This executes after ngDoCheck() method.
+                                            </p>
+                                            <p>
+                                                Use ngAfterContentChecked whenever you want to call a lifecycle event hook immediately after ngDoCheck.
+                                            </p>
+                                        <p>
+<pre><code>import { <span style="color:darkgreen;">Component, DoCheck, Input, OnChanges, AfterContentInit, AfterContentChecked , SimpleChanges</span>} from '@angular/core';
+  
+@Component({
+    <span style="color:darkgreen;">selector: 'app-docheck',
+    templateUrl: './docheck.component.html',
+    styleUrls: ['./docheck.component.css']</span>
+})
+export class <span style="color:deeppink;">AfterContentCheckedComponent</span> implements DoCheck, OnChanges, AfterContentInit, AfterContentChecked{
+    
+    <span style="color:darkgreen;">@Input() city = 'Mumbai';
+    oldCity = 'Mumbai';
+    diff = undefined;</span>
+
+    <span style="color:darkgoldenrod;">ngOnChanges</span><span style="color:blueviolet;">(changes: SimpleChanges)</span> {
+        <span style="color:rgb(194, 47, 108);">// This will only capture city changes as @Input uses</span>
+        console.log('Is first change?', changes.rates.firstChange);
+    }
+
+    <span style="color:darkgoldenrod;">ngDoCheck</span><span style="color:blueviolet;">()</span> {
+        <span style="color:rgb(194, 47, 108);">// This will capture all changes (@Input or input fields both)</span>
+        if (this.city !== this.oldCity) {
+            console.log("changes detected");
+        }
+    }
+
+    <span style="color:darkgoldenrod;">ngAfterContentInit</span><span style="color:blueviolet;">()</span>{
+        <span style="color:rgb(194, 47, 108);">// This method runs once after the first ngDoCheck() method</span>
+        console.log("after content init");
+    }
+
+    <span style="color:darkgoldenrod;">ngAfterContentChecked</span><span style="color:blueviolet;">()</span>{
+        <span style="color:rgb(194, 47, 108);">// This method is called after every subsequent ngDoCheck</span>
+        console.log("after content checked")
+      }
+}
+  
+</code></pre>
+                                    </p>
+</div>
+                                            
+                                        </div>
+
 
                                     </p>
                                 </div>            
