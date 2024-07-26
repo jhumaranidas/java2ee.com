@@ -558,7 +558,8 @@ li.next-botton{
 
 .ang-list{list-style:number !important;}
  .ang-list a{text-decoration:none;}
- .ang-list-h3{font-size:18px !important;}
+ .ang-list-h3{font-size:15px !important;line-height: 16px !important;}
+ .ang-list-h4{font-size:15px !important;line-height: 16px !important;padding:2px !important;margin:0px !important;}
  
  .top-border{
 	 border-top: 1px solid #DBDBDB !important;

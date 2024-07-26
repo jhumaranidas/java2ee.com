@@ -162,7 +162,8 @@ h3, .h3 {
   }
  .ang-list{list-style:number !important;}
  .ang-list a{text-decoration:none;}
- .ang-list-h3{font-size:18px !important;}
+ .ang-list-h3{font-size:15px !important;line-height: 16px !important;}
+ .ang-list-h4{font-size:15px !important;line-height: 14px !important;padding:0px !important;margin:0px !important;}
 }
 
 h4, .h4 {
