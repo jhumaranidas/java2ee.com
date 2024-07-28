@@ -129,11 +129,12 @@ pre{
     /* color: #145A32; */
     /* font-size: medium; */
     /* font-family: monospace;color: #07a; */
-    border-left: 3px solid #7FB3D5 !important;
+    border: 2px solid #7FB3D5 !important;
 	color: blue;
     font-weight: 200;
 	font-family: monospace;
 	font-size:10px !important;
+	border-radius: 10px;
 	
 }
 pre code {

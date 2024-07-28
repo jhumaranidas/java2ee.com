@@ -601,7 +601,8 @@
                                 Angular provides solid platform, tools, APIs, and libraries to simplify and streamline your development workflow.
 
                                 You need basic knowledge of OOP, Javascript, TypeScript, HTML & CSS to build an Angular application.
-                            </p>    
+                            </p> 
+                            <div class="d-flex" id="wrapper">   
                                 <div class="col-md-5 col-lg-5 col-xl-5 col-sm-5" >
                                 <ol ><h2 style="color:blueviolet;">Angular Topics</h2>
                                     <li class="ang-list"><a href="#components" id="jumptocomponents"><h3 class="ang-list-h3">Angular Components</h3></a></li>  
@@ -629,7 +630,16 @@
                                         <a href="#ngafterviewchecked" id="jumptongafterviewchecked" style="text-decoration: none;color:darkolivegreen;"><h4 class="ang-list-h4"><i>ngAfterViewChecked()</i></h4></a>
                                         <a href="#ngondestroy" id="jumptongondestroy" style="text-decoration: none;color:darkolivegreen;"><h4 class="ang-list-h4"><i>ngOnDestroy()</i></h4></a>
                                     </dd>
-<!--
+                           </ol>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6" >
+                                <ol style="margin-top:60px;">
+                                    <li class="ang-list"><a href="#observable" id="jumptoobservable"><h3 class="ang-list-h3">Observable in Angular</h3></a></li>
+                                    <li class="ang-list"><a href="#router" id="jumptorouter"><h3 class="ang-list-h3">Angular Router</h3></a></li>    
+                                </ol>
+                            </div>
+                        </div>   
+<!-- 
                                     <li>Component Communication</li>
                                     <li>Component Life Cycle Hook</li>   
                                     <li>Services & Dependency Injection</li>  
@@ -639,7 +649,6 @@
                                     <li>Angular Route Guards</li>  
                                     <li>Angular Module</li>  
                                     <li>Advanced Components</li>  
-                                    <li>Observable in Angular</li>  
                                     <li>Styling the Application</li>    
                                     <li>Configuration</li>  
                                     <li>Handling Errors</li>  
@@ -656,10 +665,7 @@
                                     <li>Tracking items with *ngFor trackBy</li>  
                                     NgNonBindable, @Input, @Output, ngClass, ngSwitch, 
 -->
-                                </ol>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6"></div>   
-
+                               
                                 
                                 <div id="components">
                                     <h3 class="top-border">Angular Components</h3>
@@ -740,17 +746,15 @@
 </code></pre>
                                     </p>
                                 </div>
-Aasaeas
+
                                 <div id="customdirectives">
                                     <h3 class="top-border">Custom Directives In Angular</h3>
                                     <p>1. To create custom directive execute below command.
-<pre style="background: gray;color:white;"><code>
-    ng generate directive <</code><code>directive name>
-
-    
-    PS E:\application\angular-mainapp\mainapp> ng generate directive directives/highlight
-    CREATE src/app/directives/highlight.directive.spec.ts (236 bytes)
-    CREATE src/app/directives/highlight.directive.ts (147 bytes)
+<pre style="background: gray;color:white;"><code><span style="color:aqua;">ng generate directive < directive name ></span>
+    <span style="color:brown;">---Example of creating highlight directive---</span>
+    PS E:\application\angular-mainapp\mainapp> <span style="color:aqua;">ng generate directive highlight</span>
+    CREATE src/app/highlight.directive.spec.ts (236 bytes)
+    CREATE src/app/highlight.directive.ts (147 bytes)
     UPDATE src/app/app.module.ts (1452 bytes)
 </code></pre>
                                         Angular CLI will be created a highlight.directive.ts file in the  src/app folder. 
@@ -761,21 +765,20 @@ Aasaeas
                                     </p>
                                     <p>2. Inject ElementRef in the Custom created directive.  ElementRef has direct access to the host DOM element through its nativeElement property.</p>
                                     <p><b><i>src/app/highlight.directive.ts</i></b></b>
-<pre><code>import { Directive , ElementRef} from '@angular/core';
+<pre><code>import { <span style="color:chocolate;">Directive , ElementRef</span>} from '@angular/core';
 
 @Directive({
-    selector: '[appHighlight]'
+    <span style="color:chocolate;">selector: '[appHighlight]'</span>
 })
 export class HighlightDirective {
 
-    constructor(private el: ElementRef) { 
-    this.el.nativeElement.style.backgroundColor = 'yellow';
+    constructor(<span style="color:chocolate;">private el: ElementRef</span>) { 
+    this.<span style="color:darkcyan;">el.nativeElement.style.backgroundColor</span> = 'yellow';
     }
 
 }
-
-In HTML Declare directive
-<</code><code>p appHighlight>HighlightDirective Example Text!<</code><code>/p></code></code>
+<span style="color:brown;">---In HTML Declare directive---</span>
+<</code><code><span style="color:darkmagenta;">p appHighlight>HighlightDirective Example Text!</span><</code><code>/p></code></code>
 </code></pre>
                                     </p>
                                 </div>
@@ -784,29 +787,29 @@ In HTML Declare directive
                                     <h3 class="top-border">Handling user events in Directives. HostListener in Angular directive.</h3>
                                     <p>HostListener provides the functionality to capture of DOM event
                                         to listen and provides a handler method to run when that event occurs.
-<pre><code>import { Directive , ElementRef, HostListener} from '@angular/core';
+<pre><code>import { <span style="color:darkmagenta;">Directive , ElementRef, HostListener</span>} from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+    <span style="color:darkmagenta;">selector: '[appHighlight]'</span>
 })
 export class HighlightDirective {
 
-  constructor(private el: ElementRef) {}
+  constructor(<span style="color:green;">private el: ElementRef</span>) {}
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('yellow');
+  <span style="color:deeppink;">@HostListener</span>('mouseenter') onMouseEnter() {
+    <span style="color:darkmagenta;">this.highlight('yellow');</span>
   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('');
+  <span style="color:deeppink;">@HostListener</span>('mouseleave') onMouseLeave() {
+    <span style="color:darkmagenta;">this.highlight('');</span>
   }
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.appHighlight || 'red');
+  <span style="color:deeppink;">@HostListener</span>('mouseenter') onMouseEnter() {
+    <span style="color:darkmagenta;"> this.highlight</span>(this.appHighlight || 'red');
   }
 
   private highlight(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
+    <span style="color:darkmagenta;">this.el.nativeElement.style.backgroundColor</span> = color;
   }
 
 }
@@ -816,37 +819,37 @@ export class HighlightDirective {
 
                                 <div id="atinput">
                                     <h3 class="top-border">Passing values into an attribute directive. @Input in Angular directive.</h3>
-                                    <p>You need to inject @Input in the directive to get value from component. 
-<pre><code>import { Directive , ElementRef, HostListener, Input} from '@angular/core';
+                                    <p>You need to inject <span style="color:deeppink;">>@Input</span> in the directive to get value from component. 
+<pre><code>import { <span style="color:darkmagenta;">Directive , ElementRef, HostListener, Input</span>} from '@angular/core';
 
     @Directive({
-      selector: '[highLightColor]'
+        <span style="color:darkmagenta;">selector: '[highLightColor]'</span>
     })
     
     export class HighLightColor {
       @Input() highLightColor = '';
     
-      constructor(private el: ElementRef) {}
+      constructor(<span style="color:green;">private el: ElementRef</span>) {}
     
-      @HostListener('mouseenter') onMouseEnter() {
-        this.highlight(this.highLightColor || 'yellow');
+      <span style="color:deeppink;">@HostListener</span>('mouseenter') onMouseEnter() {
+        <span style="color:darkmagenta;">this.highlight</span>(this.highLightColor || 'yellow');
       }
     
-      @HostListener('mouseleave') onMouseLeave() {
-        this.highlight('');
+      <span style="color:deeppink;">@HostListener</span>('mouseleave') onMouseLeave() {
+        <span style="color:darkmagenta;">this.highlight('');</span>
       }
     
       private highlight(color: string) {
-        this.el.nativeElement.style.backgroundColor = color;
+        <span style="color:darkmagenta;">this.el.nativeElement.style.backgroundColor</span> = color;
       }
     
     }
 
-    HTML Declaration 
-
+<span style="color:brown;">---HTML Declaration---</span>
+    
 <</code><code>h5 [highLightColor]="'red'">H5<</code><code>/h5>
 <</code><code>h6 highLightColor>H6<</code><code>/h6>
-
+    </span>
 </code></pre>
                                     </p>   
                                 </div>
@@ -1862,7 +1865,7 @@ export class <span style="color:deeppink;">OndestroyComponent</span> implements 
         console.log("On Destroy")
     }
 }
---<span style="color:red;">Child component HTML</span>--
+--<span style="color:red;">Child component HTML---</span>
 City is {{city}}
 </code></pre>
 </p>
@@ -1893,6 +1896,217 @@ import { Component} from '@angular/core';
 <</code><code><span style="color:deeppink;">button</span> (click)="<span style="color:darkgoldenrod;">toggleChildComponent()</span>">Show/Hide<</code><code>/<span style="color:deeppink;">button</span>>
 </code></pre>
 </p>            
+
+                                </div>
+
+                                <div id="observable">
+                                    <h3 class="top-border">Observables in Angular</h3>
+                                    <p>
+                                        <b>Observable</b> provides the common asynchronous functionality in Angular such as 
+                                        <b style="color:blueviolet;">HTTP module</b> uses observables to handle AJAX requests/responses and 
+                                        <b style="color:blueviolet;">Router and Forms modules</b> use observables to listen for and respond to user-input events.
+                                    </p>
+                                    
+<p>
+<pre><code><span style="color:red;">---Service TS---</span>
+import { <span style="color:darkgreen;">Injectable</span> } from '@angular/core';
+import { <span style="color:darkgreen;">HttpClient</span> } from '@angular/common/http'
+import { <span style="color:darkgreen;">Observable</span> } from 'rxjs';
+
+@Injectable({
+    <span style="color:darkgreen;">providedIn: 'root'</span>
+})
+export class MessagesService {
+  <span style="color:blueviolet;">private AppUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private LanguageURL = "http://localhost:1111/language";
+  private StudentURL = "http://localhost:1111/student";</span>
+
+  constructor(<span style="color:darkolivegreen;">private http: HttpClient</span>) {}
+
+  getPostData(): <span style="color:brown;">Observable</span><</code><code>String []>{
+    <span style="color:chocolate;">return this.http.get<</code><code>Employee[]>(this.AppUrl);</span>
+  }
+
+  getLanguage(): <span style="color:blueviolet;">Observable</span><</code><code>Array<string>>{
+    <span style="color:chocolate;">return this.http.get<</code><code>Array<</code><code>string>>(this.LanguageURL);</span>
+  }
+
+  getStudents(): <span style="color:blueviolet;">Observable</span><</code><code>String []>{
+    <span style="color:chocolate;">return this.http.get<</code><code>String []>(this.StudentURL);</span>
+  }
+}
+
+
+<span style="color:red;">---Component TS---</span>
+import { <span style="color:darkgreen;">Component</span> } from '@angular/core';
+import { <span style="color:darkgreen;">MessagesService</span> } from './services/messages.service';
+
+@Component({
+  <span style="color:blueviolet;">selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers: [MessagesService]</span>
+})
+export class AppComponent implements OnInit{
+    <span style="color:darkgreen;">messages: string[] = [];
+    serverData: Employee[] = [];
+    languageData: Array<</code><code>string> = [];
+
+    constructor(<span style="color:darkgreen;">private messageService: MessagesService</span>){
+        <span style="color:blueviolet;">this.messages = messageService.getMessage();</span>
+    }
+
+    <span style="color:forestgreen;">this.messageService.getPostData().subscribe</span>({
+        next: (response) =>{
+            <span style="color:chocolate;">this.serverData = response;</span>
+        },
+        error: (error) => {
+            <span style="color:chocolate;">console.error(error);</span>
+        }
+    }); 
+  }
+
+  getLanguage(){
+    <span style="color:forestgreen;">this.messageService.getLanguage().subscribe</span>({
+      next: (response) =>{
+        <span style="color:chocolate;">this.languageData = response;</span>
+      },
+      error: (error) => {
+        <span style="color:chocolate;">console.error(error);</span>
+      }
+    });
+  }
+}</code></pre>
+</p>   
+
+                                </div>
+
+                                <div id="router">
+                                    <h3 class="top-border">OAngular Router</h3>
+                                    <p>
+                                        <b>Angular Router</b> service provides functionality of navigation from one view to another view.
+                                        Need to import <b style="color:darkmagenta">RouterModule</b> to use the Router service in your Angular app.
+                                    </p>
+                                    
+<p>
+<pre><code><span style="color:red;">---app-routing.module.ts---</span>
+import {  <span style="color:rgb(32, 224, 15);">NgModule</span> } from '@angular/core';
+import {  <span style="color:rgb(32, 224, 15);">RouterModule, Routes</span> } from '@angular/router';
+import {  <span style="color:rgb(32, 224, 15);">HomeComponent</span> } from './components/home.component';
+import {  <span style="color:rgb(32, 224, 15);">ContactUSComponent</span> } from './components/contactUSComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">ProfileComponent</span> } from './components/profileComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">UserSearchComponent</span> } from './components/userSearchComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">AuthComponent</span> } from './components/AuthComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">RegistrationComponent</span> } from './components/RegistrationComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">LoginComponent</span> } from './components/LoginComponent.component';
+import {  <span style="color:rgb(32, 224, 15);">ChangePasswordComponent</span> } from './components/ChangePasswordComponent.component';
+
+const routes: Routes = [
+    {<span style="color:rgb(224, 15, 25);">path</span>: "", component:<span style="color:rgb(32, 224, 15);">HomeComponent</span>},
+    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/ */</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: "home", component:<span style="color:rgb(32, 224, 15);">HomeComponent</span>},
+    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/home */</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: "contactus", component:<span style="color:rgb(32, 224, 15);">ContactUSComponent</span>},
+    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/contactus*/</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: "profile", component:<span style="color:rgb(32, 224, 15);">ProfileComponent</span>},
+    <span style="color:black;font-size: 13px;">/* HTML  <</code><code><span style="color:black;font-size: 13px;">a [routerLink]="['profile']">User Details< /a>
+        or < a [routerLink]="['profile']" [queryParams]="{ id:2 }">User Details< /a>
+        Browser URL - http://localhost:4291/profile  or http://localhost:4291/profile?id=2  */</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: "usersearch", component:<span style="color:rgb(32, 224, 15);">UserSearchComponent</span>},
+    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/usersearch */</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: 'account/:id', component: <span style="color:rgb(32, 224, 15);">AccountDetailComponent</span> },
+    {<span style="color:rgb(224, 15, 25);">path</span>: 'account/:id', component: <span style="color:rgb(32, 224, 15);">AccountDetailComponent</span> },
+    <span style="color:black;font-size: 13px;">/* < a [routerLink]="['/account', 123]">Account 123< /a>
+        Browser URL - http://localhost:4291/account/123 */</span>
+    {<span style="color:rgb(224, 15, 25);">path</span>: "auth", component:<span style="color:rgb(32, 224, 15);">AuthComponent</span>, <span style="color:rgb(238, 9, 9);">children</span>: [
+    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth */</span>      
+        {<span style="color:rgb(224, 15, 25);">path</span>: "registration", component:<span style="color:rgb(32, 224, 15);">RegistrationComponent</span>},
+        <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth/registration */</span>
+        {<span style="color:rgb(224, 15, 25);">path</span>: "login", component:<span style="color:rgb(32, 224, 15);">LoginComponent</span>},
+        <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth/login */</span>
+        {<span style="color:rgb(224, 15, 25);">path</span>: "changepassword", component:<span style="color:rgb(32, 224, 15);">ChangePasswordComponent</span>}
+        <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth/changepassword */</span>
+      }
+    ];
+
+@NgModule({
+    <span style="color:darkgreen">imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]</span>
+})
+export class AppRoutingModule { }</code></pre>
+
+<pre><code><span style="color:red;">---HTML---</span>
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/</span>
+< a [routerLink]="">Dashboard< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/home</span>
+< a [routerLink]="['home']">Home< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/contactus</span>
+< a [routerLink]="['contactus']">Contact< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile</span>
+< a [routerLink]="['profile']">Profile< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile?id=2</span>
+< a [routerLink]="['profile']" [queryParams]="{ id:2 }">User Details for Id 2< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile?id=3</span>
+< a [routerLink]="['profile']" [queryParams]="{ id:3 }">User Details for Id 3< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/account/123</span>
+< a [routerLink]="['/account', 123]">Account 123< /a>
+-----------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/account/150</span>
+< a [routerLink]="['/account', 150]">Account 150< /a></code></pre>
+
+
+<pre><code><span style="color:red;">---If want to navigate from TS file---</span>
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/home</span>
+this.router.navigate(
+        ['/home']
+);
+or <span style="color:chocolate;font-size: 13px;">this.router.navigateByUrl('home');</span>
+
+-------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile</span>
+this.router.navigate(
+    ['/profile']
+); 
+or <span style="color:chocolate;font-size: 13px;">this.router.navigateByUrl('profile');</span>
+-------------------------------  
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile?id=2</span>
+this.router.navigate(
+    ['/profile'],
+    { queryParams: { id: 2'} }
+);
+or <span style="color:chocolate;font-size: 13px;">this.router.navigateByUrl('profile?id=2');</span>
+-------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/'profile?id=3</span>
+this.router.navigate(
+    ['/profile'],
+    { queryParams: { id: 3'} }
+);
+or <span style="color:chocolate;font-size: 13px;">this.router.navigateByUrl('profile?id=3');</span>
+-------------------------------
+
+<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/account/3</span>
+this.router.navigate(
+    ['/account','3'],
+);
+or <span style="color:chocolate;font-size: 13px;">this.router.navigateByUrl('account/3');</span></code></pre>
+</p>   
 
                                 </div>
                                             
