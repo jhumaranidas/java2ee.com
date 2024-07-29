@@ -105,7 +105,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /*text-align: justify; */
-  background: #EAEDED;
+  background: #a7e9c5;
   font-family: Verdana, sans-serif;
     font-size: 15px;
     line-height: 1.5;
@@ -10877,6 +10877,7 @@ textarea.form-control-lg {
   min-height: 100vh;
   margin-left: -15rem;
   transition: margin 0.25s ease-out;
+ 
 }
 
 #sidebar-wrapper .sidebar-heading {
