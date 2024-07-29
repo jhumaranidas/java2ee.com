@@ -286,7 +286,7 @@
                         </li> 
 
                         <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#router?t=2" title="Children Mapping Router in Angular">
+                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#childrenmapping" title="Children Mapping Router in Angular">
                                 <span class="left-link-button">
                                      <i class="fa fa-angle-double-right f-arraw-left"></i> 
                                      <span class="left-topic-name priority2">Children Mapping Router in Angular</span>
@@ -296,7 +296,7 @@
                         </li> 
 
                         <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#router?t=3" title="Query Param Router in Angular">
+                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#queryparam" title="Query Param Router in Angular">
                                 <span class="left-link-button">
                                      <i class="fa fa-angle-double-right f-arraw-left"></i> 
                                      <span class="left-topic-name priority2">Query Param Router in Angular</span>
@@ -305,7 +305,7 @@
                             
                         </li> 
                         <li class="next-botton">
-                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#router?t=4" title="Path Param in Angular Router">
+                            <a target="_blank" href="https://java2ee.com/angular-complete-tutorial#pathparam" title="Path Param in Angular Router">
                                 <span class="left-link-button">
                                      <i class="fa fa-angle-double-right f-arraw-left"></i> 
                                      <span class="left-topic-name priority2">Path Param in Angular Router</span>
@@ -1752,7 +1752,7 @@ const routes: Routes = [
     <span style="color:black;font-size: 13px;">/* < a [routerLink]="['/account', 123]">Account 123< /a>
         Browser URL - http://localhost:4291/account/123 */</span>
     {<span style="color:rgb(224, 15, 25);">path</span>: "auth", component:<span style="color:rgb(32, 224, 15);">AuthComponent</span>, <span style="color:rgb(238, 9, 9);">children</span>: [
-    <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth */</span>      
+    <span id="childrenmapping" style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth */</span>      
         {<span style="color:rgb(224, 15, 25);">path</span>: "registration", component:<span style="color:rgb(32, 224, 15);">RegistrationComponent</span>},
         <span style="color:black;font-size: 13px;">/*Browser URL - http://localhost:4291/auth/registration */</span>
         {<span style="color:rgb(224, 15, 25);">path</span>: "login", component:<span style="color:rgb(32, 224, 15);">LoginComponent</span>},
@@ -1786,7 +1786,7 @@ export class AppRoutingModule { }</code></pre>
 < a [routerLink]="['profile']">Profile< /a>
 -----------------------------------
 
-<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile?id=2</span>
+<span id="queryparam" style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/profile?id=2</span>
 < a [routerLink]="['profile']" [queryParams]="{ id:2 }">User Details for Id 2< /a>
 -----------------------------------
 
@@ -1794,7 +1794,7 @@ export class AppRoutingModule { }</code></pre>
 < a [routerLink]="['profile']" [queryParams]="{ id:3 }">User Details for Id 3< /a>
 -----------------------------------
 
-<span style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/account/123</span>
+<span id="pathparam" style="color:black;font-size: 13px;">Browser URL - http://localhost:4291/account/123</span>
 < a [routerLink]="['/account', 123]">Account 123< /a>
 -----------------------------------
 
