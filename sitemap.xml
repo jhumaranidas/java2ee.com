@@ -6,13 +6,18 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://java2ee.com/angular-complete-tutorial</loc>
-  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
+  <lastmod>2024-08-01T02:20:24+00:00</lastmod>
   <priority>0.97</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/spring-boot-scheduler-tutorial</loc>
+  <lastmod>2024-08-01T02:20:24+00:00</lastmod>
+  <priority>0.96</priority>
 </url>
 <url>
   <loc>https://java2ee.com/lambda/lambda-expression-example-in-java</loc>
   <lastmod>2024-07-28T02:20:24+00:00</lastmod>
-  <priority>0.96</priority>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://java2ee.com/functional-interfaces-in-java-8</loc>
