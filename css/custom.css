@@ -569,14 +569,10 @@ li.next-botton{
 	 font-size:25px !important;}
 
 .stickity{
-            
-            background: #a7e9c5;
-           
-       
-            
-			position: -webkit-sticky;
-  position: fixed;
-  top: 0;
-  overflow-y: scroll;
-  max-height: 100vh;
+	background: #a7e9c5;
+	position: -webkit-sticky;
+  	position: fixed;
+  	top: 0;
+  	overflow-y: scroll;
+  	max-height: 100vh;
 }

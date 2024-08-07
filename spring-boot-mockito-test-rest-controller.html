@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spring Boot Mockito Test Rest Controller</title>
+        <meta charset=utf-8>
+        <meta name="theme-color" content="#f10d0d">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
+        <meta name="keywords" content="Spring Boot Mockito Test Rest Controller">          
+        <meta name="description" content="7st August 2024 - Spring Boot Mockito Test Rest Controller. Example with best practices of Rest Controller GET POST PUT DELETE File Upload File Download Exception Methods Test Cases in Spring Boot Mockito, @SpringBootTest annotation @WebMvcTest annotation @ExtendWith annotation MockMvc in Spring Boot Mockito @MockBean annotation Different between @Mock and @MockBean Annotation @InjectMock Annotation in Mockito Junit @BeforeTestClass and @AfterTestClass in Mockito Junit @BeforeEach Annotation in Mockito Junit">
+
+        <link rel="canonical" href="https://java2ee.com/spring-boot-mockito-test-rest-controller">
+
+        <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
+        <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
+        <meta name="google-adsense-account" content="ca-pub-1973149732345742">              
+        <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
+       
+        <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../image/fevicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../image/fevicon/favicon-16x16.png">
+        <link rel="manifest" href="../image/fevicon/site.webmanifest">
+        <link rel="mask-icon" href="../image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
+        <link rel="shortcut icon" sizes="16x16" href="../image/fevicon/favicon-16x16.png" type=image/x-icon>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">      
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Spring Boot Mockito Test Rest Controller">
+        <meta property="og:description" content="7st August 2024 - Spring Boot Mockito Test Rest Controller. Example with best practices of Rest Controller GET POST PUT DELETE File Upload File Download Exception Methods Test Cases in Spring Boot Mockito, @SpringBootTest annotation @WebMvcTest annotation @ExtendWith annotation MockMvc in Spring Boot Mockito @MockBean annotation Different between @Mock and @MockBean Annotation @InjectMock Annotation in Mockito Junit @BeforeTestClass and @AfterTestClass in Mockito Junit @BeforeEach Annotation in Mockito Junit.">
+        <meta property="og:url" content="https://java2ee.com/spring-boot-mockito-test-rest-controller">
+        <meta property="og:site_name" content="java2ee">
+        <meta property="article:section" content="Spring Boot Mockito Test Rest Controller">
+        <meta property="article:tag" content="Spring">
+        <meta property="article:tag" content="Boot">
+        <meta property="article:tag" content="Mockito">
+        <meta property="article:tag" content="Test">
+        <meta property="article:tag" content="Rest">
+        <meta property="article:tag" content="Controller">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@DasJhum9">
+        <meta name="twitter:creator" content="@DasJhum9">
+        <meta name="twitter:domain" content="www.java2ee.com">
+        <meta name="twitter:title" property="og:title" content="Spring Boot Mockito Test Rest Controller">
+        <meta name="twitter:description" property="og:description" content="7st August 2024 - Spring Boot Mockito Test Rest Controller. Example with best practices of Rest Controller GET POST PUT DELETE File Upload File Download Exception Methods Test Cases in Spring Boot Mockito, @SpringBootTest annotation @WebMvcTest annotation @ExtendWith annotation MockMvc in Spring Boot Mockito @MockBean annotation Different between @Mock and @MockBean Annotation @InjectMock Annotation in Mockito Junit @BeforeTestClass and @AfterTestClass in Mockito Junit @BeforeEach Annotation in Mockito Junit."> 
+        <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
+        
+        <meta property="article:published_time" content="2024-08-07T12:59:35+00:00">
+        <meta property="article:modified_time" content="2024-08-07T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-08-07T02:59:35+00:00">
+    </head>
+    <body>      
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div id="sidebar-wrapper" class="d-block d-xs-none" style="width:24%;">
+                <div class="stickity d-block d-xs-none" >
+                <div class="sidebar-heading">
+                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
+                </div>
+                <div class="list-group list-group-flush d-block d-xs-none">
+                    <ul class="d-block d-xs-none">
+                        <li class="next-botton">     
+                            <a href="https://java2ee.com/spring-boot-mockito-test-rest-controller#springboottest-annotation" title="@springboottest annotation in spring boot">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">@Springboottest annotation in spring boot</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a href="https://java2ee.com/spring-boot-mockito-test-rest-controller#webmvctest-annotation" title="@webmvctest spring boot">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority1">@webmvctest spring boot</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                       
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#extendwith-annotation" title="@ExtendWith annotation in Spring Boot" >
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">@ExtendWith annotation in Spring Boot</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  class="selected" href="https://java2ee.com/spring-boot-mockito-test-rest-controller#mockmvc" title="MockMvc in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">MockMvc in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#mockbean-annotation" title="@MockBean annotation in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">@MockBean annotation in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#mock-annotation" title="@Mock annotation in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">@Mock annotation in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li> 
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#injectmock-annotation" title="@InjectMock Annotation in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2">@InjectMock Annotation in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                            
+                        </li>  
+                             
+                            
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#beforetestclass-annotation" title="@BeforeTestClass and @AfterTestClass in Mockito Junit">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">@BeforeTestClass and @AfterTestClass in Mockito Junit</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#beforeeach-annotation" title="@Beforeeach annotation in spring boot">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name">@beforeeach Annotation in Spring Boot</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollertest" title="Spring Boot Mockito Test Rest Controller">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority3">Rest Controller Spring Boot Mockito Test</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollergetmethodtest" title="Rest Controller GET Method Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">GET</b> Method Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollergetallmethodtest" title="Rest Controller Get All Users Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">Get All Users</b> Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li> 
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollepostmethodtest" title="Rest Controller POST Method Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">POST</b> Method Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrolleputmethodtest" title="Rest Controller PUT Method Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">PUT</b> Method Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrolledeletemethodtest" title="Rest Controller DELETE Method Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">DELETE</b> Method Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollefileuploadtest" title="Rest Controller File Upload Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">FILE UPLOAD</b> Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollefiledownloadtest"" title="FILE DOWNLOAD Rest Controller Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name"><b style="color:orangered">FILE DOWNLOAD</b> Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                        <li class="next-botton">
+                            <a  href="https://java2ee.com/spring-boot-mockito-test-rest-controller#restcontrollerexceptiontestcases" title="Exception Rest Controller Test Cases in Spring Boot Mockito">
+                                <span class="left-link-button">
+                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
+                                     <span class="left-topic-name priority2"><b style="color:orangered">Exception</b> Rest Controller Test Cases in Spring Boot Mockito</span>
+                                </span>&nbsp;        
+                            </a>
+                        </li>  
+                       
+                            
+                        <br><br> <br><br> 
+                            
+                    </ul>
+                </div> 
+            </div>
+            </div> 
+            <div id="page-content-wrapper">
+				<div id="right-main-div">
+                    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 left-main-div" id="left-main-div">
+                        <div id="spring-boot-mockito-rest-controller"><h1 style="margin:0px;padding:0px;">Spring Boot Mockito Test Rest Controller</h1>
+                            <p>
+                                <ol style="margin-top:0px;padding-top:0px;"><h2 style="margin:0px;padding:0px;">Topics</h2>
+                                    <!-- BDDMockito -->
+                                    <li class="ang-list"><a href="#springboottest-annotation" id="jumptospringboottest">@SpringBootTest annotation in Spring Boot Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#webmvctest-annotation" id="jumptowebmvctest-annotation">@WebMvcTest annotation in Spring Boot Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#extendwith-annotation" id="jumptoextendwith-annotation">@ExtendWith annotation in Spring Boot Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#mockmvc" id="jumptomockmvc">MockMvc in Spring Boot Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#mockbean-annotation" id="jumptomockbean">@MockBean annotation in Spring Boot Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#mock-annotation" id="jumptomockannotation">Different between @Mock and @MockBean Annotation/a></li>
+                                    <li class="ang-list"><a href="#injectmock-annotation" id="jumptoinjectmockannotation">@InjectMock Annotation in Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#beforetestclass-annotation" id="jumptobeforetestclass">@BeforeTestClass and @AfterTestClass in Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#beforeeach-annotation" id="jumptobeforeeach">@BeforeEach Annotation in Mockito Junit</a></li>
+                                    <li class="ang-list"><a href="#restcontrollertest" id="jumptorestcontrollertest"><b style="color:orangered">Rest Controller</b> Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollergetmethodtest" id="jumptorestcontrollergetmethodtest">Rest Controller <b style="color:orangered">GET</b> Method Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollergetallmethodtest" id="jumptorestcontrollergetallmethodtest">Rest Controller <b style="color:orangered">GET All Users</b> Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollepostmethodtest" id="jumptorestcontrollepostmethodtest">Rest Controller <b style="color:orangered">POST</b> Method Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrolleputmethodtest" id="jumptorestcontrolleputmethodtest">Rest Controller <b style="color:orangered">PUT</b> Method Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrolledeletemethodtest" id="jumptorestcontrolledeletemethodtest">Rest Controller <b style="color:orangered">DELETE</b> Method Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollefileuploadtest" id="jumptorestcontrollefileuploadtest">Rest Controller <b style="color:orangered">FILE UPLOAD</b> Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollefiledownloadtest" id="jumptorestcontrollefiledownloadtest">Rest Controller <b style="color:orangered">FILE DOWNLOAD</b> Test Cases in Spring Boot Mockito</a></li>
+                                    <li class="ang-list"><a href="#restcontrollerexceptiontestcases" id="jumptorestcontrollerexceptiontestcases">Rest Controller <b style="color:orangered">Exception</b> Test Cases in Spring Boot Mockito</a></li>
+                               
+                                </ol>
+                            </p>
+                        </div>
+
+                        <div id="springboottest-annotation">
+                            <h3 class="top-border">@SpringBootTest annotation</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@SpringBootTest</b> annotation provides the functionality 
+                                to bootstrap the entire container. It loads entire application context for Spring Boot application
+                                 and create integration test.
+                            </p>
+
+                            <p>
+                                Usually, we write unit test cases for all methods of a class such as 
+                                a test case class for one Controller, 2nd test case class for 2nd Controller or
+                                 one test case class for a Service class and 2nd test case class for 2nd Service class.
+                                 
+                            </p>
+                            <p>
+                                <b>But, another option is also available</b>. if you declare the <b style="color:cadetblue;">@SpringBootTest</b> annotation,
+                                you can write test cases for entire flow in one test case class such as you can write the test cases for Controller and Service integration 
+                                logic in the same method/class.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---@SpringBootTest Annotation Example---</span>
+<span style="color:brown;">@SpringBootTest
+class</span> public <span style="color:green;">MainClassApplicationTests</span> {
+ 
+  <span style="color:brown;">@Test</span>
+  void <span style="color:green;">contextLoads</span>() {
+    //write your test here
+  }
+}</code></pre>                                 
+                            </p>
+                    
+                        </div>
+
+                        <div id="webmvctest-annotation">
+                            <h3 class="top-border">@WebMvcTest annotation in Spring Boot Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@WebMvcTest</b> annotation provides the functionality of disabling 
+                                full auto-configuration and instead of full auto-configuration provides 
+                                only configuration relevant to MVC tests.
+                            </p>
+                            <p>
+                                If we declare <span style="color:cadetblue;">@WebMvcTest(controllers =  UserController.class)</span> that means
+                                we are asking to initialize only one web controller(<span style="color:cadetblue;">UserController.class</span>).
+                                We need to provide the remaining dependencies required using Mock objects.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---@WebMvcTest Annotation Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;</span>
+}</code></pre>                                 
+                            </p>
+                    
+                        </div>
+
+                        <div id="extendwith-annotation">
+                            <h3 class="top-border">@ExtendWith annotation in Spring Boot Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@ExtendWith</b> annotation in JUnit 5 is used to register extensions.
+                                Mockito provides the MockitoExtension class that can be used with the @ExtendWith annotation to enable Mockito annotations 
+                                and simplify the creation of mocks.
+                            </p>
+
+                            <p>
+                                You can not use <b style="color:cadetblue;">@ExtendWith</b> annotation in JUnit 4.
+                                If you are using older than JUnit 5 then need to use <b style="color:cadetblue;">@RunWith</b> annotation
+                                instead of @ExtendWith annotation.
+                            </p>
+                            <p>
+                                The <b style="color:cadetblue;">@ExtendWith</b> annotation can receive an array of extensions allowing 
+                                many of them to be used in the same test. Something like this <span style="color:cadetblue;">@ExtendWith({MockitoExtension.class, LogAsserterExtension.class})</span>.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---@ExtendWith Annotation Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+
+                        <div id="mockmvc">
+                            <h3 class="top-border">MockMvc in Spring Boot Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">MockMvc</b> provides the functionality 
+                                of unit testing for the controller classes in the Spring MVC applications.
+                                It is also used for testing the entire MVC stack, including controllers, filters, 
+                                and other MVC components.
+                            </p>
+                            <p>
+                                We can perform and test of the HTTP requests like GET, POST, PUT, DELETE and validate the response by using 
+                                The <b style="color:cadetblue;">MockMvc</b>.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+                        
+
+                        <div id="mockbean-annotation">
+                            <h3 class="top-border">@MockBean Annotation in Spring Boot Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@MockBean</b> annotation is provided by Spring library(<i style="color:brown;">
+                                org.springframework.boot.test.mock.mockito.MockBean</i>).
+                                <b style="color:cadetblue;">@MockBean</b> annotation add mock bean objects to the
+                                Spring application context. The @MockBean can be used field level or class level 
+                                in the unit test cases.
+                            </p>
+                            <p> If the bean object already exists in the Spring application context
+                                it will be replace with new bean object.
+                            </p>
+                            <p> If the bean object not exist in the Spring application context
+                                it willcreate a new bean object and add into application context.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.mock.mockito.MockBean</span>;
+
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;
+
+    @MockBean
+    UserService userService;
+</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+                        
+
+                        <div id="mock-annotation">
+                            <h3 class="top-border">Different between @Mock and @MockBean Annotation.</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@Mock</b> annotation provided by Mockito libraty.
+                                (<i style="color:brown;">org.mockito.Mock</i>) while   The <b style="color:cadetblue;">@MockBean</b> annotation is provided by Spring library(<i style="color:brown;">
+                                org.springframework.boot.test.mock.mockito.MockBean</i>).
+                                The @Mock annotation  does not add the mock bean objects to the Spring application context while @MockBean add the 
+                                mock bean object into the Spring application context.
+                            </p>
+                            <p> If the Spring application context is available and bean object already exists 
+                                then you can use @MockBean.
+                            </p>
+                            <p>If the Spring application context is not available then you can use the @Mock annotation to create a mock bean.
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.mockito.Mock</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.mock.mockito.MockBean</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;
+
+    @MockBean
+    UserService userService;
+    <span style="color:red;">---or---</span>
+    @Mock
+    UserService userService;</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+                        
+
+                        <div id="injectmock-annotation">
+                            <h3 class="top-border">@InjectMock Annotation in Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@InjectMock</b> annotation is used to create the mock bean object of
+                                the field level dependency of the class which annotated  with @Mock or @MockBean. It provides the mock
+                                bean of field level dependency.
+                            </p>
+                            <p> 
+                                Suppose, The mock object of the UserService class created in the test class
+                                and UserService class annotated the  @Mock or @MockBean.
+                                <span style="color:brown">
+                                <br>@Mock<br>
+                                UserService userService;<br></span>
+
+                            </p>
+                            <p>If the UserService class has dependency with repository like below code then you need to
+                                use @InjectMock to create mock bean object of the repository class. 
+                              <span style="color:brown">
+                                <br>@Service
+                                <br>public class UserService {<br><br>
+
+                                        &nbsp;&nbsp;@Autowired<br>
+                                        &nbsp;&nbsp;UserRepository userRepository;<br>
+                                }<br></span>
+                            </p>
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.mockito.Mock</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.mock.mockito.MockBean</span>;
+import <span style="color:blueviolet;">org.mockito.InjectMocks</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;
+   
+    @Mock
+    UserService userService;
+
+    @InjectMock
+    UserRepository userRepository;</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+                        
+                        <div id="beforetestclass-annotation">
+                            <h3 class="top-border">@BeforeTestClass and @AfterTestClass Annotation in Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@BeforeTestClass</b> annotation provide the functionality
+                                to execute the method before executing the test cases.
+                            </p>
+                            <p> 
+                                The <b style="color:cadetblue;">@AfterTestClass</b> annotation provide the functionality
+                                to execute the method after completion of all the test cases.
+                            </p>
+                            
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.springframework.test.context.event.annotation.AfterTestClass</span>;
+import <span style="color:blueviolet;">org.springframework.test.context.event.annotation.BeforeTestClass</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @BeforeTestClass
+    public void befor(){
+        System.out.println("BeforeTestClass");
+    }
+
+    @AfterTestClass
+    public void after(){
+        System.out.println("AfterTestClass");
+    }</span>
+}</code></pre>                          
+                            </p>
+                    
+                        </div>
+
+                        
+                        <div id="beforeeach-annotation">
+                            <h3 class="top-border">@BeforeEach Annotation in Mockito Junit</h3>
+                            <p> 
+                                The <b style="color:cadetblue;">@BeforeEach</b> annotation provides the functionality to 
+                                execute before each test method in the JUnit test case. It is used to provide initialization for set-up tasks.
+                            </p>
+                            
+                             <p>  
+<pre><code><span style="color:red;">---MockMvc Example---</span>
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.mockito.Mock</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.mock.mockito.MockBean</span>;
+import <span style="color:blueviolet;">org.mockito.InjectMocks</span>;
+<span style="color:brown;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</span>
+public <span style="color:green;">class UserControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;
+    
+    @Mock
+    UserService userService;
+
+    @InjectMock
+    UserRepository userRepository;
+
+    @BeforeEach
+    public void init(){
+        user = getMockUser();
+        userDTO = getMockUserDTO();
+    }
+
+    @test
+    /......
+</span>
+}</code></pre>                           
+                            </p>
+                    
+                        </div>
+
+                        <div id="restcontrollertest">
+                            <h3 class="top-border">Rest Controller Test Cases in Spring Boot Mockito</h3>
+                             <p>  
+<pre><code><span style="color:red;"><h4 style="margin:0px;padding:0px;">Rest Controller Test Cases in Spring Boot Mockito Example</h4></span>
+import <span style="color:blueviolet;">com.fasterxml.jackson.databind.ObjectMapper</span>;
+import <span style="color:blueviolet;">org.hamcrest.CoreMatchers</span>;
+import <span style="color:blueviolet;">org.junit.jupiter.api.BeforeEach</span>;
+import <span style="color:blueviolet;">org.junit.jupiter.api.Test</span>;
+import <span style="color:blueviolet;">org.junit.jupiter.api.extension.ExtendWith</span>;
+import <span style="color:blueviolet;">org.mockito.junit.jupiter.MockitoExtension</span>;
+import <span style="color:blueviolet;">org.springframework.beans.factory.annotation.Autowired</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest</span>;
+import <span style="color:blueviolet;">org.springframework.boot.test.mock.mockito.MockBean</span>;
+import <span style="color:blueviolet;">org.springframework.http.HttpStatus</span>;
+import <span style="color:blueviolet;">org.springframework.http.MediaType</span>;
+import <span style="color:blueviolet;">org.springframework.mock.web.MockHttpServletResponse</span>;
+import <span style="color:blueviolet;">org.springframework.mock.web.MockMultipartFile</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MockMvc</span>;
+import <span style="color:blueviolet;">org.mockito.ArgumentMatchers</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.MvcResult</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.ResultActions</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.request.MockMvcRequestBuilders</span>;
+import <span style="color:blueviolet;">org.springframework.test.web.servlet.result.MockMvcResultMatchers</span>;
+import <span style="color:blueviolet;">java.io.InputStream</span>;
+import <span style="color:blueviolet;">java.util.ArrayList</span>;
+import <span style="color:blueviolet;">java.util.List</span>;
+
+<b style="color:brown !important;">
+@WebMvcTest(controllers =  UserController.class)
+@ExtendWith(MockitoExtension.class, LogAsserterExtension.class)</b>
+public <span style="color:green;">class UserControllerTest {
+    
+<b style="color:brown !important;">@Autowired</b>
+MockMvc mockMvc;
+
+<b style="color:brown !important;">@Mock</b>
+UserService userService;
+
+private User user;
+private UserDTO userDTO;
+
+<b style="color:brown !important;">@BeforeEach</b>
+public void init(){
+    user = getMockUser();
+    userDTO = getMockUserDTO();
+}
+
+private User getMockUser(){
+    if(user!=null){
+        return user;
+    }else {
+        user = new User();
+        user.setId(1);
+        user.setName("Shib Das");
+        user.setMobileNumber("8650932");
+        user.setEmailId("s@gmail.com");
+        user.setAddress("Pune, India");
+        return user;
+    }
+}
+
+private UserDTO getMockUserDTO(){
+    if(userDTO!=null){
+        return userDTO;
+    }else {
+        userDTO = new UserDTO();
+        userDTO.setId(user.getId());
+        userDTO.setName(user.getName());
+        userDTO.setMobileNumber(user.getMobileNumber());
+        userDTO.setEmailId(user.getEmailId());
+        userDTO.setAddress(user.getAddress());
+        return new UserDTO();
+    }
+}
+
+    
+<span id="restcontrollergetmethodtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller GET Method Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void getUserById() throws Exception {
+    given(userService.findUserById(any())).willReturn(userDTO);
+    ResultActions response = mockMvc.perform(get("/user/get/1")
+            .contentType(MediaType.APPLICATION_JSON));
+
+    response.andExpect(status().isOk())
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.id", CoreMatchers.is( userDTO.getId())))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.name", CoreMatchers.is( userDTO.getName())))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.mobileNumber", CoreMatchers.is( userDTO.getMobileNumber())))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.emailId", CoreMatchers.is( userDTO.getEmailId())))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.address", CoreMatchers.is( userDTO.getAddress())));
+
+} </span>
+
+
+<span id="restcontrollergetallmethodtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller GET All Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void testGetAll() throws Exception {
+    UserDTO userDTO1 = new UserDTO(1,"Shib Das","s@gmail.com","8650932","pune");
+    List<UserDTO> userList = new ArrayList<UserDTO>();
+
+    userList.add(userDTO1);
+    userList.add(userDTO1);
+    AllUserDTO allUserDTO = new AllUserDTO();
+    allUserDTO.setUserList(userList);
+
+    given(userService.getAllUser()).willReturn(allUserDTO);
+
+    ResultActions response = mockMvc.perform(get( "/user/getall")
+            .contentType( MediaType.APPLICATION_JSON));
+
+
+    response.andExpect( MockMvcResultMatchers.status().isOk() ).andDo(print())
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList", hasSize(2)))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList[0].id", CoreMatchers.is( 1 )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList[0].name", CoreMatchers.is( "Shib Das" )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList[0].emailId", CoreMatchers.is( "s@gmail.com" )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList[0].address", CoreMatchers.is( "pune" )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.userList[0].mobileNumber", CoreMatchers.is( "8650932" )));
+
+}</span>  
+
+<span id="restcontrollepostmethodtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller POST Method Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void addTest() throws Exception {
+    given(userService.addUser(ArgumentMatchers.any())).willAnswer(invocation -> invocation.getArgument(0));
+    //or when(userService.addUser(any())).thenReturn(getMockUserDTO());
+
+    ResultActions response = mockMvc.perform(post( "/user/add" )
+            .contentType(MediaType.APPLICATION_JSON)
+            .content( objectMapper.writeValueAsString( userDTO )));
+
+    response.andExpect(status().isOk())
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.id", CoreMatchers.is( userDTO.getId() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.name", CoreMatchers.is( userDTO.getName() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.mobileNumber", CoreMatchers.is( userDTO.getMobileNumber() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.emailId", CoreMatchers.is( userDTO.getEmailId() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.address", CoreMatchers.is( userDTO.getAddress() )));
+}</span>
+
+
+<span id="restcontrolleputmethodtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller PUT Method Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void updateTest() throws Exception {
+    System.out.println("getUserById--");
+    given(userService.update(any())).willReturn(userDTO);
+    ResultActions response = mockMvc.perform( put( "/user/update" )
+            .contentType(MediaType.APPLICATION_JSON)
+            .content( objectMapper.writeValueAsString( userDTO )));
+
+    response.andExpect(status().isOk())
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.id", CoreMatchers.is( userDTO.getId() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.name", CoreMatchers.is( userDTO.getName() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.mobileNumber", CoreMatchers.is( userDTO.getMobileNumber() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.emailId", CoreMatchers.is( userDTO.getEmailId() )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.address", CoreMatchers.is( userDTO.getAddress() )));
+
+}</span>
+
+
+<span id="restcontrolledeletemethodtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller DELETE Method Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void testDelete() throws Exception {
+    given(userService.delete(1)).willReturn( "Employee deleted" );
+    ResultActions response = mockMvc.perform(delete( "/user/delete/1" )
+            .contentType( MediaType.APPLICATION_JSON ));
+
+    response.andExpect( MockMvcResultMatchers.status().isOk())
+            .andExpect( MockMvcResultMatchers.content().string( "Employee deleted" ));
+}</span>
+
+
+<span id="restcontrollefileuploadtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller multipart or File Upload Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+public void testFileUpload() throws Exception {
+    InputStream inputStream = UserControllerTest.class. getClassLoader().getResourceAsStream( "users.csv" );
+    MockMultipartFile file = new MockMultipartFile( "file", inputStream );
+    FileUploadResponse fileUploadResponse = new FileUploadResponse( "users.csv", "Success", 5 );
+    given(userService.fileUpload( ArgumentMatchers.any() )).willReturn( fileUploadResponse );
+    assertNotNull( inputStream );
+
+    ResultActions response = mockMvc.perform( MockMvcRequestBuilders.multipart( "/user/fileupload" ).file(file).param( "name", "user.csv" ));
+    response.andExpect(MockMvcResultMatchers.status().isOk())
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.fileName", CoreMatchers.is( "users.csv" )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.status", CoreMatchers.is( "Success" )))
+            .andExpect(MockMvcResultMatchers.jsonPath( "$.count", CoreMatchers.is( 5 )));
+}</span>
+
+
+<span id="restcontrollefiledownloadtest"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller File Download Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+public void testFileDownload() throws Exception {
+    String fileDownloadContent = "Shib Das, s@gmail.com, 90764, Pune India Maharastra\r\n"
+            + "Shib Das1, s@gmail.com, 90764, Pune India Maharastra\r\n"
+            + "Shib Das2, s@gmail.com, 90764, Pune India Maharastra\r\n"
+            + "Shib Das3, s@gmail.com, 90764, Pune India Maharastra\r\n"
+            + "Shib Das4, s@gmail.com, 90764, Pune India Maharastra";
+
+    InputStream inputStream = UserControllerTest.class .getClassLoader().getResourceAsStream( "users.csv" );
+    MockMultipartFile file = new MockMultipartFile( "file", inputStream );
+
+    MvcResult result = mockMvc.perform(get( "/user/filedownload/users.csv" )
+            .contentType( MediaType.APPLICATION_JSON )).andReturn();
+
+    MockHttpServletResponse response = result.getResponse();
+    assertThat( response.getStatus()).isEqualTo( HttpStatus.OK.value() );
+    assertThat( response.getContentType()).isEqualTo( "application/CSV" );
+    assertThat( response.getContentAsString().trim()).isEqualTo( fileDownloadContent.trim() );
+    assertThat( response.getContentAsByteArray()).isEqualTo( file.getBytes() );
+}</span>
+
+
+<span id="restcontrollerexceptiontestcases"><h4 style="margin:0px;padding:0px;color:red;">Rest Controller Exception Test Cases in Spring Boot Mockito</h4>
+<b style="color:brown !important;">@Test</b>
+void testDeleteErrorMessage() throws Exception {
+    given(userService.delete(1)).willThrow( new Exception( "Error: User with id does not exist" ));
+    Exception thrown = assertThrows(
+            Exception.class,
+            () -> mockMvc.perform(delete("/user/delete/1")
+                    .contentType(MediaType.APPLICATION_JSON)),
+                    "Expected to throw, but it didn't"
+
+            );
+    assertTrue( thrown.getMessage().contains( "Error: User with id does not exist" ));
+}
+
+//2nd example
+<b style="color:brown !important;">@Test</b>
+void testUpdateForErrorMessage() throws Exception {
+    given(userService.update(ArgumentMatchers.any())).willThrow( new Exception( "Error: User with id does not exist" ));
+    Exception thrown = assertThrows(
+            Exception.class,
+            () -> mockMvc.perform( put("/user/update" )
+                    .contentType( MediaType.APPLICATION_JSON )
+                    .content( objectMapper.writeValueAsString(userDTO) )),
+                    "Expected to throw, but it didn't"
+    );
+    assertTrue( thrown.getMessage().contains( "Error: User with id does not exist" ));
+}</span>
+
+}</code></pre>                           
+                            </p>
+                    
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cookie-consent">      
+            By using our site, you acknowledge that you have read and understood our
+            <a href="https://java2ee.com/Cookies Policy" target="_blank"><u>Cookie Policy</u></a> &amp;
+            <a href="https://java2ee.com/termandpolicy" target="_blank"><u>Privacy Policy</u></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="https://java2ee.com/contactus" target="_blank"><u>Contact Us</u></a>  
+        </div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/scripts.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNN8BHZLNW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WNN8BHZLNW');
+        </script>
+    </body>
+</html>

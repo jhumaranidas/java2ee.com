@@ -15,29 +15,34 @@
   <priority>0.96</priority>
 </url>
 <url>
+  <loc>https://java2ee.com/spring-boot-mockito-test-rest-controller</loc>
+  <lastmod>2024-08-07T02:20:24+00:00</lastmod>
+  <priority>0.95</priority>
+</url>
+<url>
   <loc>https://java2ee.com/lambda/lambda-expression-example-in-java</loc>
-  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
-  <priority>0.95</priority>
-</url>
-<url>
-  <loc>https://java2ee.com/functional-interfaces-in-java-8</loc>
-  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
-  <priority>0.95</priority>
-</url>
-<url>
-  <loc>https://java2ee.com/stream/stream-reduce-method-in-java-8</loc>
-  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
-  <priority>0.96</priority>
-</url>
-<url>
-  <loc>https://java2ee.com/stream/stream-api-in-java-8</loc>
   <lastmod>2024-07-28T02:20:24+00:00</lastmod>
   <priority>0.94</priority>
 </url>
 <url>
-  <loc>https://java2ee.com/stream/stream-operations-in-java-8</loc>
+  <loc>https://java2ee.com/functional-interfaces-in-java-8</loc>
   <lastmod>2024-07-28T02:20:24+00:00</lastmod>
   <priority>0.93</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-reduce-method-in-java-8</loc>
+  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-api-in-java-8</loc>
+  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://java2ee.com/stream/stream-operations-in-java-8</loc>
+  <lastmod>2024-07-28T02:20:24+00:00</lastmod>
+  <priority>0.92</priority>
 </url>
 <url>
   <loc>https://java2ee.com/stream/stream-filter-method-in-java-8</loc>
