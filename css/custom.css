@@ -558,16 +558,98 @@ li.next-botton{
 
 
 .ang-list{list-style:number !important;}
- .ang-list a{text-decoration:none;}
+ .ang-list a{
+	
+	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	background-clip: text;
+    color: transparent;
+    font-size: .875rem;
+    margin-block: 0;
+    transition: background-position 3s ease-out;
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    position: relative;
+}
+
+.ang-list-dd a i{
+	
+	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	background-clip: text;
+    color: transparent;
+    font-size: .875rem;
+    margin-block: 0;
+    transition: background-position 3s ease-out;
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    position: relative;
+}
+
+.ang-list a:hover{
+	
+	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
+	background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+background-clip: text;
+color: transparent;
+font-size: .875rem;
+margin-block: 0;
+transition: background-position 3s ease-out;
+background-size: 200% 100%;
+background-position: 100% 0%;
+position: relative;
+}
+
+.ang-list-dd a i:hover{
+	
+	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
+	background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+background-clip: text;
+color: transparent;
+font-size: .875rem;
+margin-block: 0;
+transition: background-position 3s ease-out;
+background-size: 200% 100%;
+background-position: 100% 0%;
+position: relative;
+}
+	/*linear-gradient( 140deg, oklch(69.02% .277 332.77) 0%, oklch(69.02% .277 332.77) 15%, color-mix(in srgb, oklch(69.02% .277 332.77), oklch(53.18% .28 296.97) 50%) 25%, color-mix(in srgb, oklch(69.02% .277 332.77), oklch(53.18% .28 296.97) 10%) 35%, color-mix(in srgb, oklch(69.02% .277 332.77), oklch(63.32% .24 31.68) 50%) 42%, color-mix(in srgb, oklch(69.02% .277 332.77), oklch(63.32% .24 31.68) 50%) 44%, color-mix(in srgb, oklch(69.02% .277 332.77), white 70%) 47%, oklch(53.18% .28 296.97) 48%, oklch(51.01% .274 263.83) 60% )
+}*/
  .ang-list-h3{font-size:15px !important;line-height: 16px !important;}
  .ang-list-h4{font-size:15px !important;line-height: 16px !important;padding:2px !important;margin:0px !important;}
  
  .top-border{
-	 border-top: 1px solid #DBDBDB !important;
-	 padding:15px 0px 15px 0px;
+	 border-top: 1px dashed #7FB3D5 !important;
+	 padding:35px 0px 15px 0px;
 	 color:#9617EE;
-	 font-size:25px !important;}
+	 font-size:25px !important;
+	 background: rgb(252,30,107);
+background: radial-gradient(circle, rgba(252,30,107,1) 11%, rgba(63,94,251,1) 45%);
+background-clip: text;
+color: transparent;
+font-size: .875rem;
+margin-block: 0;
+transition: background-position 3s ease-out;
+background-size: 200% 100%;
+background-position: 100% 0%;
+position: relative;
+	}
 
+.main-heading{
+	background: rgb(252,30,107);
+	background: radial-gradient(circle, rgba(252,30,107,1) 11%, rgba(63,94,251,1) 45%);
+	background-clip: text;
+	color: transparent;
+	margin-block: 0;
+	transition: background-position 3s ease-out;
+	background-size: 200% 100%;
+	background-position: 100% 0%;
+	position: relative;
+}
 .stickity{
 	background: #a7e9c5;
 	position: -webkit-sticky;
