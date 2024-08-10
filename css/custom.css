@@ -558,7 +558,8 @@ li.next-botton{
 
 
 .ang-list{list-style:number !important;}
- .ang-list a{
+.home-ang-list{list-style:none !important;}
+ .ang-list,.home-ang-list a{
 	
 	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
 	background: rgb(63,94,251);
@@ -572,6 +573,7 @@ li.next-botton{
     background-position: 100% 0%;
     position: relative;
 }
+
 
 .ang-list-dd a i{
 	
@@ -588,7 +590,7 @@ li.next-botton{
     position: relative;
 }
 
-.ang-list a:hover{
+.ang-list,.home-ang-list a:hover{
 	
 	/*background-image: linear-gradient(to right, #0ff308 , rgb(245, 189, 7));*/
 	background: rgb(131,58,180);

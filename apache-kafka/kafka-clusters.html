@@ -6,14 +6,13 @@
         <meta name="theme-color" content="#f10d0d">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">  
         <meta name="keywords" content="kafka cluster, kafka cluster architecture, kafka cluster setup window, kafka tutorial">          
-        <meta name="description" content="1st May 2024 - The Kafka cluster is a group of Kafka brokers that work together to handle the data or messages for Kafka system. Each broker is a separate process that runs on a different machine and communicates with other brokers through a network.">
+        <meta name="description" content="Kafka Cluster. The Kafka cluster is a group of Kafka brokers that work together to handle the data or messages for Kafka system. Each broker is a separate process that runs on a different machine and communicates with other brokers through a network.">
 
-        <link rel="canonical" href="https://java2ee.com/apache-kafka/kafka-clusters?v=1&to=what-is-kafka-cluster">
+        <link rel="canonical" href="https://java2ee.com/apache-kafka/kafka-clusters">
 
         <meta name="facebook-domain-verification" content="zpxne6s7q0awh58npjx0c9jd1mooi9">
         <meta property="article:publisher" content="https://www.facebook.com/java2eesite">
         <meta name="google-site-verification" content="bc7PlPPbYWCTlleru4zAklCrhDt9wLPJ4cpHiFREhuQ">
-       <!-- <meta name="google-adsense-account" content="ca-pub-1973149732345742">-->
 
         <link rel="icon" type="image/x-icon" href="../image/fevicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="../image/fevicon/apple-touch-icon.png">
@@ -33,7 +32,7 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="Kafka Cluster">
         <meta property="og:description" content="1st May 2024 - The Kafka cluster is a group of Kafka brokers that work together to handle the data or messages for Kafka system. Each broker is a separate process that runs on a different machine and communicates with other brokers through a network."/>
-        <meta property="og:url" content="https://java2ee.com/apache-kafka/kafka-clusters?v=1&to=what-is-kafka-cluster">
+        <meta property="og:url" content="https://java2ee.com/apache-kafka/kafka-clusters">
         <meta property="og:site_name" content="java2ee">
         <meta property="article:section" content="Kafka Cluster">
         <meta property="article:tag" content="Kafka">
@@ -44,140 +43,18 @@
         <meta name="twitter:creator" content="@DasJhum9">
         <meta name="twitter:domain" content="www.java2ee.com">
         <meta name="twitter:title" property="og:title" content="Kafka Cluster">
-        <meta name="twitter:description" property="og:description" content="1st May 2024 - The Kafka cluster is a group of Kafka brokers that work together to handle the data or messages for Kafka system. Each broker is a separate process that runs on a different machine and communicates with other brokers through a network.">
         <meta name="twitter:image" content="https://java2ee.com/image/java2ee-logo.PNG">
          
         <meta property="article:published_time" content="2024-05-01T02:59:35+00:00">
-        <meta property="article:modified_time" content="2024-05-01T02:59:35+00:00">
-        <meta property="og:updated_time" content="2024-05-01T02:59:35+00:00">
+        <meta property="article:modified_time" content="2024-08-09T02:59:35+00:00">
+        <meta property="og:updated_time" content="2024-08-09T02:59:35+00:00">
     </head>
     <body>      
         <div class="d-flex" id="wrapper">
-            <!-- Sidebar-->
-            <div id="sidebar-wrapper">
-                <div class="sidebar-heading">
-                    <a href="https://www.java2ee.com" alt="Java2ee.com"><img id="logo" src="../image/java2ee-logo.PNG" style="width:100%;"/></a>
-                </div>
-                <div class="list-group list-group-flush">
-                    <ul>       
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-tutorial" title="Kafka Tutorial" href="https://java2ee.com/apache-kafka/kafka-tutorial?rank=6&title=kafka-complete-tutorial">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Tutorial</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton active">     
-                            <a id="kafka-cluster" target="_blank" title="Kafka Cluster" href="https://java2ee.com/apache-kafka/kafka-clusters?rank=6&title=kafka-cluster-in-details">
-                                <span class="left-link-button active">
-                                     <i class="fa fa-angle-double-right f-arraw-left green"></i> 
-                                     <span class="left-topic-name active">Kafka Cluster</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-api" title="Kafka API" href="https://java2ee.com/apache-kafka/kafka-api?rank=6&title=kafka-api-in-details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka API In Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-brokers" title="Kafka Brockers" href="https://java2ee.com/apache-kafka/kafka-brokers?rank=6&title=kafka-brockers">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Brockers</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" class="next-link" id="kafka-topics" title="Kafka Topics" href="https://java2ee.com/apache-kafka/kafka-topics?rank=6&title=kafka-topics-in-details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Topics in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" class="next-link" id="kafka-topic-partitions" title="Kafka Topics Partitions" href="https://java2ee.com/apache-kafka/kafka-topics-partitions?rank=3&title=kafka-topics-in-details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Topics Partitions</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" class="next-link" id="create-kafka-topic" title="Create Kafka Topic" href="https://java2ee.com/apache-kafka/create-kafka-topic?rank=3&title=create-kafka-topic">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Create Kafka Topic</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-producer" title="Kafka Producer" href="https://java2ee.com/apache-kafka/kafka-producer?rank=6&title=kafka-producer-in-details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Producer in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-consumer" title="Kafka Consumer" href="https://java2ee.com/apache-kafka/kafka-consumer?rank=6&title=kafka-consumer-in-details">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Consumer in Details</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="kafka-cluster-setup" title="Kafka Cluster Setup" href="https://java2ee.com/apache-kafka/create-kafka-cluster?rank=6&title=setup-kafka-cluster-on-windows">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Setup Kafka Cluster</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="create-kafka-producer" title="Create Kafka Producer in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=6&title=kafka-producer-in-java">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Producer in Java</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=6&title=kafka-consumer-in-java">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Kafka Consumer in Java</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li> 
-                        <li class="next-botton">     
-                            <a target="_blank" id="create-kafka-producer" title="Write Kafka Messages in Java" href="https://java2ee.com/apache-kafka/create-kafka-producer-in-java?rank=6&title=Write Kafka Messages in Java">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Write Kafka Messages in Java</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>
-                        <li class="next-botton">     
-                            <a target="_blank" id="read-kafka-messages-in-java" title="Read Kafka Messages In Java" href="https://java2ee.com/apache-kafka/create-kafka-consumer-in-java?rank=6&title=Read Kakfa Messages in Java">
-                                <span class="left-link-button">
-                                     <i class="fa fa-angle-double-right f-arraw-left"></i> 
-                                     <span class="left-topic-name">Read Kakfa Messages in Java</span>
-                                </span>&nbsp;        
-                            </a>
-                        </li>           
-                    </ul>
-                </div> 
-            </div> 
+            <div id="page-content-wrapper">
             <div id="right-main-div">
-                <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">
-                    <h1>What is Kafka Cluster?</h1>  
+                <div class="left-main-div" id="left-main-div">
+                    <h1 class="main-heading">What is Kafka Cluster?</h1>  
                 <p>
                     The <b>Kafka cluster</b> is a group of Kafka brokers that work together to handle 
                     the data or messages for Kafka system. Each broker is a separate process that 
@@ -186,10 +63,10 @@
                 Kafka cluster contains ZooKeeper for maintaining their cluster state. 
                 <p> 
                     <ol class="top-list-ol">
-                        <li class="top-list"><h3 class="top-list">The <b>Kafka cluster</b> is a group of Kafka brokers.</h3></li>
-                        <li class="top-list"><h3 class="top-list">Each broker is a separate process that runs on a different machine and communicates with other brokers through a network.</h3></li>
-                        <li class="top-list"><h3 class="top-list">Kafka cluster contains ZooKeeper for maintaining their cluster state.</h3></li>
-                        <li class="top-list"><h3 class="top-list">Kafka Cluster contains Kafka brokers, brokers contains topics, topic contains partitions and they works together.</h3></li>
+                        <li class="top-list"><h3 class="top-list main-heading">The <b>Kafka cluster</b> is a group of Kafka brokers.</h3></li>
+                        <li class="top-list"><h3 class="top-list main-heading">Each broker is a separate process that runs on a different machine and communicates with other brokers through a network.</h3></li>
+                        <li class="top-list"><h3 class="top-list main-heading">Kafka cluster contains ZooKeeper for maintaining their cluster state.</h3></li>
+                        <li class="top-list"><h3 class="top-list main-heading">Kafka Cluster contains Kafka brokers, brokers contains topics, topic contains partitions and they works together.</h3></li>
                     </ol>
                 </p>
 
@@ -270,12 +147,10 @@
                             </div>    -->
                         </div> 
                                            
-                    </div> <br><br>    
+                    </div>   
                 </div> <!--end left-->
-                <!--start right-->
-                <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
-                    
-                </div>   <!--end right-->
+              
+                </div> 
             </div>          
         </div>     
     <div class="cookie-consent">      
@@ -294,20 +169,6 @@
         gtag('js', new Date());
 
         gtag('config', 'G-WNN8BHZLNW');
-    </script>
-    <script>
-        window.addEventListener("load", (event) => {
-           
-            if(document.getElementById('right-adv')!=0){
-                var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
-                if(height>300){
-                    height=height-117;
-                }
-                document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
-            }
-            
-        });
-       
     </script>
 </body>
 </html>
